@@ -8,6 +8,7 @@
     <title>MountainHacks 2015</title>
 
     <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css" />
+    <!-- <link rel="stylesheet" type="text/css" href="bower_components/geopattern/css/geopattern.css"> -->
 
     <style type="text/css">
       * {
@@ -164,7 +165,7 @@
 
       <div
         class="parallax-image parallax-image-100"
-        style="background-image:url(images/SLC.jpg)"
+        id="geopattern"
         data-anchor-target="#bacons + .gap"
         data-bottom-top="transform: translate3d(0px, -80%, 0px);"
         data-top-bottom="transform: translate3d(0px, 80%, 0px);"
@@ -210,7 +211,6 @@
         </div>
         <div class="gap gap-100" style="background-color:#00DD22"></div>
         <div class="content content-full" id="kittens">
-          Here be kittens
         </div>
         <div class="gap gap-50" style="background-color:#DD2200"></div>
         <div class="content" id="done">
@@ -230,6 +230,7 @@
         </div>
       </div>
  
+        <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
         <script type="text/javascript" src="bower_components/skrollr/src/skrollr.js"></script>
         <script type="text/javascript">
         skrollr.init({
@@ -237,6 +238,8 @@
           mobileDeceleration: 0.004
         });
         </script>
+        <script type="text/javascript" src="bower_components/geopattern/js/geopattern.min.js"></script>
+        <script type="text/javascript" src="scripts/geopattern.js"></script>
   </body>
  
 </html>
