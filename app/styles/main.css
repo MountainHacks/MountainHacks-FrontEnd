@@ -33,6 +33,16 @@ hr {
   color:#2c3e50;
 }
 
+.social-icon-large {
+  margin:30px;
+  float:left;
+  margin-top:-10px;
+  border-radius:30px;
+  width:2em;
+  background:white;
+  padding:15px;
+}
+
 .large-fa {
   font-size:30px;
 }
