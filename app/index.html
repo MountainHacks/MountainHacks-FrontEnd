@@ -8,148 +8,10 @@
     <title>MountainHacks 2015</title>
 
     <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css" />
-    <!-- <link rel="stylesheet" type="text/css" href="bower_components/geopattern/css/geopattern.css"> -->
-
-    <style type="text/css">
-      * {
-        padding:0;
-        margin:0;
-      }
-         
-      .hsContent {
-        background: rgba(0,0,0,0.5);
-        width: 900px;
-        margin: 0 auto;
-        padding: 50px;
-        border-radius: 10px;
-        height: 400px;    
-      }
-         
-      .hsContainer {
-        color: white;
-        text-align: center;
-        display:table-cell;
-        vertical-align: middle;
-        margin: 0 auto;
-        padding: 30px;
-      }
-   
-      html, body {
-        height:100%;
-      }
-
-      .skrollr-desktop body {
-        height:100% !important;
-      }
-
-      body {
-        font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-      }
-
-      p {
-        margin:1em 0;
-      }
-
-      .parallax-image-wrapper {
-        position:fixed;
-        left:0;
-        width:100%;
-        overflow:hidden;
-      }
-
-      .parallax-image-wrapper-50 {
-        height:50%;
-        top:-50%;
-      }
-
-      .parallax-image-wrapper-75 {
-        height:75%;
-        top:-75%;
-      }
-
-      .parallax-image-wrapper-100 {
-        height:100%;
-        top:-100%;
-      }
-
-      .parallax-image {
-        display:none;
-        position:absolute;
-        bottom:0;
-        left:0;
-        width:100%;
-        background-repeat:no-repeat;
-        background-position:center;
-        background-size:cover;
-      }
-
-      .parallax-image-50 {
-        height:200%;
-        top:-50%;
-      }
-
-      .parallax-image-75 {
-        height: 150%;
-        top:-33%;
-      }
-
-      .parallax-image-100 {
-        height:100%;
-        top:0;
-      }
-
-      .parallax-image.skrollable-between {
-        display:block;
-      }
-
-      .no-skrollr .parallax-image-wrapper {
-        display:none !important;
-      }
-
-      #skrollr-body {
-        height:100%;
-        overflow:visible;
-        position:relative;
-      }
-
-      .gap {
-        background:transparent center no-repeat;
-        background-size:cover;
-      }
-
-      .skrollr .gap {
-        background:transparent !important;
-      }
-
-      .gap-50 {
-        height:50%;
-      }
-
-      .gap-100 {
-        height:100%;
-        width: 100%;
-      }
-
-      .header, .content {
-        background:#fff;
-        padding:1em;
-
-        -webkit-box-sizing:border-box;
-        -moz-box-sizing:border-box;
-        box-sizing:border-box;
-      }
-
-      .content-full {
-        height:100%;
-      }
-
-      #done {
-        height:100%;
-      }
-    </style>
+    <link rel="stylesheet" type="text/css" href="styles/main.css">
   </head>
    
-  <body style="text-align:center">
+  <body>
  
     <div
       class="parallax-image-wrapper parallax-image-wrapper-100"
@@ -221,56 +83,57 @@
         <div class="content" id="kittens">
           <div style="height:500px;display:inline-block;margin-left:auto;margin-right:auto">
             <!--Info blob-->
-            <div style="width:200px;height:300px;float:left;margin:40px">
-              <h4 class="text-center">So how does this work?</h4>
-              <p class="text-center">You have 24 hours to build a new unique product, whether it be an iOS app, an Android app, a web app, a platform, a hardware hack... etc. The only rule is that it has to be an original product. All your programming must take place at the hackathon, however you may come up with ideas and form teams prior to the event.</p>
+            <div class="text-center info-blob">
+              <h4>So how does this work?</h4>
+              <p>You have 24 hours to build a new unique product, whether it be an iOS app, an Android app, a web app, a platform, a hardware hack... etc. The only rule is that it has to be an original product. All your programming must take place at the hackathon, however you may come up with ideas and form teams prior to the event.</p>
             </div>
 
             <!--Info blob-->
-            <div style="width:200px;height:300px;float:left;margin:40px">
-              <h4 class="text-center">What should I bring?</h4>
-              <p class="text-center">Just bring you, your laptop, and your awesome coding skills. Some optional items you can bring are pillows, headphones, small whiteboards, a travel size blanket, and anything else you need to be comfortable hacking!</p>
+            <div class="text-center info-blob">
+              <h4>What should I bring?</h4>
+              <p>Just bring you, your laptop, and your awesome coding skills. Some optional items you can bring are pillows, headphones, small whiteboards, a travel size blanket, and anything else you need to be comfortable hacking!</p>
             </div>
 
             <!--Info blob-->
-            <div style="width:200px;height:300px;float:left;margin:40px">
-              <h4 class="text-center">Am I locked in?</h4>
-              <p class="text-center">Not at all! You are free to leave the venue whenever you like or need to.</p>
+            <div class="text-center info-blob">
+              <h4>Am I locked in?</h4>
+              <p>Not at all! You are free to leave the venue whenever you like or need to.</p>
             </div>
           </div>
         </div>
+
         <div class="gap gap-50" style="background-color:#DD2200"></div>
         <div class="content" id="done">
           <h4 style="font-size:40px">Organizer Team:</h4>
 
           <!-- Derek's Bio -->
-          <div class="center-block" style="display:block;width:80%">
+          <div class="center-block">
             <p class="text-center" style="font-size:40px">Derek Argueta</p>
-            <div style="background-image:url(images/profiles/derek.jpg);height:150px;width:150px;border-radius:75px;margin-top:-30px;float:left;background-repeat:no-repeat;background-size: 100% 100%"></div>
-            <div style="width:100%;margin-left:170px">
-              <p style="font-size:26px;text-align:left">Derek is a student at BYU studying Computer Science. His main interests are in iOS, Android, and Django development.</p>
+            <div class="bio-strip-pic" style="background-image:url(images/profiles/derek.jpg);"></div>
+            <div class="bio-strip-content">
+              <p>Derek is a student at BYU studying Computer Science. His main interests are in iOS, Android, and Django development.</p>
             </div>
           </div>
 
           <div style="width:100%;height:1px;clear:both"></div>
 
           <!-- Greg's Bio -->
-          <div class="center-block" style="display:block;width:80%">
+          <div class="center-block">
             <p class="text-center" style="font-size:40px">Greg Holguin</p>
-            <div style="background-image:url(images/profiles/greg.jpg);height:150px;width:150px;border-radius:75px;margin-top:-30px;float:left;background-repeat:no-repeat;background-size: 100% 100%"></div>
-            <div style="width:100%;margin-left:170px">
-              <p style="font-size:26px;text-align:left">Greg is a scrub at GeoPattern</p>
+            <div class="bio-strip-pic" style="background-image:url(images/profiles/greg.jpg);"></div>
+            <div class="bio-strip-content">
+              <p>Greg is a good guy.</p>
             </div>
           </div>
 
           <div style="width:100%;height:1px;clear:both"></div>
 
           <!-- Jeff's Bio -->
-          <div class="center-block" style="display:block;width:80%">
+          <div class="center-block">
             <p class="text-center" style="font-size:40px">Jeff Barton</p>
-            <div style="background-image:url(images/profiles/jeff.jpg);height:150px;width:150px;border-radius:75px;margin-top:-30px;float:left;background-repeat:no-repeat;background-size: 100% 100%"></div>
-            <div style="width:100%;margin-left:170px">
-              <p style="font-size:26px;text-align:left">Jeff is also a student a BYU. He is studying Electrical Engineering and enjoys hacking around with microcontrollers and circuits.</p>
+            <div class="bio-strip-pic"style="background-image:url(images/profiles/jeff.jpg);"></div>
+            <div class="bio-strip-content">
+              <p>Jeff is also a student a BYU. He is studying Electrical Engineering and enjoys hacking around with microcontrollers and circuits.</p>
             </div>
           </div>
 
