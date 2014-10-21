@@ -28,6 +28,21 @@
   margin: 40px;
 }
 
+.info_row {
+  height: 500px;
+  display: inline-block;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.info-blob > h4 {
+  font-size: 30px;
+}
+
+.info-blob > p {
+  font-size: 16px;
+}
+
 .center-block {
   display: block;
   width: 80%;
@@ -49,7 +64,7 @@
   float:right;
 }
 
-.bio-strip-content p {
+.bio-strip-content > p {
   font-size:26px;
   text-align:left;
   margin-top:0;
@@ -70,6 +85,30 @@ body {
 
 p {
   margin:1em 0;
+}
+
+#derek_bio {
+  background-image: url(../images/profiles/derek.jpg);
+}
+
+#derek_bio:hover {
+  background-image: url(http://media.giphy.com/media/Dea0leKapJzJC/giphy.gif);
+}
+
+#greg_bio {
+  background-image: url(../images/profiles/greg.jpg);
+}
+
+#greg_bio:hover {
+  background-image: url(http://37.media.tumblr.com/21baac6d7fa8287c3af00b9fce89fad4/tumblr_n83ylbsZJN1sedjuto1_250.gif);
+}
+
+#jeff_bio {
+  background-image: url(../images/profiles/jeff.jpg);
+}
+
+#jeff_bio:hover {
+  background-image: url(http://media.yourdailymedia.com/4/cat_98.gif);
 }
 
 /*-----------------------------
