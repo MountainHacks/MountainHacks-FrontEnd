@@ -26,11 +26,11 @@ hr {
 }
 
 .box-shawdow-inset {
--webkit-box-shadow: inset 0px 8px 169px -34px rgba(0,0,0,0.13);
--moz-box-shadow: inset 0px 8px 169px -34px rgba(0,0,0,0.13);
-box-shadow: inset 0px 8px 169px -34px rgba(0,0,0,0.13);
-background:#ecf0f1 !important;
-color:#2c3e50;"
+  -webkit-box-shadow: inset 0px 8px 169px -34px rgba(0,0,0,0.13);
+  -moz-box-shadow: inset 0px 8px 169px -34px rgba(0,0,0,0.13);
+  box-shadow: inset 0px 8px 169px -34px rgba(0,0,0,0.13);
+  background:#ecf0f1 !important;
+  color:#2c3e50;
 }
 
 .large-fa {
@@ -217,7 +217,6 @@ p {
 .header, .content {
   background:#fff;
   padding:1em;
-
   -webkit-box-sizing:border-box;
   -moz-box-sizing:border-box;
   box-sizing:border-box;

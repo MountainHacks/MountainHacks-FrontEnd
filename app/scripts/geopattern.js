@@ -1,5 +1,5 @@
 $(function() {
 
-	$('#geopattern').geopattern('MountainHacks');
+	$('#geopattern').geopattern('bluebgplsblueBLUEGIVE ME PLEASE GOSH');
 		
 });
