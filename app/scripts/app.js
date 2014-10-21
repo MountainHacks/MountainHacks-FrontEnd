@@ -1,6 +1,7 @@
 'use strict';
 
 /**
+ * @author Derek Argueta
  * @ngdoc overview
  * @name mhFrontApp
  * @description

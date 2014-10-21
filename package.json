@@ -1,6 +1,6 @@
 {
-  "name": "mhfront",
-  "version": "0.0.0",
+  "name": "MountainHacks-FrontEnd",
+  "version": "0.0.1",
   "dependencies": {},
   "devDependencies": {
     "grunt": "^0.4.1",
@@ -35,6 +35,8 @@
     "node": ">=0.10.0"
   },
   "scripts": {
-    "test": "grunt test"
+    "test": "grunt test",
+    "serve": "grunt serve",
+    "build": "grunt build"
   }
 }

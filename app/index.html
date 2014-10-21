@@ -1,140 +1,242 @@
-<!doctype html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js no-skrollr"> <!--<![endif]-->
+<!DOCTYPE html>
+<html class="no-skrollr">
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="author" content="Derek Argueta">
-    <meta name="keywords" content="Hackathon, Utah, Adobe, Mountain, Hacks, MountainHacks">
-    <meta name="description" content="Mountain-West hackathon coming to Utah 2015">
-    <title>MountainHacks</title>
+
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-    <!-- build:css(.) styles/vendor.css -->
-    <!-- bower:css -->
-    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
-    <link rel="stylesheet" href="bower_components/normalize.css/normalize.css" />
-    <!-- endbower -->
-    <!-- endbuild -->
 
+    <title>MountainHacks 2015</title>
+
+    <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css" />
+
+    <style type="text/css">
+      * {
+        padding:0;
+        margin:0;
+      }
+         
+      .hsContent {
+        background: rgba(0,0,0,0.5);
+        width: 900px;
+        margin: 0 auto;
+        padding: 50px;
+        border-radius: 10px;
+        height: 400px;    
+      }
+         
+      .hsContainer {
+        color: white;
+        text-align: center;
+        display:table-cell;
+        vertical-align: middle;
+        margin: 0 auto;
+        padding: 30px;
+      }
+   
+      html, body {
+        height:100%;
+      }
+
+      .skrollr-desktop body {
+        height:100% !important;
+      }
+
+      body {
+        font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+      }
+
+      p {
+        margin:1em 0;
+      }
+
+      .parallax-image-wrapper {
+        position:fixed;
+        left:0;
+        width:100%;
+        overflow:hidden;
+      }
+
+      .parallax-image-wrapper-50 {
+        height:50%;
+        top:-50%;
+      }
+
+      .parallax-image-wrapper-100 {
+        height:100%;
+        top:-100%;
+      }
+
+      .parallax-image {
+        display:none;
+        position:absolute;
+        bottom:0;
+        left:0;
+        width:100%;
+        background-repeat:no-repeat;
+        background-position:center;
+        background-size:cover;
+      }
+
+      .parallax-image-50 {
+        height:200%;
+        top:-50%;
+      }
+
+      .parallax-image-100 {
+        height:100%;
+        top:0;
+      }
+
+      .parallax-image.skrollable-between {
+        display:block;
+      }
+
+      .no-skrollr .parallax-image-wrapper {
+        display:none !important;
+      }
+
+      #skrollr-body {
+        height:100%;
+        overflow:visible;
+        position:relative;
+      }
+
+      .gap {
+        background:transparent center no-repeat;
+        background-size:cover;
+      }
+
+      .skrollr .gap {
+        background:transparent !important;
+      }
+
+      .gap-50 {
+        height:50%;
+      }
+
+      .gap-100 {
+        height:100%;
+        width: 100%;
+      }
+
+      .header, .content {
+        background:#fff;
+        padding:1em;
+
+        -webkit-box-sizing:border-box;
+        -moz-box-sizing:border-box;
+        box-sizing:border-box;
+      }
+
+      .content-full {
+        height:100%;
+      }
+
+      #done {
+        height:100%;
+      }
+    </style>
   </head>
+   
+  <body>
+ 
+    <div
+      class="parallax-image-wrapper parallax-image-wrapper-100"
+      data-anchor-target="#dragons + .gap"
+      data-bottom-top="transform:translate3d(0px, 200%, 0px)"
+      data-top-bottom="transform:translate3d(0px, 0%, 0px)">
 
-  <body ng-app="mhFrontApp" class="loading">
-    <!--[if lt IE 7]>
-        <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
-    <![endif]-->
-
-    <div id="preload">
-      <img src="images/SLC.jpg">
-      <img src="images/park-city-skiing-utah.jpg">
-      <img src="images/images.jpeg">
+      <div
+        class="parallax-image parallax-image-100"
+        style="background-image:url(images/park-city-skiing-utah.jpg)"
+        data-anchor-target="#dragons + .gap"
+        data-bottom-top="transform: translate3d(0px, -80%, 0px);"
+        data-top-bottom="transform: translate3d(0px, 80%, 0px);"
+      ></div>
+      <!--the +/-80% translation can be adjusted to control the speed difference of the image-->
     </div>
+   
+    <div
+      class="parallax-image-wrapper parallax-image-wrapper-100"
+      data-anchor-target="#bacons + .gap"
+      data-bottom-top="transform:translate3d(0px, 200%, 0px)"
+      data-top-bottom="transform:translate3d(0px, 0%, 0px)">
 
-    <main>
-      <section id="slide-1" class="homeSlide">
-        <div class="bcg"
-          data-center="background-position: 50% 200px;"
-          data-top-bottom="background-position: 50% -240px;"
-          data-anchor-target="#slide-1"
-        >
-          <div class="hsContainer">
-            <div class="hsContent"
-              data-center="background-position: 100% 0px;"
-              data-top-bottom="background-position: 100% -100px;"
-              data-bottom-top="background-position: 100% 100px;"
-              data-anchor-target="#slide-1 div"
-            >
-              <div class="text center-block" style="width:1200px;height:200px;background-color:rgba(30, 30, 30, .7);border-radius:5px;margin-left:-200px">
-                <h1 class="text-center">MountainHacks</h1>
-                <h3 class="text-center">The Mountain-West's first university-level hackathon</h3>
-              </div>
-            </div>
+      <div
+        class="parallax-image parallax-image-100"
+        style="background-image:url(images/SLC.jpg)"
+        data-anchor-target="#bacons + .gap"
+        data-bottom-top="transform: translate3d(0px, -80%, 0px);"
+        data-top-bottom="transform: translate3d(0px, 80%, 0px);"
+      ></div>
+    </div>
+   
+    <div
+      class="parallax-image-wrapper parallax-image-wrapper-50"
+      data-anchor-target="#kittens + .gap"
+      data-bottom-top="transform:translate3d(0px, 300%, 0px)"
+      data-top-bottom="transform:translate3d(0px, 0%, 0px)">
+
+      <div
+        class="parallax-image parallax-image-50"
+        style="background-image:url(images/images.jpeg)"
+        data-anchor-target="#kittens + .gap"
+        data-bottom-top="transform: translate3d(0px, -60%, 0px);"
+        data-top-bottom="transform: translate3d(0px, 60%, 0px);"
+      ></div>
+    </div>
+   
+    <div id="skrollr-body">
+      <div class="header" id="dragons" style="display:none;">
+  <!--          #ignoreThis-->
+      </div>
+      <div class="gap gap-100" style="background-image:url(images/park-city-skiing-utah.jpg); display:table;">
+   
+      <div class="hsContainer">
+        <div class="hsContent">
+          <h1 style="font-size:85px">MountainHacks</h1>
+          <br/>
+          <h3 style="font-size:35px">The mountain-west's first university hackathon.</h3>
+        </div>
+      </div>
+         
+      </div>
+        <div class="content" id="bacons">
+          <p>Landjaeger chicken ham fatback sausage hamburger, tri-tip capicola pastrami pancetta ribeye turducken. Rump shank turkey pig kevin sausage meatloaf tenderloin drumstick short ribs short loin. Prosciutto spare ribs chuck, pork strip steak pork chop swine bacon turkey shoulder andouille. Jowl landjaeger chicken corned beef. Ham hock kielbasa pancetta ground round sausage. Spare ribs porchetta pastrami filet mignon drumstick ball tip. Beef ribs prosciutto kevin, landjaeger shoulder ham hock ham brisket sirloin chuck t-bone drumstick kielbasa pork chop.</p>
+
+          <p>Landjaeger spare ribs chicken ball tip, filet mignon frankfurter ribeye tenderloin corned beef. Strip steak boudin pork loin, chicken turkey ball tip beef ribs ground round shank ham hock. Kevin capicola beef, chuck pork chop shoulder brisket doner meatloaf shank ham hock tenderloin. Chuck ham hock short ribs ground round sausage prosciutto shoulder bacon andouille tri-tip beef biltong filet mignon chicken. Pork belly andouille shank, bacon sausage meatloaf bresaola pork chop short ribs t-bone. Ham hock salami porchetta bacon beef turkey, strip steak kielbasa pancetta brisket meatball t-bone.</p>
+
+          <p>Chicken pancetta capicola chuck, turkey meatball jerky frankfurter kielbasa ball tip bacon ground round. Beef ribs brisket meatloaf short ribs landjaeger shankle spare ribs sausage, pancetta swine sirloin flank. Tail shank chuck pancetta, ham meatloaf short ribs sausage rump turkey kevin pork chop landjaeger. Doner boudin short ribs t-bone, jerky shankle bresaola drumstick. Strip steak shank spare ribs boudin doner short ribs. Boudin prosciutto jowl tenderloin tongue beef ribs, short ribs salami short loin strip steak ham jerky. Shank pancetta beef ribs, corned beef ham hock pork belly drumstick tail bresaola chuck.</p>
+        </div>
+        <div class="gap gap-100" style="background-color:#00DD22"></div>
+        <div class="content content-full" id="kittens">
+          Here be kittens
+        </div>
+        <div class="gap gap-50" style="background-color:#DD2200"></div>
+        <div class="content" id="done">
+          <h4 style="font-size:40px">Organizer Team:</h4>
+          <div class="center-block" style="display:block;width:80%">
+            <p class="text-center" style="font-size:40px">Derek Argueta</p>
+            <img src="images/profiles/derek.jpg" height="150" width="150" alt="SwagMaster" style="border-radius:75px;margin-top:-30px" class="center-block">
+          </div>
+          <div class="center-block" style="display:block;width:80%">
+            <p class="text-center" style="font-size:40px">Greg Holguin</p>
+            <img src="images/profiles/greg.jpg" height="150" width="150" alt="SwagMaster" style="border-radius:75px;margin-top:-30px" class="center-block">
+          </div>
+          <div class="center-block" style="display:block;width:80%">
+            <p class="text-center" style="font-size:40px">Jeff Barton</p>
+            <img src="images/profiles/jeff.jpg" height="150" width="150" alt="SwagMaster" style="border-radius:75px;margin-top:-30px" class="center-block">
           </div>
         </div>
-      </section>
-
-      <!-- Section 2 -->
-      <section id="slide-2" class="homeSlide">
-        <div class="bcg"
-          data-center="background-position: 100% 0px;"
-          data-top-bottom="background-position: 100% 0px;"
-          data-anchor-target="#slide-2"
-        >
-          <div class="hsContainer">
-            <div class="hsContent"
-              data-center="background-position: 100% 0px;"
-              data-top-bottom="background-position: 100% -100px;"
-              data-bottom-top="background-position: 100% 100px;"
-              data-anchor-target="#slide-2 h2"
-            >
-              <h2>Great for telling stories</h2>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- Section 3 -->
-      <section id="slide-3" class="homeSlide">
-        <div class="bcg"
-          data-center="background-position: 100% 0px;"
-          data-top-bottom="background-position: 100% -100px;"
-          data-anchor-target="#slide-3"
-        >
-          <div class="hsContainer">
-            <div class="hsContent"
-              data-center="background-position: 100% 0px;"
-              data-top-bottom="background-position: 100% -100px;"
-              data-bottom-top="background-position: 100% 100px;"
-              data-anchor-target="#slide-3 h2"
-            >
-              <h2>swag</h2>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
-     <script>
-       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-       ga('create', 'UA-XXXXX-X');
-       ga('send', 'pageview');
-    </script>
-
-    <!-- build:js(.) scripts/vendor.js -->
-    <!-- bower:js -->
-    <script src="bower_components/modernizr/modernizr.js"></script>
-    <script src="bower_components/jquery/dist/jquery.js"></script>
-    <script src="bower_components/es5-shim/es5-shim.js"></script>
-    <script src="bower_components/angular/angular.js"></script>
-    <script src="bower_components/json3/lib/json3.js"></script>
-    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
-    <script src="bower_components/angular-resource/angular-resource.js"></script>
-    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
-    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
-    <script src="bower_components/angular-animate/angular-animate.js"></script>
-    <script src="bower_components/angular-touch/angular-touch.js"></script>
-    <script src="bower_components/angular-route/angular-route.js"></script>
-    <script src="bower_components/skrollr/src/skrollr.js"></script>
-    <script src="bower_components/eventEmitter/EventEmitter.js"></script>
-    <script src="bower_components/eventie/eventie.js"></script>
-    <script src="bower_components/imagesloaded/imagesloaded.js"></script>
-    <!-- endbower -->
-    <!-- endbuild -->
-
-    <script>
-      var s = skrollr.init();
-      s.refresh($('.homeSlide'));
-    </script>
-
-        <!-- build:js({.tmp,app}) scripts/scripts.js -->
-        <script src="scripts/app.js"></script>
-        <script src="scripts/controllers/main.js"></script>
-        <!-- endbuild -->
+      </div>
+ 
+        <script type="text/javascript" src="bower_components/skrollr/src/skrollr.js"></script>
+        <script type="text/javascript">
+        skrollr.init({
+          smoothScrolling: false,
+          mobileDeceleration: 0.004
+        });
+        </script>
   </body>
+ 
 </html>

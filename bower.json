@@ -1,6 +1,6 @@
 {
-  "name": "mh-front",
-  "version": "0.0.0",
+  "name": "MountainHacks-FrontEnd",
+  "version": "0.0.1",
   "dependencies": {
     "angular": "~1.2.0",
     "json3": "~3.3.1",
