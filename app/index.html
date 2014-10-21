@@ -62,6 +62,11 @@
         top:-50%;
       }
 
+      .parallax-image-wrapper-75 {
+        height:75%;
+        top:-75%;
+      }
+
       .parallax-image-wrapper-100 {
         height:100%;
         top:-100%;
@@ -81,6 +86,11 @@
       .parallax-image-50 {
         height:200%;
         top:-50%;
+      }
+
+      .parallax-image-75 {
+        height: 150%;
+        top:-33%;
       }
 
       .parallax-image-100 {
@@ -139,7 +149,7 @@
     </style>
   </head>
    
-  <body>
+  <body style="text-align:center">
  
     <div
       class="parallax-image-wrapper parallax-image-wrapper-100"
@@ -180,10 +190,10 @@
 
       <div
         class="parallax-image parallax-image-50"
-        style="background-image:url(images/images.jpeg)"
+        style="background-image:url(images/images.jpg)"
         data-anchor-target="#kittens + .gap"
-        data-bottom-top="transform: translate3d(0px, -60%, 0px);"
-        data-top-bottom="transform: translate3d(0px, 60%, 0px);"
+        data-bottom-top="transform: translate3d(0px, -80%, 0px);"
+        data-top-bottom="transform: translate3d(0px, 80%, 0px);"
       ></div>
     </div>
    
@@ -203,30 +213,67 @@
          
       </div>
         <div class="content" id="bacons">
-          <p>Landjaeger chicken ham fatback sausage hamburger, tri-tip capicola pastrami pancetta ribeye turducken. Rump shank turkey pig kevin sausage meatloaf tenderloin drumstick short ribs short loin. Prosciutto spare ribs chuck, pork strip steak pork chop swine bacon turkey shoulder andouille. Jowl landjaeger chicken corned beef. Ham hock kielbasa pancetta ground round sausage. Spare ribs porchetta pastrami filet mignon drumstick ball tip. Beef ribs prosciutto kevin, landjaeger shoulder ham hock ham brisket sirloin chuck t-bone drumstick kielbasa pork chop.</p>
-
-          <p>Landjaeger spare ribs chicken ball tip, filet mignon frankfurter ribeye tenderloin corned beef. Strip steak boudin pork loin, chicken turkey ball tip beef ribs ground round shank ham hock. Kevin capicola beef, chuck pork chop shoulder brisket doner meatloaf shank ham hock tenderloin. Chuck ham hock short ribs ground round sausage prosciutto shoulder bacon andouille tri-tip beef biltong filet mignon chicken. Pork belly andouille shank, bacon sausage meatloaf bresaola pork chop short ribs t-bone. Ham hock salami porchetta bacon beef turkey, strip steak kielbasa pancetta brisket meatball t-bone.</p>
-
-          <p>Chicken pancetta capicola chuck, turkey meatball jerky frankfurter kielbasa ball tip bacon ground round. Beef ribs brisket meatloaf short ribs landjaeger shankle spare ribs sausage, pancetta swine sirloin flank. Tail shank chuck pancetta, ham meatloaf short ribs sausage rump turkey kevin pork chop landjaeger. Doner boudin short ribs t-bone, jerky shankle bresaola drumstick. Strip steak shank spare ribs boudin doner short ribs. Boudin prosciutto jowl tenderloin tongue beef ribs, short ribs salami short loin strip steak ham jerky. Shank pancetta beef ribs, corned beef ham hock pork belly drumstick tail bresaola chuck.</p>
+          <p style="font-size:30px" class="text-center">MountainHacks is the Mountain-West's premier 24-hour hackathon for university students.
+          <br/>
+          Come build with us.</p>
         </div>
         <div class="gap gap-100" style="background-color:#00DD22"></div>
-        <div class="content content-full" id="kittens">
+        <div class="content" id="kittens">
+          <div style="height:500px;display:inline-block;margin-left:auto;margin-right:auto">
+            <!--Info blob-->
+            <div style="width:200px;height:300px;float:left;margin:40px">
+              <h4 class="text-center">So how does this work?</h4>
+              <p class="text-center">You have 24 hours to build a new unique product, whether it be an iOS app, an Android app, a web app, a platform, a hardware hack... etc. The only rule is that it has to be an original product. All your programming must take place at the hackathon, however you may come up with ideas and form teams prior to the event.</p>
+            </div>
+
+            <!--Info blob-->
+            <div style="width:200px;height:300px;float:left;margin:40px">
+              <h4 class="text-center">What should I bring?</h4>
+              <p class="text-center">Just bring you, your laptop, and your awesome coding skills. Some optional items you can bring are pillows, headphones, small whiteboards, a travel size blanket, and anything else you need to be comfortable hacking!</p>
+            </div>
+
+            <!--Info blob-->
+            <div style="width:200px;height:300px;float:left;margin:40px">
+              <h4 class="text-center">Am I locked in?</h4>
+              <p class="text-center">Not at all! You are free to leave the venue whenever you like or need to.</p>
+            </div>
+          </div>
         </div>
         <div class="gap gap-50" style="background-color:#DD2200"></div>
         <div class="content" id="done">
           <h4 style="font-size:40px">Organizer Team:</h4>
+
+          <!-- Derek's Bio -->
           <div class="center-block" style="display:block;width:80%">
             <p class="text-center" style="font-size:40px">Derek Argueta</p>
-            <img src="images/profiles/derek.jpg" height="150" width="150" alt="SwagMaster" style="border-radius:75px;margin-top:-30px" class="center-block">
+            <div style="background-image:url(images/profiles/derek.jpg);height:150px;width:150px;border-radius:75px;margin-top:-30px;float:left;background-repeat:no-repeat;background-size: 100% 100%"></div>
+            <div style="width:100%;margin-left:170px">
+              <p style="font-size:26px;text-align:left">Derek is a student at BYU studying Computer Science. His main interests are in iOS, Android, and Django development.</p>
+            </div>
           </div>
+
+          <div style="width:100%;height:1px;clear:both"></div>
+
+          <!-- Greg's Bio -->
           <div class="center-block" style="display:block;width:80%">
             <p class="text-center" style="font-size:40px">Greg Holguin</p>
-            <img src="images/profiles/greg.jpg" height="150" width="150" alt="SwagMaster" style="border-radius:75px;margin-top:-30px" class="center-block">
+            <div style="background-image:url(images/profiles/greg.jpg);height:150px;width:150px;border-radius:75px;margin-top:-30px;float:left;background-repeat:no-repeat;background-size: 100% 100%"></div>
+            <div style="width:100%;margin-left:170px">
+              <p style="font-size:26px;text-align:left">Greg is a scrub at GeoPattern</p>
+            </div>
           </div>
+
+          <div style="width:100%;height:1px;clear:both"></div>
+
+          <!-- Jeff's Bio -->
           <div class="center-block" style="display:block;width:80%">
             <p class="text-center" style="font-size:40px">Jeff Barton</p>
-            <img src="images/profiles/jeff.jpg" height="150" width="150" alt="SwagMaster" style="border-radius:75px;margin-top:-30px" class="center-block">
+            <div style="background-image:url(images/profiles/jeff.jpg);height:150px;width:150px;border-radius:75px;margin-top:-30px;float:left;background-repeat:no-repeat;background-size: 100% 100%"></div>
+            <div style="width:100%;margin-left:170px">
+              <p style="font-size:26px;text-align:left">Jeff is also a student a BYU. He is studying Electrical Engineering and enjoys hacking around with microcontrollers and circuits.</p>
+            </div>
           </div>
+
         </div>
       </div>
  
