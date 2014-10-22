@@ -201,59 +201,58 @@
 
         <div class="gap gap-50" style="background-color:#DD2200"></div>
         <div class="content box-shawdow-inset" id="done">
-          <h4 style="font-size:40px">Organizer Team:</h4>
-
+          <h4 style="font-size:40px">Meet the team.</h4>
+          <div style="height:4em;"></div>
           <!-- Derek's Bio -->
           <div class="center-block">
-            <p class="text-center" style="font-size:40px">Derek Argueta</p>
             <div id="derek_bio" class="bio-strip-pic"></div>
             <div class="bio-strip-content">
               <p>Derek is a student at BYU studying Computer Science. His main interests are in iOS, Android, and Django development.</p>
             </div>
+            <div class="bio-strip-nametag"><strong>Derek Argueta</strong></div>
           </div>
 
           <div style="width:100%;height:1px;clear:both"></div>
 
           <!-- Greg's Bio -->
           <div class="center-block">
-            <p class="text-center" style="font-size:40px">Greg Holguin</p>
             <div id="greg_bio" class="bio-strip-pic"></div>
             <div class="bio-strip-content">
               <p>Greg is studying Graphic Design in Houston, Texas and is helping out MountainHacks remotely with web design and misc. tasks.</p>
             </div>
+            <div class="bio-strip-nametag"><strong>Greg Holguin</strong></div>
           </div>
 
           <div style="width:100%;height:1px;clear:both"></div>
 
           <!-- Jeff's Bio -->
           <div class="center-block">
-            <p class="text-center" style="font-size:40px">Jeff Barton</p>
             <div id="jeff_bio" class="bio-strip-pic"></div>
             <div class="bio-strip-content">
               <p>Jeff is also a student a BYU. He is studying Electrical Engineering and enjoys hacking around with microcontrollers and circuits.</p>
             </div>
+            <div class="bio-strip-nametag"><strong>Jeff Barton</strong></div>
           </div>
 
         </div>
       </div>
  
-        <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
-        <script type="text/javascript" src="bower_components/skrollr/src/skrollr.js"></script>
-        <script type="text/javascript">
-          skrollr.init({
-            smoothScrolling: false,
-            mobileDeceleration: 0.004
-          });
+      <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+      <script type="text/javascript" src="bower_components/skrollr/src/skrollr.js"></script>
+      <script type="text/javascript">
+        skrollr.init({
+          smoothScrolling: false,
+          mobileDeceleration: 0.004
+        });
 
-          $('.btn-group button').click(function() {
-              $(this).parent().children().removeClass('active');
-              $(this).addClass('active');
-          });
-        </script>
-        <script type="text/javascript" src="bower_components/geopattern/js/geopattern.min.js"></script>
-        <script type="text/javascript" src="scripts/geopattern.js"></script>
+        $('.btn-group button').click(function() {
+            $(this).parent().children().removeClass('active');
+            $(this).addClass('active');
+        });
+      </script>
+      <script type="text/javascript" src="bower_components/geopattern/js/geopattern.min.js"></script>
+      <script type="text/javascript" src="scripts/geopattern.js"></script>
 
-        <div style="width:100%;clear:both;height:75px"></div>
+      <div style="width:100%;clear:both;height:75px"></div>
   </body>
- 
 </html>
