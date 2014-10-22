@@ -4,7 +4,7 @@ MountainHacks is a 24-hour hackathon in the Utah valley for university and high 
 
 Installation
 ============
-1) Clone down the repository
-2) Run "npm install"
-3) Run "bower install"
+1) Clone down the repository<br/>
+2) Run "npm install"<br/>
+3) Run "bower install"<br/>
 4) Run "grunt serve"

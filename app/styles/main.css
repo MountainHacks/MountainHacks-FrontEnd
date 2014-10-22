@@ -6,14 +6,29 @@
 hr {
   border-color:rgba(0,0,0,0.4); 
 }
+
+.bar {
+  width: 100%;
+  clear: both;
+}
+
+#form {
+  width: 300px;
+}
+
+#form > p {
+  margin-bottom: 10px;
+  width: 100%;
+}
    
 .hsContent {
   background: rgba(0,0,0,0.5);
   width: 900px;
   margin: 0 auto;
   padding: 50px;
+  padding-top: 20px;
   border-radius: 10px;
-  height: 400px;    
+  /*height: 400px;    */
 }
    
 .hsContainer {
