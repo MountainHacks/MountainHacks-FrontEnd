@@ -13,8 +13,12 @@
 
   </head>
    
-  <body>
+  <body ng-app="mountainhacks">
  
+    <!-- <div class="container">
+      <div ng-view=""></div>
+    </div> -->
+    
     <div
       class="parallax-image-wrapper parallax-image-wrapper-100"
       data-anchor-target="#dragons + .gap"
@@ -238,8 +242,17 @@
         </div>
       </div>
  
-      <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
-      <script type="text/javascript" src="bower_components/skrollr/src/skrollr.js"></script>
+      <!-- Libraries -->
+      <script src="bower_components/angular/angular.js"></script>
+      <script src="bower_components/angular-resource/angular-resource.min.js"></script>
+      <script src="bower_components/angular-route/angular-route.min.js"></script>
+      <script src="bower_components/lodash/dist/lodash.compat.js"></script>
+      <script src="bower_components/restangular/dist/restangular.min.js"></script>
+      <script src="bower_components/jquery/dist/jquery.min.js"></script>
+      <script src="bower_components/skrollr/src/skrollr.js"></script>
+      <script src="bower_components/geopattern/js/geopattern.min.js"></script>
+
+      <!-- Custom JavaScript -->
       <script type="text/javascript">
         skrollr.init({
           smoothScrolling: false,
@@ -251,8 +264,9 @@
             $(this).addClass('active');
         });
       </script>
-      <script type="text/javascript" src="bower_components/geopattern/js/geopattern.min.js"></script>
-      <script type="text/javascript" src="scripts/geopattern.js"></script>
+      <script src="scripts/geopattern.js"></script>
+      <script src="scripts/app.js"></script>
+      <script src="scripts/controllers/main.js"></script>
 
       <div style="width:100%;clear:both;height:75px"></div>
   </body>

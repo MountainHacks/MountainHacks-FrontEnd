@@ -7,11 +7,7 @@
  * # MainCtrl
  * Controller of the mhFrontApp
  */
-angular.module('mhFrontApp')
-  .controller('MainCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-  });
+angular.module('mountainhacks')
+  .controller('MainCtrl', ['$scope', 'Restangular', function ($scope, Restangular) {
+
+  }]);

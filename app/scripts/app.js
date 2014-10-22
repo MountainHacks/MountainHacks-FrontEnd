@@ -3,32 +3,33 @@
 /**
  * @author Derek Argueta
  * @ngdoc overview
- * @name mhFrontApp
+ * @name mountainhacks
  * @description
- * # mhFrontApp
+ * # mountainhacks
  *
  * Main module of the application.
  */
 angular
-  .module('mhFrontApp', [
-    'ngAnimate',
-    'ngCookies',
+  .module('mountainhacks', [
     'ngResource',
     'ngRoute',
-    'ngSanitize',
-    'ngTouch'
+    'restangular'
   ])
-  .config(function ($routeProvider) {
+
+  .config(['$httpProvider', function($httpProvider) {
+    $httpProvider.defaults.xsrfCookieName = 'csrftoken';
+    $httpProvider.defaults.xsrfHeaderName = 'X-CSRFToken';
+  }])
+
+  .config(['$routeProvider', 'RestangularProvider', function ($routeProvider, RestangularProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
       })
-      .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl'
-      })
       .otherwise({
         redirectTo: '/'
       });
-  });
+
+      RestangularProvider.setBaseUrl('http://....');
+  }]);
