@@ -240,10 +240,15 @@
         <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
         <script type="text/javascript" src="bower_components/skrollr/src/skrollr.js"></script>
         <script type="text/javascript">
-        skrollr.init({
-          smoothScrolling: false,
-          mobileDeceleration: 0.004
-        });
+          skrollr.init({
+            smoothScrolling: false,
+            mobileDeceleration: 0.004
+          });
+
+          $('.btn-group button').click(function() {
+              $(this).parent().children().removeClass('active');
+              $(this).addClass('active');
+          });
         </script>
         <script type="text/javascript" src="bower_components/geopattern/js/geopattern.min.js"></script>
         <script type="text/javascript" src="scripts/geopattern.js"></script>
