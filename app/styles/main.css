@@ -32,7 +32,6 @@ hr {
   padding: 50px;
   padding-top: 20px;
   border-radius: 10px;
-  /*height: 400px;    */
 }
    
 .hsContainer {
@@ -277,4 +276,14 @@ p {
 
 #done {
   height:125%;
+}
+
+#done > div > a, #done > p > a {
+  color: black;
+  cursor: default;
+}
+
+#done > div > a:hover, #done > p > a:hover {
+  text-decoration: none;
+  cursor: default;
 }
