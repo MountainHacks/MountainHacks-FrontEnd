@@ -67,10 +67,9 @@ hr {
 }
 
 .info-blob {
-  width: 260px;
   height: 425px; 
   float: left;
-  margin: 40px;
+  margin: 5px;
 }
 
 .info_row {
@@ -186,7 +185,7 @@ p {
 .parallax-image-wrapper {
   position:fixed;
   left:0;
-  width:100%;
+  width:200%;
   overflow:hidden;
 }
 
