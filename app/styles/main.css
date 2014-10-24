@@ -86,6 +86,10 @@ hr {
   margin-top:1em;
 }
 
+.info-blob > i {
+  font-size: 72px;
+}
+
 .center-block {
   display: block;
   width: 80%;
