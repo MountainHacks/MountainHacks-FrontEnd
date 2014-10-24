@@ -22,14 +22,14 @@
     
     <div
       class="parallax-image-wrapper parallax-image-wrapper-100"
-      data-anchor-target="#dragons + .gap"
-      data-bottom-top="transform:translate3d(0px, 200%, 0px)"
-      data-top-bottom="transform:translate3d(0px, 0%, 0px)">
+      data-anchor-target=".gap"
+      data-bottom-top="transform:translate3d(0px, 200%, 0px);opacity:1"
+      data-top-bottom="transform:translate3d(0px, 0%, 0px);opacity:0">
 
       <div
         class="parallax-image parallax-image-100"
         style="background-image:url(images/park-city-skiing-utah.jpg)"
-        data-anchor-target="#dragons + .gap"
+        data-anchor-target=".gap"
         data-bottom-top="transform: translate3d(0px, -80%, 0px);"
         data-top-bottom="transform: translate3d(0px, 80%, 0px);"
       ></div>
@@ -67,9 +67,6 @@
     </div>
    
     <div id="skrollr-body">
-      <div class="header" id="dragons" style="display:none;">
-  <!--          #ignoreThis-->
-      </div>
       <div class="gap gap-100" style="background-image:url(images/park-city-skiing-utah.jpg); display:table;">
    
       <div class="hsContainer">
@@ -151,6 +148,17 @@
               </div>
             </div>
           </div>
+
+          <!-- <div class="info_row">
+            <div class="text-center info-blob">
+                <i class="fa fa-question" style="font-size: 84px;"></i>
+                <h4>So what am I supposed to build?</h4>
+                <hr>
+                <p>Anything you like! Feel free to build web apps, mobile apps, platforms, hardware hacks, developer tools, brower extensions, software plugins, etc. Anything that you're passionate about building. Just make sure you can pull it off within 24 hours!</p>
+              </div>
+            </div>
+          </div> -->
+
         </div>
         <div class="gap gap-100" style="background-color:#00DD22; display:table;">
 
@@ -161,19 +169,19 @@
               <form id="form" class="center-block">
                 <p class="text-left">
                   First Name:
-                  <input name="first_name" placeholder="Your first name" class="pull-right">
+                  <input name="first_name" placeholder="Your first name" class="pull-right" required>
                 </p>
                 <p class="text-left">
                   Last Name:
-                  <input name="last_name" placeholder="Your last name" class="pull-right">
+                  <input name="last_name" placeholder="Your last name" class="pull-right" required>
                 </p>
                 <p class="text-left">
                   Email:
-                  <input name="email" placeholder="Your .edu email please" class="pull-right">
+                  <input name="email" placeholder="Your .edu email please" class="pull-right" required>
                 </p>
                 <p class="text-left">
                   School:
-                  <input name="school" placeholder="Your school" class="pull-right">
+                  <input name="school" placeholder="Your school" class="pull-right" required>
                 </p>
                 <p class="text-left pull-left" style="width:100px">Shirt Size:</p>
                 <div class="btn-group pull-right" data-toggle="buttons" style="margin-top:10px;margin-bottom:30px">
