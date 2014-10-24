@@ -7,6 +7,10 @@ hr {
   border-color:rgba(0,0,0,0.4); 
 }
 
+.hsContent > a {
+  color: white;
+}
+
 .bar {
   width: 100%;
   clear: both;
