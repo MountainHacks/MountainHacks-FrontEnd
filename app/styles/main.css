@@ -70,7 +70,7 @@ hr {
 }
 
 .info_row {
-  height: 470px;
+  height: 490px;
   display: inline-block;
   margin-right: auto;
   margin-left: auto;
@@ -120,6 +120,10 @@ hr {
   float:left;
   font-size:20px;
   margin-bottom: 4em;
+}
+
+.font-raleway {
+  font-family: 'Raleway', sans-serif;
 }
 
 html, body {
