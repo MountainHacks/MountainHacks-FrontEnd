@@ -14,6 +14,7 @@ hr {
 .bar {
   width: 100%;
   clear: both;
+  height: 1px;
 }
 
 #form {
