@@ -59,16 +59,9 @@ hr { border-color:rgba(0, 0, 0, 0.4); }
 .large-fa { font-size: 30px; }
 
 .info-blob {
-<<<<<<< HEAD
   height: 425px; 
   float: left;
   margin: 5px;
-=======
-  float: left;
-  height: 425px; 
-  margin: 40px;
-  width: 260px;
->>>>>>> 527b697ff2e62561cb1c7409accd8e7e101ccd78
 }
 
 .info_row {
