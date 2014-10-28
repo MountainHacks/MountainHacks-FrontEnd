@@ -21,10 +21,10 @@
 /* #Base 960 Grid
 ================================================== */
 
-    .container, .info-blobs                     { position: relative; width: 960px; margin: 0 auto; padding: 0; }
+    .container, .info-blobs,                     { position: relative; width: 960px; margin: 0 auto; padding: 0; }
     .container .column,
     .container .columns                         { float: left; display: inline; margin-left: 10px; margin-right: 10px; }
-    .row, .info_row                             { margin-bottom: 20px; }
+    .row                                        { margin-bottom: 20px; }
 
     /* Nested Column Classes */
     .column.alpha, .columns.alpha               { margin-left: 0; }
@@ -47,7 +47,7 @@
     .container .thirteen.columns                { width: 760px; }
     .container .fourteen.columns                { width: 820px; }
     .container .fifteen.columns                 { width: 880px; }
-    .container .sixteen.columns                 { width: 940px; }
+    .container .sixteen.columns, .info_row      { width: 940px; }
 
     .container .one-third.column                { width: 300px; }
     .container .two-thirds.column               { width: 620px; }
@@ -77,7 +77,7 @@
     /* Note: Design for a width of 768px */
 
     @media only screen and (min-width: 768px) and (max-width: 959px) {
-        .container                                  { width: 768px; }
+        .container, .info-blobs                                  { width: 768px; }
         .container .column,
         .container .columns                         { margin-left: 10px; margin-right: 10px;  }
         .column.alpha, .columns.alpha               { margin-left: 0; margin-right: 10px; }
@@ -88,7 +88,7 @@
         .container .one.columns                     { width: 28px; }
         .container .two.columns                     { width: 76px; }
         .container .three.columns                   { width: 124px; }
-        .container .four.columns, .info-blob        { width: 172px; }
+        .container .four.columns, .info-blob                    { width: 172px; }
         .container .five.columns                    { width: 220px; }
         .container .six.columns                     { width: 268px; }
         .container .seven.columns                   { width: 316px; }
@@ -100,7 +100,7 @@
         .container .thirteen.columns                { width: 604px; }
         .container .fourteen.columns                { width: 652px; }
         .container .fifteen.columns                 { width: 700px; }
-        .container .sixteen.columns                 { width: 748px; }
+        .container .sixteen.columns, .info_row                 { width: 748px; }
 
         .container .one-third.column                { width: 236px; }
         .container .two-thirds.column               { width: 492px; }
@@ -130,7 +130,7 @@
     /* Note: Design for a width of 320px */
 
     @media only screen and (max-width: 767px) {
-        .container { width: 300px; }
+        .container, .info-blobs { width: 300px; }
         .container .columns,
         .container .column { margin: 0; }
 
@@ -180,7 +180,7 @@
     /* Note: Design for a width of 480px */
 
     @media only screen and (min-width: 480px) and (max-width: 767px) {
-        .container { width: 420px; }
+        .container, .info-blobs { width: 420px; }
         .container .columns,
         .container .column { margin: 0; }
 
