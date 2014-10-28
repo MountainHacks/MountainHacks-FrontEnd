@@ -19,7 +19,7 @@ hr { border-color:rgba(0, 0, 0, 0.4); }
   margin-bottom: 10px;
   width: 100%;
 }
-   
+
 .hsContent {
   background: rgba(0, 0, 0, 0.5);
   border-radius: 10px;
@@ -28,7 +28,7 @@ hr { border-color:rgba(0, 0, 0, 0.4); }
   padding-top: 20px;
   width: 900px;
 }
-   
+
 .hsContainer {
   color: white;
   display: table-cell;
@@ -56,17 +56,24 @@ hr { border-color:rgba(0, 0, 0, 0.4); }
   width: 2em;
 }
 
+#home-sponsor {
+  text-decoration: none;
+}
+
+#home-sponsor:hover {
+  color: #ccc;
+}
+
 .large-fa { font-size: 30px; }
 
 .info-blob {
-  height: 425px; 
+  height: 425px;
   float: left;
   margin: 5px;
 }
 
 .info_row {
   height: 490px;
-  display: inline-block;
   margin-left: auto;
   margin-right: auto;
 }
@@ -149,7 +156,7 @@ p { margin:1em 0; }
 #jeff_bio:hover { background-image: url(http://goo.gl/Hw4YyL); }
 
 /*-----------------------------
-|                             | 
+|                             |
 | Skrollr CSS                 |
 |                             |
 ------------------------------*/
@@ -256,4 +263,4 @@ p { margin:1em 0; }
 #done > div > a:hover {
   cursor: default;
   text-decoration: none;
-} 
+}

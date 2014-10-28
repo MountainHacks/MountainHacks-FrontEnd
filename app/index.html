@@ -10,12 +10,13 @@
     <link rel="stylesheet" type="text/css" href="styles/main.css">
     <link rel="stylesheet" type="text/css" href="bower_components/fontawesome/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="styles/skeleton.css">
+    <link rel="stylesheet" type="text/css" href="styles/breakpoints.css">
     <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
 
   </head>
-   
+
   <body ng-app="mountainhacks">
-    
+
     <div
       class="parallax-image-wrapper parallax-image-wrapper-100"
       data-anchor-target=".gap"
@@ -31,7 +32,7 @@
       ></div>
       <!--the +/-80% translation can be adjusted to control the speed difference of the image-->
     </div>
-   
+
     <div
       class="parallax-image-wrapper parallax-image-wrapper-100"
       data-anchor-target="#bacons + .gap"
@@ -46,7 +47,7 @@
         data-top-bottom="transform: translate3d(0px, 80%, 0px);"
       ></div>
     </div>
-   
+
     <div
       class="parallax-image-wrapper parallax-image-wrapper-50"
       data-anchor-target="#kittens + .gap"
@@ -61,7 +62,7 @@
         data-top-bottom="transform: translate3d(0px, 40%, 0px);"
       ></div>
     </div>
-   
+
     <div id="skrollr-body">
       <div class="gap gap-100" style="background-image:url(images/park-city-skiing-utah.jpg); display:table;">
       <div class="hsContainer">
@@ -69,27 +70,42 @@
         <div class="hsContent" style="padding-bottom:0px">
           <img src="images/logo.svg" width="150px" />
           <br />
-          <h1 style="font-size:85px; margin-bottom:0; margin-top:0; line-heigth:0;">
+          <h1 id="home-title"style="font-size:85px; margin-bottom:0; margin-top:0; line-heigth:0;">
             MountainHacks
           </h1>
-          <h3 class="font-raleway" style="font-size:35px;margin-bottom:1.25em;margin-top:0;">
+          <h3 id="home-subtitle" class="font-raleway" style="font-size:35px;margin-bottom:1.25em;margin-top:0;">
             The mountain-west's first university hackathon.
           </h3>
-          <div class="center-block">
-            <p class="text-center" style="font-size:30px">
+
+          <div class="center-block no-sm">
+            <p id="home-date" class="text-center" style="font-size:30px">
             <a href="http://goo.gl/5rFDJn" target="_blank">
               <i class="fa fa-facebook social-icon-large"></i>
             </a>
-            <span class="font-raleway">Feb. 27-28th 2015</span>
+            <span class="font-raleway">Feb. 27-28th, 2015</span>
             <a href="http://goo.gl/IbjldB" target="_blank">
               <i class="fa fa-twitter social-icon-large" style="float:right"></i>
             </a>
             </p>
           </div>
-          <a href="mailto:derek@mountainhacks.com" target="_blank"><p style="font-size:35px">Interested in sponsoring?</p></a>
+
+          <div id="home-info-only-sm" class="only-sm" style="display: none;">
+            <div>
+              <span class="font-raleway">Feb. 27-28th, 2015</span>
+            </div>
+            <div>
+            <a href="http://goo.gl/5rFDJn" target="_blank">
+              <i class="fa fa-facebook social-icon-large"></i>
+            </a>
+            <a href="http://goo.gl/IbjldB" target="_blank">
+              <i class="fa fa-twitter social-icon-large" style="float:right"></i>
+            </a></div>
+          </div>
+
+          <a id="home-sponsor" href="mailto:derek@mountainhacks.com" target="_blank"><p style="font-size:35px">Interested in sponsoring?</p></a>
         </div>
       </div>
-         
+
       </div>
         <div class="content box-shawdow-inset" id="bacons">
           <p style="font-size:30px; width:80%; margin:1em auto;" class="text-center">
@@ -126,7 +142,7 @@
 
             <!-- row -->
             <div class="info_row" style="position:relative;" data-bottom-top="opacity:.65" data-center-center="opacity:1" data-top="opacity:0.8">
-              
+
               <!--Info blob-->
               <div class="text-center info-blob" style="position:relative;" data-bottom-top="opacity:.65;" data-center-center="opacity:1;" data-top="opacity:0.8">
                 <i class="fa fa-group"></i>
@@ -166,7 +182,7 @@
 
           <div class="hsContainer" style="margin: 0 auto;">
             <div class="hsContent">
-            
+
               <h1 class="font-raleway">Registration</h1>
               <form id="form" class="center-block">
                 <p class="text-left">
@@ -242,7 +258,7 @@
 
         </div>
         <div class="content" id="kittens" style="display:none;">
-          Use this space for something new 
+          Use this space for something new
         </div>
 
         <div class="gap gap-50" style="background-color:#DD2200"></div>
@@ -283,7 +299,7 @@
           <p>Coded with <a href="http://goo.gl/Yx6toJ" target="_blank">♥</a> by <a href="http://goo.gl/liafQq" target="_blank">Derek</a> and <a href="http://goo.gl/yA7a5m" target="_blank">Greg</a></p>
         </div>
       </div>
- 
+
       <!-- Libraries -->
       <script src="bower_components/angular/angular.js"></script>
       <script src="bower_components/angular-resource/angular-resource.min.js"></script>
