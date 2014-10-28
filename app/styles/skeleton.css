@@ -88,7 +88,7 @@
         .container .one.columns                     { width: 28px; }
         .container .two.columns                     { width: 76px; }
         .container .three.columns                   { width: 124px; }
-        .container .four.columns, .info-blob                    { width: 172px; }
+        .container .four.columns, .info-blob        { width: 172px; }
         .container .five.columns                    { width: 220px; }
         .container .six.columns                     { width: 268px; }
         .container .seven.columns                   { width: 316px; }
@@ -130,7 +130,7 @@
     /* Note: Design for a width of 320px */
 
     @media only screen and (max-width: 767px) {
-        .container, .info-blobs { width: 300px; }
+        .container { width: 300px; }
         .container .columns,
         .container .column { margin: 0; }
 

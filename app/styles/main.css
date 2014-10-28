@@ -155,17 +155,10 @@ p { margin:1em 0; }
 ------------------------------*/
 
 .parallax-image-wrapper {
-<<<<<<< HEAD
-  position:fixed;
-  left:0;
-  width:200%;
-  overflow:hidden;
-=======
   left: 0;
   overflow: hidden;
   position: fixed;
   width: 100%;
->>>>>>> 527b697ff2e62561cb1c7409accd8e7e101ccd78
 }
 
 .parallax-image-wrapper-50 {
