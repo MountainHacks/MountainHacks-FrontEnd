@@ -447,7 +447,7 @@
           console.log("data : " + $(datablob).serialize());
 
           $.ajax({
-            url: "http://localhost:8000/submit",
+            url: "http://api.mountainhacks.com/submit",
             type: "POST",
             data: datablob,
             success: function( data ) {
