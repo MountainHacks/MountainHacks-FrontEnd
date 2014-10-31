@@ -38,7 +38,7 @@ hr { border-color:rgba(0, 0, 0, 0.4); }
   vertical-align: middle;
 }
 
-.box-shawdow-inset {
+.box-shadow-inset {
   background:#ecf0f1 !important;
   -webkit-box-shadow: inset 0px 8px 169px -34px rgba(0,0,0,0.13);
   -moz-box-shadow: inset 0px 8px 169px -34px rgba(0,0,0,0.13);

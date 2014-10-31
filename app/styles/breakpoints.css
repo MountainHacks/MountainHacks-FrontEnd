@@ -43,6 +43,10 @@
 	#home-sponsor p {
 		font-size: 24px !important;
 	}
+
+	#bacons {
+		height: 3150px;
+	}
 }
 
 @media only screen and (min-width: 767px) and (max-width: 959px) {
