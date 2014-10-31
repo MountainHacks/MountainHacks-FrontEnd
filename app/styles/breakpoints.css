@@ -23,12 +23,12 @@
 		font-size: 24px !important;
 	}
 
-	.no-sm {
-		display: none;
-	}
-
 	.only-sm {
 		display: inline-block !important;
+	}
+
+	.no-sm {
+		display: none !important;
 	}
 
 	#home-info-only-sm {
@@ -37,7 +37,7 @@
 
 	.social-icon-large {
 		margin-top:.25em;
-		maring-bottom: 0;
+		margin-bottom: 0;
 	}
 
 	#home-sponsor p {
@@ -46,6 +46,33 @@
 
 	#bacons {
 		height: 3150px;
+	}
+
+	.bio-strip-pic {
+		float: none !important;
+		margin: 0 auto;
+		display:block;
+		width: 200px;
+		height: 200px;
+		border-radius: 100px;
+	}
+
+	.bio-strip-nametag {
+		display:block;
+		text-align: center;
+		width: 100%;
+		font-size: 32px;
+		margin-bottom: 0;
+	}
+
+	.bio-strip-content {
+		margin-top: 1.2em;
+		width: 100%;
+		margin-bottom: 3em;
+	}
+
+	.bio-strip-content > p {
+		text-align: center;
 	}
 }
 
@@ -64,6 +91,40 @@
 		font-size:24px !important;
 	}
 
+	.bs-only-sm {
+		display: inline-block !important;
+		float: left;
+		clear: none;
+		font-size: 32px;
+		width: 300px;
+		margin-top: 90px;
+		margin-bottom: 2.3em;
+	}
+
+	.bs-no-sm {
+		display: none;
+	}
+
+	.bio-strip-content {
+		width: 100%;
+
+	}
+
+	.bio-strip-pic {
+		margin-top: 3em;
+	}
+
+}
+
+
+/*-----------------------------
+|                             |
+| Some Fixin's                |
+|                             |
+------------------------------*/
+
+.only-sm {
+	display: none;
 }
 
 
