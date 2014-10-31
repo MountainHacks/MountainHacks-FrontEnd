@@ -13,6 +13,12 @@
     <link rel="stylesheet" type="text/css" href="styles/breakpoints.css">
     <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
 
+    <style>
+    #form > p > input {
+      color: black;
+    }
+    </style>
+
   </head>
 
   <body ng-app="mountainhacks">
@@ -214,7 +220,7 @@
                 </p>
                 <p class="text-left">
                   Grade:
-                  <select name="grade" class="pull-right" style="margin-top:5px">
+                  <select id="grade" name="grade" class="pull-right" style="margin-top:5px">
                     <option value="High School">High School</option>
                     <option value="Freshman">Freshman</option>
                     <option value="Sophomore">Sophomore</option>
@@ -224,12 +230,12 @@
                   </select>
                 </p>
                 <p class="text-left pull-left" style="width:100px">Gender:</p>
-                <div class="btn-group pull-right" data-toggle="buttons" style="margin-top:10px;margin-bottom:0px">
+                <div id="gender" class="btn-group pull-right" data-toggle="buttons" style="margin-top:10px;margin-bottom:0px">
                   <button type="button" class="btn btn-default">Male</button>
                   <button type="button" class="btn btn-default">Female</button>
                 </div>
                 <p class="text-left pull-left" style="width:100px">Shirt Size:</p>
-                <div class="btn-group pull-right" data-toggle="buttons" style="margin-top:10px;margin-bottom:30px">
+                <div id="shirt" class="btn-group pull-right" data-toggle="buttons" style="margin-top:10px;margin-bottom:30px">
                   <button type="button" class="btn btn-default">XS</button>
                   <button type="button" class="btn btn-default">S</button>
                   <button type="button" class="btn btn-default">M</button>
@@ -237,27 +243,27 @@
                   <button type="button" class="btn btn-default">XL</button>
                 </div>
                 <p class="text-left pull-left" style="width:100px">Out of state Hacker?:</p>
-                <div class="btn-group pull-right" data-toggle="buttons" style="margin-top:-15px;margin-bottom:5px">
+                <div id="outOfState" class="btn-group pull-right" data-toggle="buttons" style="margin-top:-15px;margin-bottom:5px">
                   <button type="button" class="btn btn-default">Yes</button>
                   <button type="button" class="btn btn-default">No</button>
                 </div>
                 <div class="bar"></div>
                 <p class="text-left" style="margin-top:-5px">
                   Github Handle:
-                  <input name="school" placeholder="Username" class="pull-right" required>
+                  <input name="github" placeholder="Username" class="pull-right" required>
                 </p>
                 <p class="text-left">
                   LinkedIn Profile:
-                  <input name="school" placeholder="Public link" class="pull-right" required>
+                  <input name="linkedin" placeholder="Public link" class="pull-right" required>
                 </p>
                 <div class="bar"></div>
                 <p class="text-left pull-left" style="width:100px">First Hackathon?</p>
-                <div class="btn-group pull-right" data-toggle="buttons" style="margin-top:10px;margin-bottom:10px">
+                <div id="first" class="btn-group pull-right" data-toggle="buttons" style="margin-top:10px;margin-bottom:10px">
                   <button type="button" class="btn btn-default">Yes</button>
                   <button type="button" class="btn btn-default">No</button>
                 </div>
                 <div class="bar"></div>
-                <div class="center-block" style="width:100%;max-width:126px"><a class="btn btn-primary">click me babeh!</a></div>
+                <div id="formSubmit" class="center-block" style="width:100%;max-width:126px"><a class="btn btn-primary">click me babeh!</a></div>
               </form>
             </div>
           </div>
@@ -321,6 +327,13 @@
 
       <!-- Custom JavaScript -->
       <script type="text/javascript">
+
+        if (!String.prototype.contains) {
+            String.prototype.contains = function(s, i) {
+                return this.indexOf(s, i) != -1;
+            }
+        }
+
         skrollr.init({
           smoothScrolling: false,
           mobileDeceleration: 0.004
@@ -329,6 +342,52 @@
         $('.btn-group button').click(function() {
             $(this).parent().children().removeClass('active');
             $(this).addClass('active');
+        });
+
+        $("#formSubmit").click(function(e){
+          e.preventDefault();
+          var datablob = {};
+          datablob.first_name = $("#form input[name='first_name']").val();
+          datablob.last_name = $("#form input[name='last_name']").val();
+          datablob.email = $("#form input[name='email']").val();
+          datablob.school = $("#form input[name='school']").val();
+          datablob.major = $("#form input[name='major']").val();
+          datablob.grade = $("#grade option:selected").val();
+          datablob.gender = $("#gender").children(".active").text();
+          datablob.shirt = $("#shirt").children(".active").text();
+          datablob.out_of_state = $("#outOfState").children(".active").text();
+          datablob.github = $("#form input[name='github']").val();
+          datablob.linkedin = $("#form input[name='linkedin']").val();
+          datablob.first = $("#first").children(".active").text();
+
+          // form validation
+          if(datablob.first_name == "") { alert("Please enter your first name."); return; }
+          if(datablob.last_name == "") { alert("Please enter your last name."); return; }
+          if(datablob.email == "") { alert("Please enter your email."); return; }
+          if(!String(datablob.email).contains(".edu")) { alert("Please enter your .edu email."); return; }
+          if(datablob.school == "") { alert("Please enter your school."); return; }
+          if(datablob.major == "") { alert("Please enter your major"); return; }
+          if(datablob.grade == "") { alert("Please enter your grade."); return; }
+          if(datablob.gender == "") { alert("Please enter your gender."); return; }
+          if(datablob.shirt == "") { alert("Please enter your shirt size."); return; }
+          if(datablob.out_of_state == "") { alert("Please indicate if you are out-of-state."); return; }
+          if(datablob.first == "") { alert("Please indicate if you are a first-time hacker."); return; }
+
+          console.log(datablob);
+          console.log("data : " + $(datablob).serialize());
+
+          $.ajax({
+            url: "http://localhost:8000/submit",
+            type: "POST",
+            data: datablob,
+            success: function( data ) {
+              alert("Thanks for registering!");
+              $("#form").trigger("reset");
+            },
+            error: function ( jXHR, textStatus, errorThrown ) {
+              alert("There was a problem submitting your data yo");
+            }
+          })
         });
       </script>
       <script src="scripts/geopattern.js"></script>
