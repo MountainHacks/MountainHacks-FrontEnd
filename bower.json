@@ -20,7 +20,8 @@
     "fontawesome": "~4.2.0",
     "restangular": "~1.4.0",
     "lodash": "~2.4.1",
-    "skeleton": "*"
+    "skeleton": "*",
+    "jquery.ambiance":"git@github.com:richardhsu/jquery.ambiance.git"
   },
   "devDependencies": {
     "angular-mocks": "~1.2.0",

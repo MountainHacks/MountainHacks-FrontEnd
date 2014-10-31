@@ -12,6 +12,7 @@
     <link rel="stylesheet" type="text/css" href="styles/skeleton.css">
     <link rel="stylesheet" type="text/css" href="styles/breakpoints.css">
     <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="bower_components/jquery.ambiance/assets/css/jquery.ambiance.css">
 
     <style>
     #form > p > input {
@@ -324,6 +325,7 @@
       <script src="bower_components/jquery/dist/jquery.min.js"></script>
       <script src="bower_components/skrollr/src/skrollr.js"></script>
       <script src="bower_components/geopattern/js/geopattern.min.js"></script>
+      <script src="bower_components/jquery.ambiance/assets/js/jquery.ambiance.js"></script>
 
       <!-- Custom JavaScript -->
       <script type="text/javascript">
@@ -361,17 +363,85 @@
           datablob.first = $("#first").children(".active").text();
 
           // form validation
-          if(datablob.first_name == "") { alert("Please enter your first name."); return; }
-          if(datablob.last_name == "") { alert("Please enter your last name."); return; }
-          if(datablob.email == "") { alert("Please enter your email."); return; }
-          if(!String(datablob.email).contains(".edu")) { alert("Please enter your .edu email."); return; }
-          if(datablob.school == "") { alert("Please enter your school."); return; }
-          if(datablob.major == "") { alert("Please enter your major"); return; }
-          if(datablob.grade == "") { alert("Please enter your grade."); return; }
-          if(datablob.gender == "") { alert("Please enter your gender."); return; }
-          if(datablob.shirt == "") { alert("Please enter your shirt size."); return; }
-          if(datablob.out_of_state == "") { alert("Please indicate if you are out-of-state."); return; }
-          if(datablob.first == "") { alert("Please indicate if you are a first-time hacker."); return; }
+          if(datablob.first_name == "")
+          { 
+            $.ambiance({
+              message: "Please enter your first name.",
+              type: "error",
+              fade: true
+            }); 
+            return;
+          }
+          if(datablob.last_name == "") {
+            $.ambiance({ message: "Please enter your last name.",
+              type: "error",
+              fade: true
+            });
+            return;
+          }
+          if(datablob.email == "") {
+            $.ambiance({ message: "Please enter your email.",
+              type: "error",
+              fade: true
+            });
+            return;
+          }
+          if(!String(datablob.email).contains(".edu")) {
+            $.ambiance({ message: "Please enter your .edu email.",
+              type: "error",
+              fade: true
+            });
+            return;
+          }
+          if(datablob.school == "") {
+            $.ambiance({ message: "Please enter your school.",
+              type: "error",
+              fade: true
+            });
+            return;
+          }
+          if(datablob.major == "") {
+            $.ambiance({ message: "Please enter your major",
+              type: "error",
+              fade: true
+            });
+            return;
+          }
+          if(datablob.grade == "") {
+            $.ambiance({ message: "Please enter your grade.",
+              type: "error",
+              fade: true
+            });
+            return;
+          }
+          if(datablob.gender == "") {
+            $.ambiance({ message: "Please enter your gender.",
+              type: "error",
+              fade: true
+            });
+            return;
+          }
+          if(datablob.shirt == "") {
+            $.ambiance({ message: "Please enter your shirt size.",
+              type: "error",
+              fade: true
+            });
+            return;
+          }
+          if(datablob.out_of_state == "") {
+            $.ambiance({ message: "Please indicate if you are out-of-state.",
+              type: "error",
+              fade: true
+            });
+            return;
+          }
+          if(datablob.first == "") {
+            $.ambiance({ message: "Please indicate if you are a first-time hacker.",
+              type: "error",
+              fade: true
+            });
+            return;
+          }
 
           console.log(datablob);
           console.log("data : " + $(datablob).serialize());
@@ -381,11 +451,19 @@
             type: "POST",
             data: datablob,
             success: function( data ) {
-              alert("Thanks for registering!");
+              $.ambiance({
+                message: "Thanks for registering!",
+                title: "Success!",
+                type: "success"
+              });
               $("#form").trigger("reset");
             },
             error: function ( jXHR, textStatus, errorThrown ) {
-              alert("There was a problem submitting your data yo");
+              $.ambiance({
+                message: "There was a problem submitting your data yo",
+                type: "error",
+                fade: true
+              });
             }
           })
         });
