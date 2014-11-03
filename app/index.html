@@ -6,24 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
     <title>MountainHacks 2015</title>
-    <link rel="stylesheet" type="text/css"  href="bower_components/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" type="text/css"  href="styles/main.css">
-    <link rel="stylesheet" type="text/css"  href="bower_components/fontawesome/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css"  href="styles/skeleton.css">
-    <link rel="stylesheet" type="text/css"  href="styles/breakpoints.css">
-    <link rel='stylesheet' type='text/css'  href='http://fonts.googleapis.com/css?family=Raleway'  >
-    <link rel="stylesheet" type="text/css"  href="bower_components/jquery.ambiance/assets/css/jquery.ambiance.css">
-    <link rel="icon"       type="image/png" href="logo.ico" />
-    <style>
-    #form > p > input {
-      color: black;
-    }
-    </style>
+
+    <!-- Third Party -->
+    <link rel="stylesheet"
+          href="bower_components/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet"
+          href="bower_components/fontawesome/css/font-awesome.min.css"/>
+    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Raleway'/>
+    <link rel="stylesheet"
+          href="bower_components/jquery.ambiance/assets/css/jquery.ambiance.css"/>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles/main.css"/>
+    <link rel="stylesheet" href="styles/skeleton.css"/>
+    <link rel="stylesheet" href="styles/breakpoints.css"/>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="logo.ico"/>
 
   </head>
 
   <body ng-app="mountainhacks">
 
+    <!-- Parallax Skrollr Settings -->
     <div
       class="parallax-image-wrapper parallax-image-wrapper-100"
       data-anchor-target=".gap"
@@ -70,21 +75,22 @@
     </div>
 
     <div id="skrollr-body">
-      <div class="gap gap-100" style="background-image:url(images/park-city-skiing-utah.jpg); display:table;">
+      <div class="gap gap-100" 
+           style="background-image:url(images/park-city-skiing-utah.jpg);display:table;">
       <div class="hsContainer">
 
         <div class="hsContent" style="padding-bottom:0px">
           <img src="images/logo.svg" width="150px" />
-          <br />
-          <h1 id="home-title"style="font-size:85px; margin-bottom:0; margin-top:0; line-heigth:0;">
+          <br/>
+          <h1 id="home-title">
             MountainHacks
           </h1>
-          <h3 id="home-subtitle" class="font-raleway" style="font-size:35px;margin-bottom:1.25em;margin-top:0;">
+          <h3 id="home-subtitle" class="font-raleway">
             The mountain-west's first university hackathon.
           </h3>
 
           <div class="center-block no-sm">
-            <p id="home-date" class="text-center" style="font-size:30px">
+            <p id="home-date" class="text-center">
             <a href="http://goo.gl/5rFDJn" target="_blank">
               <i class="fa fa-facebook social-icon-large"></i>
             </a>
@@ -109,14 +115,20 @@
             </a></div>
           </div>
 
-          <a id="home-sponsor" href="mailto:derek@mountainhacks.com" target="_blank"><p style="font-size:35px">Interested in sponsoring?</p></a>
+          <a id="home-sponsor"
+             href="mailto:derek@mountainhacks.com"
+             target="_blank">
+            <p style="font-size:35px">Interested in sponsoring?</p>
+          </a>
         </div>
       </div>
 
       </div>
         <div class="content box-shadow-inset" id="bacons">
-          <p style="font-size:30px; width:80%; margin:1em auto;" class="text-center">
-            MountainHacks is the Mountain-West's premier 24-hour hackathon for university students. <strong>Come build with us.</strong>
+          <p style="font-size:30px; width:80%; margin:1em auto;"
+             class="text-center">
+            MountainHacks is the Mountain-West's premier 24-hour hackathon for 
+            university students. <strong>Come build with us.</strong>
           </p>
 
           <div id="info-blobs">
@@ -124,70 +136,133 @@
             <div class="info_row">
 
               <!--Info blob-->
-              <div class="text-center info-blob" style="position:relative;" data-bottom-top="opacity:.65;" data-center-center="opacity:1;" data-top="opacity:0.8">
+              <div class="text-center info-blob"
+                   style="position:relative"
+                   data-bottom-top="opacity:.65"
+                   data-center-center="opacity:1"
+                   data-top="opacity:0.8">
                 <i class="fa fa-question"></i>
                 <h4>So how does this work?</h4>
                 <hr>
-                <p>You have 24 hours to build a new unique product, whether it be an iOS app, an Android app, a web app, a platform, a hardware hack... etc. The only rule is that it has to be an original product. All your programming must take place at the hackathon, however you may come up with ideas and form teams prior to the event.</p>
+                <p>You have 24 hours to build a new unique product, whether it 
+                be an iOS app, an Android app, a web app, a platform, a hardware
+                hack... etc. The only rule is that it has to be an original 
+                product. All your programming must take place at the hackathon, 
+                however you may come up with ideas and form teams prior to the 
+                event.</p>
               </div>
 
               <!--Info blob-->
-              <div class="text-center info-blob" style="position:relative;" data-bottom-top="opacity:.65;" data-center-center="opacity:1;" data-top="opacity:0.8">
+              <div class="text-center info-blob"
+                   style="position:relative"
+                   data-bottom-top="opacity:.65"
+                   data-center-center="opacity:1"
+                   data-top="opacity:0.8">
                 <i class="fa fa-cube"></i>
                 <h4>What should I bring?</h4>
                 <hr>
-                <p>Just bring you, your laptop, and your awesome coding skills. Some optional items you can bring are pillows, headphones, small whiteboards, a travel size blanket, and anything else you need to be comfortable hacking!</p>
+                <p>Just bring you, your laptop, and your awesome coding skills. 
+                Some optional items you can bring are pillows, headphones, small 
+                whiteboards, a travel size blanket, and anything else you need 
+                to be comfortable hacking!</p>
               </div>
 
               <!--Info blob-->
-              <div class="text-center info-blob" style="position:relative;" data-bottom-top="opacity:.65;" data-center-center="opacity:1;" data-top="opacity:0.8">
+              <div class="text-center info-blob"
+                   style="position:relative"
+                   data-bottom-top="opacity:.65"
+                   data-center-center="opacity:1"
+                   data-top="opacity:0.8">
                 <i class="fa fa-lock"></i>
                 <h4>Am I locked in until finish?</h4>
                 <hr>
-                <p>Not at all! You are free to leave the venue whenever you like or need to. The doors are open for you to come and leave any time.</p>
+                <p>Not at all! You are free to leave the venue whenever you like 
+                or need to. The doors are open for you to come and leave any 
+                time.</p>
               </div>
 
-              <div class="text-center info-blob" style="position:relative;" data-bottom-top="opacity:.65;" data-center-center="opacity:1;" data-top="opacity:0.8">
+              <div class="text-center info-blob"
+                   style="position:relative;"
+                   data-bottom-top="opacity:.65;"
+                   data-center-center="opacity:1;"
+                   data-top="opacity:0.8">
                 <i class="fa fa-users"></i>
                 <h4>Do you need volunteers?</h4>
                 <hr>
-                <p>I am so glad you asked! You bet we need volunteers! We'll need helpers to manage food, cater to recruiters, and handle any tasks required to help the event run smoothly. You can also join in on the free food, company swag, and side events. It is expected that volunteers stay for at least 8 hours.</p>
+                <p>I am so glad you asked! You bet we need volunteers! We'll 
+                need helpers to manage food, cater to recruiters, and handle any 
+                tasks required to help the event run smoothly. You can also join 
+                in on the free food, company swag, and side events. It is 
+                expected that volunteers stay for at least 8 hours.</p>
               </div>
             </div>
 
             <!-- row -->
-            <div class="info_row" style="position:relative;" data-bottom-top="opacity:.65" data-center-center="opacity:1" data-top="opacity:0.8">
+            <div class="info_row"
+                 style="position:relative;"
+                 data-bottom-top="opacity:.65"
+                 data-center-center="opacity:1"
+                 data-top="opacity:0.8">
 
               <!--Info blob-->
-              <div class="text-center info-blob" style="position:relative;" data-bottom-top="opacity:.65;" data-center-center="opacity:1;" data-top="opacity:0.8">
+              <div class="text-center info-blob"
+                   style="position:relative"
+                   data-bottom-top="opacity:.65"
+                   data-center-center="opacity:1"
+                   data-top="opacity:0.8">
                 <i class="fa fa-gavel"></i>
                 <h4>How will my hack get judged?</h4>
                 <hr>
-                <p>We will bring in a number of professionals in the field, including engineers and professors, to evaluate your hack on a number of considerations. We will be giving awards for Best iOS App, Best Hardware Hack, Most Technically Impressive, etc. so that every hack has a chance to win.</p>
+                <p>We will bring in a number of professionals in the field, 
+                including engineers and professors, to evaluate your hack on a 
+                number of considerations. We will be giving awards for Best iOS 
+                App, Best Hardware Hack, Most Technically Impressive, etc. so 
+                that every hack has a chance to win.</p>
               </div>
 
               <!--Info blob-->
-              <div class="text-center info-blob" style="position:relative;" data-bottom-top="opacity:.65;" data-center-center="opacity:1;" data-top="opacity:0.8">
+              <div class="text-center info-blob"
+                   style="position:relative"
+                   data-bottom-top="opacity:.65"
+                   data-center-center="opacity:1"
+                   data-top="opacity:0.8">
                 <i class="fa fa-thumbs-up"></i>
                 <h4>Will there be anything else to do?</h4>
                 <hr>
-                <p>You bet! We'll be having a number of activities throughout the night including workshops and coding challenges, as well as non-coding related items like a <strong>Super Smash Bro.</strong> tournament in case you need a break.</p>
+                <p>You bet! We'll be having a number of activities throughout 
+                the night including workshops and coding challenges, as well as 
+                non-coding related items like a <strong>Super Smash Bro.
+                </strong> tournament in case you need a break.</p>
               </div>
 
               <!--Info blob-->
-              <div class="text-center info-blob" style="position:relative;" data-bottom-top="opacity:.65;" data-center-center="opacity:1;" data-top="opacity:0.8">
+              <div class="text-center info-blob"
+                   style="position:relative;"
+                   data-bottom-top="opacity:.65;"
+                   data-center-center="opacity:1;"
+                   data-top="opacity:0.8">
                 <i class="fa fa-puzzle-piece"></i>
                 <h4>So what am I supposed to build?</h4>
                 <hr>
-                <p>Anything you like! Feel free to build web apps, mobile apps, platforms, hardware hacks, developer tools, brower extensions, software plugins, etc. Anything that you're passionate about building. Just make sure you can pull it off within 24 hours!</p>
+                <p>Anything you like! Feel free to build web apps, mobile apps, 
+                platforms, hardware hacks, developer tools, brower extensions, 
+                software plugins, etc. Anything that you're passionate about 
+                building. Just make sure you can pull it off within 24 hours!
+                </p>
               </div>
 
               <!--Info blob-->
-              <div class="text-center info-blob" style="position:relative;" data-bottom-top="opacity:.65;" data-center-center="opacity:1;" data-top="opacity:0.8">
+              <div class="text-center info-blob"
+                   style="position:relative;"
+                   data-bottom-top="opacity:.65;"
+                   data-center-center="opacity:1;"
+                   data-top="opacity:0.8">
                 <i class="fa fa-bitcoin"></i>
                 <h4>Ok, how much is this gonna cost?</h4>
                 <hr>
-                <p>It's <strong>FREE!</strong> All expenses including food, prizes, giveaways, venue space, travel costs (where applicable) are all covered by our awesome sponsors!</p>
+                <p>It's <strong>FREE!</strong> All expenses including food, 
+                prizes, giveaways, venue space, travel costs (where applicable) 
+                are all covered by our awesome sponsors!</p>
               </div>
             </div>
           </div>
@@ -201,23 +276,41 @@
               <h1 class="font-raleway">Registration</h1>
               <form id="form" class="center-block">
                 <p class="text-left">
-                  <input name="first_name" placeholder="Your first name" class="pull-right form-control" required>
+                  <input name="first_name"
+                         placeholder="Your first name"
+                         class="pull-right form-control"
+                         required>
                 </p>
                 <p class="text-left">
-                  <input name="last_name" placeholder="Your last name" class="pull-right form-control" required>
+                  <input name="last_name"
+                         placeholder="Your last name"
+                         class="pull-right form-control"
+                         required>
                 </p>
                 <p class="text-left">
-                  <input name="email" placeholder="Your email (.edu if applicable)" class="pull-right form-control" required>
+                  <input name="email"
+                         placeholder="Your email (.edu if applicable)"
+                         class="pull-right form-control"
+                         required>
                 </p>
                 <p class="text-left">
-                  <input name="school" placeholder="Your school" class="pull-right form-control" required>
+                  <input name="school"
+                         placeholder="Your school"
+                         class="pull-right form-control"
+                         required>
                 </p>
                 <p class="text-left">
-                  <input name="major" placeholder="Your major" class="pull-right form-control" required>
+                  <input name="major"
+                         placeholder="Your major"
+                         class="pull-right form-control"
+                         required>
                 </p>
                 <p class="text-left">
                   Grade:
-                  <select id="grade" name="grade" class="pull-right form-control" style="width:230px">
+                  <select id="grade"
+                          name="grade"
+                          class="pull-right form-control"
+                          style="width:230px">
                     <option value="High School">High School</option>
                     <option value="Freshman">Freshman</option>
                     <option value="Sophomore">Sophomore</option>
@@ -227,38 +320,64 @@
                   </select>
                 </p>
                 <p class="text-left pull-left" style="width:100px">Gender:</p>
-                <div id="gender" class="btn-group pull-right" data-toggle="buttons" style="margin-top:10px;margin-bottom:0px">
+                <div id="gender"
+                     class="btn-group pull-right"
+                     data-toggle="buttons"
+                     style="margin-top:10px;margin-bottom:0px">
                   <button type="button" class="btn btn-default">Male</button>
                   <button type="button" class="btn btn-default">Female</button>
                 </div>
                 <p class="text-left pull-left" style="width:100px">Shirt Size:</p>
-                <div id="shirt" class="btn-group pull-right" data-toggle="buttons" style="margin-top:10px;margin-bottom:30px">
+                <div id="shirt"
+                     class="btn-group pull-right"
+                     data-toggle="buttons"
+                     style="margin-top:10px;margin-bottom:30px">
                   <button type="button" class="btn btn-default">XS</button>
                   <button type="button" class="btn btn-default">S</button>
                   <button type="button" class="btn btn-default">M</button>
                   <button type="button" class="btn btn-default">L</button>
                   <button type="button" class="btn btn-default">XL</button>
                 </div>
-                <p class="text-left pull-left" style="width:100px">Out of state Hacker?:</p>
-                <div id="outOfState" class="btn-group pull-right" data-toggle="buttons" style="margin-top:-15px;margin-bottom:5px">
+                <p class="text-left pull-left" style="width:100px">
+                  Out of state Hacker?:
+                </p>
+                <div id="outOfState"
+                     class="btn-group pull-right"
+                     data-toggle="buttons"
+                     style="margin-top:-15px;margin-bottom:5px">
                   <button type="button" class="btn btn-default">Yes</button>
                   <button type="button" class="btn btn-default">No</button>
                 </div>
                 <div class="bar"></div>
                 <p class="text-left" style="margin-top:-5px">
-                  <input name="github" placeholder="Github username" class="pull-right form-control" required>
+                  <input name="github"
+                         placeholder="Github username"
+                         class="pull-right form-control"
+                         required>
                 </p>
                 <p class="text-left">
-                  <input name="linkedin" placeholder="LinkedIn Profile" class="pull-right form-control" required>
+                  <input name="linkedin"
+                         placeholder="LinkedIn Profile"
+                         class="pull-right form-control"
+                         required>
                 </p>
                 <div class="bar"></div>
-                <p class="text-left pull-left" style="width:100px">First Hackathon?</p>
-                <div id="first" class="btn-group pull-right" data-toggle="buttons" style="margin-top:10px;margin-bottom:10px">
+                <p class="text-left pull-left" style="width:100px">
+                  First Hackathon?
+                </p>
+                <div id="first"
+                     class="btn-group pull-right"
+                     data-toggle="buttons"
+                     style="margin-top:10px;margin-bottom:10px">
                   <button type="button" class="btn btn-default">Yes</button>
                   <button type="button" class="btn btn-default">No</button>
                 </div>
                 <div class="bar"></div>
-                <div id="formSubmit" class="center-block" style="width:100%;max-width:126px"><a class="btn btn-primary">click me babeh!</a></div>
+                <div id="formSubmit"
+                     class="center-block"
+                     style="width:100%;max-width:126px">
+                  <a class="btn btn-primary">click me babeh!</a>
+                </div>
               </form>
             </div>
           </div>
@@ -270,40 +389,74 @@
 
         <div class="gap gap-50" style="background-color:#DD2200"></div>
         <div class="content box-shawdow-inset" id="done">
-          <h4 style="font-size:40px; margin: 1em auto; width: 80%;">Meet the team.</h4>
+          <h4 style="font-size:40px; margin: 1em auto; width: 80%;">
+            Meet the team.
+          </h4>
           <div style="height:4em;"></div>
           <!-- Derek's Bio -->
-          <div class="center-block" style="position:relative;" data-bottom-top="transform: translate3d(-100%, 0%, 0px)" data--230-bottom="transform: translate3d(0%, 0%, 0px)">
-            <a href="http://goo.gl/WH26n" target="_blank"><div id="derek_bio" class="bio-strip-pic"></div></a>
-            <div class="bio-strip-nametag only-sm bs-only-sm"><strong>Derek Argueta</strong></div>
-            <div class="bio-strip-content">
-              <p>Derek is a student at BYU studying Computer Science. His main interests are in iOS, Android, and Django development.</p>
+          <div class="center-block"
+               style="position:relative;"
+               data-bottom-top="transform: translate3d(-100%, 0%, 0px)"
+               data--230-bottom="transform: translate3d(0%, 0%, 0px)">
+            <a href="http://goo.gl/WH26n" target="_blank">
+              <div id="derek_bio" class="bio-strip-pic"></div>
+            </a>
+            <div class="bio-strip-nametag only-sm bs-only-sm">
+              <strong>Derek Argueta</strong>
             </div>
-            <div class="bio-strip-nametag no-sm bs-no-sm"><strong>Derek Argueta</strong></div>
+            <div class="bio-strip-content">
+              <p>Derek is a student at BYU studying Computer Science. His main 
+              interests are in iOS, Android, and Django development.</p>
+            </div>
+            <div class="bio-strip-nametag no-sm bs-no-sm">
+              <strong>Derek Argueta</strong>
+            </div>
           </div>
 
           <div style="width:100%;height:1px;clear:both"></div>
 
           <!-- Greg's Bio -->
-          <div class="center-block" style="position:relative;" data-bottom-top="transform: translate3d(-100%, 0%, 0px)" data--230-bottom="transform: translate3d(0%, 0%, 0px)">
-            <a href="http://goo.gl/pSZRRv" target="_blank"><div id="greg_bio" class="bio-strip-pic"></div></a>
-            <div class="bio-strip-nametag only-sm bs-only-sm"><strong>Greg Holguin</strong></div>
-            <div class="bio-strip-content">
-              <p>Greg is studying Graphic Design in Houston, Texas and is helping out MountainHacks remotely with web design and misc. tasks.</p>
+          <div class="center-block"
+               style="position:relative;"
+               data-bottom-top="transform: translate3d(-100%, 0%, 0px)"
+               data--230-bottom="transform: translate3d(0%, 0%, 0px)">
+            <a href="http://goo.gl/pSZRRv" target="_blank">
+              <div id="greg_bio" class="bio-strip-pic"></div>
+            </a>
+            <div class="bio-strip-nametag only-sm bs-only-sm">
+              <strong>Greg Holguin</strong>
             </div>
-            <div class="bio-strip-nametag no-sm bs-no-sm"><strong>Greg Holguin</strong></div>
+            <div class="bio-strip-content">
+              <p>Greg is studying Graphic Design in Houston, Texas and is 
+              helping out MountainHacks remotely with web design and misc. 
+              tasks.</p>
+            </div>
+            <div class="bio-strip-nametag no-sm bs-no-sm">
+              <strong>Greg Holguin</strong>
+            </div>
           </div>
 
           <div style="width:100%;height:1px;clear:both"></div>
 
           <!-- Jeff's Bio -->
-          <div class="center-block" style="position:relative;" data-bottom-top="transform: translate3d(-100%, 0%, 0px)" data--230-bottom="transform: translate3d(0%, 0%, 0px)">
-            <a href="http://goo.gl/qwCSK" target="_blank"><div id="jeff_bio" class="bio-strip-pic"></div></a>
-            <div class="bio-strip-nametag only-sm bs-only-sm"><strong>Jeff Barton</strong></div>
-            <div class="bio-strip-content">
-              <p>Jeff is also a student a BYU. He is studying Electrical Engineering and enjoys hacking around with microcontrollers and circuits.</p>
+          <div class="center-block"
+               style="position:relative;"
+               data-bottom-top="transform: translate3d(-100%, 0%, 0px)"
+               data--230-bottom="transform: translate3d(0%, 0%, 0px)">
+            <a href="http://goo.gl/qwCSK" target="_blank">
+              <div id="jeff_bio" class="bio-strip-pic"></div>
+            </a>
+            <div class="bio-strip-nametag only-sm bs-only-sm">
+              <strong>Jeff Barton</strong>
             </div>
-            <div class="bio-strip-nametag no-sm bs-no-sm"><strong>Jeff Barton</strong></div>
+            <div class="bio-strip-content">
+              <p>Jeff is also a student a BYU. He is studying Electrical 
+              Engineering and enjoys hacking around with microcontrollers and 
+              circuits.</p>
+            </div>
+            <div class="bio-strip-nametag no-sm bs-no-sm">
+              <strong>Jeff Barton</strong>
+            </div>
           </div>
           <div style="width:100%;clear:both;height:1px"></div>
           <p>Coded with <a href="http://goo.gl/Yx6toJ" target="_blank">♥</a> by <a href="http://goo.gl/LMkTJ8" target="_blank">Derek</a> and <a href="http://goo.gl/Yx6toJ" target="_blank">Greg</a></p>

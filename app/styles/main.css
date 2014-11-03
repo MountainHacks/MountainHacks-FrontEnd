@@ -9,6 +9,20 @@ hr { border-color:rgba(0, 0, 0, 0.4); }
 
 .form-control { margin-bottom: 8px;}
 
+#home-title {
+  font-size: 85px;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+#home-subtitle {
+  font-size: 35px;
+  margin-bottom: 1.25em;
+  margin-top: 0;
+}
+
+#home-date { font-size:30px }
+
 .bar {
   clear: both;
   height: 1px;
@@ -85,6 +99,8 @@ hr { border-color:rgba(0, 0, 0, 0.4); }
   font-size: 16px;
   margin-top: 1em;
 }
+
+#form > p > input { color: black; }
 
 .info-blob > i { font-size: 72px; }
 
