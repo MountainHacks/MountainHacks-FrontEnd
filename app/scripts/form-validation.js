@@ -86,8 +86,8 @@ $("#formSubmit").click( function( e ) {
   }
 
   $.ajax({
-    url: "http://localhost:8000/submit",
-    //url: "http://api.mountainhacks.com/submit",
+    //url: "http://localhost:8000/submit",
+    url: "http://api.mountainhacks.com/submit",
     type: "POST",
     data: datablob,
     success: function( data ) {
