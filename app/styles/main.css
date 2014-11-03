@@ -7,6 +7,8 @@ hr { border-color:rgba(0, 0, 0, 0.4); }
 
 .hsContent > a { color: white; }
 
+.form-control { margin-bottom: 8px;}
+
 .bar {
   clear: both;
   height: 1px;
@@ -56,13 +58,8 @@ hr { border-color:rgba(0, 0, 0, 0.4); }
   width: 2em;
 }
 
-#home-sponsor {
-  text-decoration: none;
-}
-
-#home-sponsor:hover {
-  color: #ccc;
-}
+#home-sponsor { text-decoration: none; }
+#home-sponsor:hover { color: #ccc; }
 
 .large-fa { font-size: 30px; }
 
@@ -130,9 +127,7 @@ hr { border-color:rgba(0, 0, 0, 0.4); }
   width: 150px;
 }
 
-.font-raleway {
-  font-family: 'Raleway', sans-serif;
-}
+.font-raleway { font-family: 'Raleway', sans-serif; }
 
 html, body {
   height: 100%;
@@ -181,6 +176,11 @@ p { margin:1em 0; }
 .parallax-image-wrapper-100 {
   height: 100%;
   top: -100%;
+}
+
+.piw-125 {
+  height: 125%;
+  top: -125%;
 }
 
 .parallax-image {

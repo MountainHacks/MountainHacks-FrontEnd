@@ -37,21 +37,20 @@
         data-bottom-top="transform: translate3d(0px, -80%, 0px);"
         data-top-bottom="transform: translate3d(0px, 80%, 0px);"
       ></div>
-      <!--the +/-80% translation can be adjusted to control the speed difference of the image-->
     </div>
 
     <div
-      class="parallax-image-wrapper parallax-image-wrapper-100"
+      class="parallax-image-wrapper piw-125"
       data-anchor-target="#bacons + .gap"
-      data-bottom-top="transform:translate3d(0px, 200%, 0px)"
+      id="geopattern"
+      data-bottom-top="transform:translate3d(0px, 180%, 0px)"
       data-top-bottom="transform:translate3d(0px, 0%, 0px)">
 
       <div
         class="parallax-image parallax-image-100"
-        id="geopattern"
         data-anchor-target="#bacons + .gap"
-        data-bottom-top="transform: translate3d(0px, -80%, 0px);"
-        data-top-bottom="transform: translate3d(0px, 80%, 0px);"
+        data-bottom-top="transform: translate3d(0px, 0%, 0px);"
+        data-top-bottom="transform: translate3d(0px, 0%, 0px);"
       ></div>
     </div>
 
@@ -93,6 +92,7 @@
             <a href="http://goo.gl/IbjldB" target="_blank">
               <i class="fa fa-twitter social-icon-large" style="float:right"></i>
             </a>
+            <span class="font-raleway"><br/>TBA, Utah</span>
             </p>
           </div>
 
@@ -120,8 +120,9 @@
           </p>
 
           <div id="info-blobs">
-            <!-- row -->
+
             <div class="info_row">
+
               <!--Info blob-->
               <div class="text-center info-blob" style="position:relative;" data-bottom-top="opacity:.65;" data-center-center="opacity:1;" data-top="opacity:0.8">
                 <i class="fa fa-question"></i>
@@ -200,28 +201,23 @@
               <h1 class="font-raleway">Registration</h1>
               <form id="form" class="center-block">
                 <p class="text-left">
-                  First Name:
                   <input name="first_name" placeholder="Your first name" class="pull-right form-control" required>
                 </p>
                 <p class="text-left">
-                  Last Name:
                   <input name="last_name" placeholder="Your last name" class="pull-right form-control" required>
                 </p>
                 <p class="text-left">
-                  Email:
-                  <input name="email" placeholder="Your .edu email please" class="pull-right form-control" required>
+                  <input name="email" placeholder="Your email (.edu if applicable)" class="pull-right form-control" required>
                 </p>
                 <p class="text-left">
-                  School:
                   <input name="school" placeholder="Your school" class="pull-right form-control" required>
                 </p>
                 <p class="text-left">
-                  Major:
                   <input name="major" placeholder="Your major" class="pull-right form-control" required>
                 </p>
                 <p class="text-left">
                   Grade:
-                  <select id="grade" name="grade" class="pull-right form-control" style="margin-top:5px">
+                  <select id="grade" name="grade" class="pull-right form-control" style="width:230px">
                     <option value="High School">High School</option>
                     <option value="Freshman">Freshman</option>
                     <option value="Sophomore">Sophomore</option>
@@ -250,12 +246,10 @@
                 </div>
                 <div class="bar"></div>
                 <p class="text-left" style="margin-top:-5px">
-                  Github Handle:
-                  <input name="github" placeholder="Username" class="pull-right form-control" required>
+                  <input name="github" placeholder="Github username" class="pull-right form-control" required>
                 </p>
                 <p class="text-left">
-                  LinkedIn Profile:
-                  <input name="linkedin" placeholder="Public link" class="pull-right form-control" required>
+                  <input name="linkedin" placeholder="LinkedIn Profile" class="pull-right form-control" required>
                 </p>
                 <div class="bar"></div>
                 <p class="text-left pull-left" style="width:100px">First Hackathon?</p>
@@ -317,25 +311,14 @@
       </div>
 
       <!-- Libraries -->
-      <script src="bower_components/angular/angular.js"></script>
-      <script src="bower_components/angular-resource/angular-resource.min.js"></script>
-      <script src="bower_components/angular-route/angular-route.min.js"></script>
-      <script src="bower_components/lodash/dist/lodash.compat.js"></script>
-      <script src="bower_components/restangular/dist/restangular.min.js"></script>
       <script src="bower_components/jquery/dist/jquery.min.js"></script>
       <script src="bower_components/skrollr/src/skrollr.js"></script>
       <script src="bower_components/geopattern/js/geopattern.min.js"></script>
       <script src="bower_components/jquery.ambiance/assets/js/jquery.ambiance.js"></script>
+      <script src="bower_components/bootstrap/js/tooltip.js"></script>
 
       <!-- Custom JavaScript -->
       <script type="text/javascript">
-
-        if (!String.prototype.contains) {
-            String.prototype.contains = function(s, i) {
-                return this.indexOf(s, i) != -1;
-            }
-        }
-
         skrollr.init({
           smoothScrolling: false,
           mobileDeceleration: 0.004
@@ -345,132 +328,9 @@
             $(this).parent().children().removeClass('active');
             $(this).addClass('active');
         });
-
-        $("#formSubmit").click(function(e){
-          e.preventDefault();
-          var datablob = {};
-          datablob.first_name = $("#form input[name='first_name']").val();
-          datablob.last_name = $("#form input[name='last_name']").val();
-          datablob.email = $("#form input[name='email']").val();
-          datablob.school = $("#form input[name='school']").val();
-          datablob.major = $("#form input[name='major']").val();
-          datablob.grade = $("#grade option:selected").val();
-          datablob.gender = $("#gender").children(".active").text();
-          datablob.shirt = $("#shirt").children(".active").text();
-          datablob.out_of_state = $("#outOfState").children(".active").text();
-          datablob.github = $("#form input[name='github']").val();
-          datablob.linkedin = $("#form input[name='linkedin']").val();
-          datablob.first = $("#first").children(".active").text();
-
-          // form validation
-          if(datablob.first_name == "")
-          { 
-            $.ambiance({
-              message: "Please enter your first name.",
-              type: "error",
-              fade: true
-            }); 
-            return;
-          }
-          if(datablob.last_name == "") {
-            $.ambiance({ message: "Please enter your last name.",
-              type: "error",
-              fade: true
-            });
-            return;
-          }
-          if(datablob.email == "") {
-            $.ambiance({ message: "Please enter your email.",
-              type: "error",
-              fade: true
-            });
-            return;
-          }
-          if(!String(datablob.email).contains(".edu")) {
-            $.ambiance({ message: "Please enter your .edu email.",
-              type: "error",
-              fade: true
-            });
-            return;
-          }
-          if(datablob.school == "") {
-            $.ambiance({ message: "Please enter your school.",
-              type: "error",
-              fade: true
-            });
-            return;
-          }
-          if(datablob.major == "") {
-            $.ambiance({ message: "Please enter your major",
-              type: "error",
-              fade: true
-            });
-            return;
-          }
-          if(datablob.grade == "") {
-            $.ambiance({ message: "Please enter your grade.",
-              type: "error",
-              fade: true
-            });
-            return;
-          }
-          if(datablob.gender == "") {
-            $.ambiance({ message: "Please enter your gender.",
-              type: "error",
-              fade: true
-            });
-            return;
-          }
-          if(datablob.shirt == "") {
-            $.ambiance({ message: "Please enter your shirt size.",
-              type: "error",
-              fade: true
-            });
-            return;
-          }
-          if(datablob.out_of_state == "") {
-            $.ambiance({ message: "Please indicate if you are out-of-state.",
-              type: "error",
-              fade: true
-            });
-            return;
-          }
-          if(datablob.first == "") {
-            $.ambiance({ message: "Please indicate if you are a first-time hacker.",
-              type: "error",
-              fade: true
-            });
-            return;
-          }
-
-          console.log(datablob);
-          console.log("data : " + $(datablob).serialize());
-
-          $.ajax({
-            url: "http://api.mountainhacks.com/submit",
-            type: "POST",
-            data: datablob,
-            success: function( data ) {
-              $.ambiance({
-                message: "Thanks for registering!",
-                title: "Success!",
-                type: "success"
-              });
-              $("#form").trigger("reset");
-            },
-            error: function ( jXHR, textStatus, errorThrown ) {
-              $.ambiance({
-                message: "There was a problem submitting your data yo",
-                type: "error",
-                fade: true
-              });
-            }
-          })
-        });
       </script>
       <script src="scripts/geopattern.js"></script>
-      <script src="scripts/app.js"></script>
-      <script src="scripts/controllers/main.js"></script>
+      <script src="scripts/form-validation.js"></script>
       <script>
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
