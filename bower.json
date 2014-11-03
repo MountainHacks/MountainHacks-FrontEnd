@@ -21,7 +21,8 @@
     "restangular": "~1.4.0",
     "lodash": "~2.4.1",
     "skeleton": "*",
-    "jquery.ambiance":"git@github.com:richardhsu/jquery.ambiance.git"
+    "jquery.ambiance": "git@github.com:richardhsu/jquery.ambiance.git",
+    "html5shiv": "~3.7.2"
   },
   "devDependencies": {
     "angular-mocks": "~1.2.0",
