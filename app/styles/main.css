@@ -143,6 +143,18 @@ hr { border-color:rgba(0, 0, 0, 0.4); }
   width: 150px;
 }
 
+.bio-strip-social-icon {
+  font-size: 26px;
+}
+
+.bio-strip-social-icon a i:hover {
+  color: #bdc3c7;
+}
+
+.bio-strip-social-icon a i {
+  color: #34495e;
+}
+
 .font-raleway { font-family: 'Raleway', sans-serif; }
 
 html, body {
