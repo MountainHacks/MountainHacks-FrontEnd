@@ -1,6 +1,6 @@
 {
   "name": "MountainHacks-FrontEnd",
-  "version": "1.1",
+  "version": "1.2.0",
   "dependencies": {
     "json3": "~3.3.1",
     "es5-shim": "~3.1.0",
@@ -14,7 +14,8 @@
     "lodash": "~2.4.1",
     "skeleton": "*",
     "jquery.ambiance": "git@github.com:richardhsu/jquery.ambiance.git",
-    "html5shiv": "~3.7.2"
+    "html5shiv": "~3.7.2",
+    "highcharts": "~4.0.4"
   },
   "appPath": "app"
 }

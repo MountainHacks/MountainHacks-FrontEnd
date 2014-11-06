@@ -97,6 +97,9 @@ $("#formSubmit").click( function( e ) {
         type: "success"
       });
       $("#form").trigger("reset");
+      $('.btn-group button').click(function() {
+            $(this).parent().children().removeClass('active');
+        });
     },
     error: function ( jXHR, textStatus, errorThrown ) {
       $.ambiance({
