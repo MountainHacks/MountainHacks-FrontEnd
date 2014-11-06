@@ -34,8 +34,7 @@
     <meta property="og:title"
     content="MountainHacks - The mountain-west's first university hackathon." />
     <meta property="og:site_name" content="MountainHacks"/>
-    <meta property="og:url"
-    content="http://mountainhacks.com" />
+    <meta property="og:url" content="http://mountainhacks.com" />
     <meta property="og:description" content="MountainHacks is the mountain-west's premier 24-hour hackathon for university students. Come build with us." />
 
   </head>
@@ -280,6 +279,7 @@
               </div>
             </div>
           </div>
+          <div style="width:100%;height:500px" id="chart"></div>
         </div>
 
         <div class="gap gap-100" style="background-color:#00DD22; display:table;">
@@ -397,7 +397,8 @@
           </div>
 
         </div>
-        <div class="content" id="kittens" style="display:none;">
+
+        <div class="content" id="kittens" style="height:200px;display:none">
           Use this space for something new
         </div>
 
@@ -418,9 +419,9 @@
             <div class="bio-strip-nametag only-sm bs-only-sm">
               <strong>Derek Argueta</strong>
               <div class="bio-strip-social-icon">
-                <a href="http://twitter.com/derek_arg"><i class="fa fa-twitter"></i></a>
-                <a href="https://github.com/derekargueta"><i class="fa fa-github"></i></a>
-                <a href="https://www.linkedin.com/pub/derek-argueta/64/810/517"><i class="fa fa-linkedin-square"></i></a>
+                <a href="http://twitter.com/derek_arg" target="_blank"><i class="fa fa-twitter"></i></a>
+                <a href="https://github.com/derekargueta" target="_blank"><i class="fa fa-github"></i></a>
+                <a href="https://www.linkedin.com/pub/derek-argueta/64/810/517" target="_blank"><i class="fa fa-linkedin-square"></i></a>
               </div>
             </div>
             <div class="bio-strip-content">
@@ -430,9 +431,9 @@
             <div class="bio-strip-nametag no-sm bs-no-sm">
               <strong>Derek Argueta</strong>
               <div class="bio-strip-social-icon">
-                <a href="http://twitter.com/derek_arg"><i class="fa fa-twitter"></i></a>
-                <a href="https://github.com/derekargueta"><i class="fa fa-github"></i></a>
-                <a href="https://www.linkedin.com/pub/derek-argueta/64/810/517"><i class="fa fa-linkedin-square"></i></a>
+                <a href="http://twitter.com/derek_arg" target="_blank"><i class="fa fa-twitter"></i></a>
+                <a href="https://github.com/derekargueta" target="_blank"><i class="fa fa-github"></i></a>
+                <a href="https://www.linkedin.com/pub/derek-argueta/64/810/517" target="_blank"><i class="fa fa-linkedin-square"></i></a>
               </div>
             </div>
           </div>
@@ -450,9 +451,9 @@
             <div class="bio-strip-nametag only-sm bs-only-sm">
               <strong>Greg Holguin</strong>
               <div class="bio-strip-social-icon">
-                <a href="http://twitter.com/simulatedgreg"><i class="fa fa-twitter"></i></a>
-                <a href="https://github.com/simulatedgreg"><i class="fa fa-github"></i></a>
-                <a href="https://www.linkedin.com/pub/greg-holguin/a7/b3b/527"><i class="fa fa-linkedin-square"></i></a>
+                <a href="http://twitter.com/simulatedgreg" target="_blank"><i class="fa fa-twitter"></i></a>
+                <a href="https://github.com/simulatedgreg" target="_blank"><i class="fa fa-github"></i></a>
+                <a href="https://www.linkedin.com/pub/greg-holguin/a7/b3b/527" target="_blank"><i class="fa fa-linkedin-square"></i></a>
               </div>
             </div>
             <div class="bio-strip-content">
@@ -463,9 +464,9 @@
             <div class="bio-strip-nametag no-sm bs-no-sm">
               <strong>Greg Holguin</strong>
               <div class="bio-strip-social-icon">
-                <a href="http://twitter.com/simulatedgreg"><i class="fa fa-twitter"></i></a>
-                <a href="https://github.com/simulatedgreg"><i class="fa fa-github"></i></a>
-                <a href="https://www.linkedin.com/pub/greg-holguin/a7/b3b/527"><i class="fa fa-linkedin-square"></i></a>
+                <a href="http://twitter.com/simulatedgreg" target="_blank"><i class="fa fa-twitter"></i></a>
+                <a href="https://github.com/simulatedgreg" target="_blank"><i class="fa fa-github"></i></a>
+                <a href="https://www.linkedin.com/pub/greg-holguin/a7/b3b/527" target="_blank"><i class="fa fa-linkedin-square"></i></a>
               </div>
             </div>
           </div>
@@ -503,6 +504,8 @@
       <script src="bower_components/geopattern/js/geopattern.min.js"></script>
       <script src="bower_components/jquery.ambiance/assets/js/jquery.ambiance.js"></script>
       <script src="bower_components/bootstrap/js/tooltip.js"></script>
+      <script src="bower_components/highcharts/highcharts.js"></script>
+      <script src="bower_components/highcharts/modules/exporting.js"></script>
 
       <!-- Custom JavaScript -->
       <script type="text/javascript">
@@ -515,6 +518,48 @@
             $(this).parent().children().removeClass('active');
             $(this).addClass('active');
         });
+
+        $(function () {
+          $('#chart').highcharts({
+            chart: {
+              plotBackgroundColor: null,
+              plotBorderWidth: 1,//null,
+              plotShadow: false
+            },
+            title: {
+              text: 'Registered Students'
+            },
+            tooltip: {
+              pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+            },
+            plotOptions: {
+              pie: {
+                allowPointSelect: true,
+                cursor: 'pointer',
+                dataLabels: {
+                  enabled: true,
+                  format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                  style: {
+                    color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                  }
+                }
+              }
+            },
+            series: [{
+              type: 'pie',
+              name: 'Attendants',
+              data: [
+                ['Brigham Young University', 31.0],
+                ['The University of Illinois, Urbana-Champaign', 16.7],
+                ['Boise State University', 9.5],
+                ['The University of Texas, Austin', 4.8],
+                ['Others',   38.1]
+              ]
+            }]
+          });
+        });
+
+
       </script>
       <script src="scripts/geopattern.js"></script>
       <script src="scripts/form-validation.js"></script>

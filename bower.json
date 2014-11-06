@@ -14,7 +14,8 @@
     "lodash": "~2.4.1",
     "skeleton": "*",
     "jquery.ambiance": "git@github.com:richardhsu/jquery.ambiance.git",
-    "html5shiv": "~3.7.2"
+    "html5shiv": "~3.7.2",
+    "highcharts": "~4.0.4"
   },
   "appPath": "app"
 }
