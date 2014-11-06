@@ -15,7 +15,8 @@
     "skeleton": "*",
     "jquery.ambiance": "git@github.com:richardhsu/jquery.ambiance.git",
     "html5shiv": "~3.7.2",
-    "highcharts": "~4.0.4"
+    "highcharts": "~4.0.4",
+    "stellar": "~0.6.2"
   },
   "appPath": "app"
 }

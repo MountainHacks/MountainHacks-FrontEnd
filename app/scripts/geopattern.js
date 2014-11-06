@@ -1,5 +1,5 @@
 $(function() {
 
-	$('#geopattern').geopattern('bluebgplsblueBLUEGIVE ME PLEASE GOSH');
+	$('#registration').geopattern('bluebgplsblueBLUEGIVE ME PLEASE GOSH');
 		
 });

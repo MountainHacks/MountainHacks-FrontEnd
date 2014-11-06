@@ -23,6 +23,11 @@ hr { border-color:rgba(0, 0, 0, 0.4); }
 
 #home-date { font-size:30px }
 
+#home-bg {
+  background: url('../images/park-city-skiing-utah.jpg');
+  background-size: cover;
+}
+
 .bar {
   clear: both;
   height: 1px;
@@ -41,13 +46,11 @@ hr { border-color:rgba(0, 0, 0, 0.4); }
   border-radius: 10px;
   margin: 0 auto;
   padding: 50px;
-  padding-top: 20px;
   width: 900px;
 }
 
 .hsContainer {
   color: white;
-  display: table-cell;
   margin: 0 auto;
   padding: 30px;
   text-align: center;
@@ -88,7 +91,6 @@ hr { border-color:rgba(0, 0, 0, 0.4); }
   margin-left: auto;
   margin-right: auto;
 }
-
 
 .info-blob > h4 {
   font-family: 'Raleway', sans-serif;
@@ -271,7 +273,7 @@ p { margin:1em 0; }
 
 .content-full { height: 100%; }
 
-#done { height: 125%; }
+#done { }
 
 #done > p > a {
   color: black;
