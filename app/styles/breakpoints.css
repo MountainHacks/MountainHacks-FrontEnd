@@ -3,11 +3,11 @@
 	.info-blob {
 		margin: 1em auto;
 		width: 300px;
-		height: 372px;
 	}
 
 	.info_row {
-		margin-bottom:1em;
+		margin-bottom:-6em;
+		height: 1600px;
 	}
 
 	.hsContent {
@@ -32,7 +32,7 @@
 	}
 
 	#home-info-only-sm {
-		font-size: 32px !important;
+		font-size: 30px !important;
 	}
 
 	.social-icon-large {
@@ -42,10 +42,6 @@
 
 	#home-sponsor p {
 		font-size: 24px !important;
-	}
-
-	#bacons {
-		height: 3150px;
 	}
 
 	.bio-strip-pic {
@@ -73,7 +69,26 @@
 
 	.bio-strip-content > p {
 		text-align: center;
+		font-size: 18px;
 	}
+
+	#form {
+		width:250px;
+	}
+
+	#grade {
+		width: 170px !important;
+	}
+
+	.bio-strip {
+		height: 525px;
+		padding-top: 4em;
+	}
+
+	.btn {
+		padding: 6px 8px;
+	}
+
 }
 
 @media only screen and (min-width: 767px) and (max-width: 959px) {
@@ -116,7 +131,21 @@
 
 }
 
+@media only screen and (max-width: 479px) {
+	.hsContent {
+		width: 300px !important;
+	}
 
+	.hsContainer {
+		padding: 0 !important;
+	}
+
+	#home-title {
+		font-size: 32px !important;
+	}
+}
+
+ 
 /*-----------------------------
 |                             |
 | Some Fixin's                |

@@ -2,7 +2,6 @@
 <html class="no-skrollr">
   <head>
     <meta charset="utf-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
     <title>MountainHacks 2015</title>
@@ -41,58 +40,14 @@
 
   <body ng-app="mountainhacks">
 
-    <!-- Parallax Skrollr Settings -->
-    <div
-      class="parallax-image-wrapper parallax-image-wrapper-100"
-      data-anchor-target=".gap"
-      data-bottom-top="transform:translate3d(0px, 200%, 0px);opacity:1"
-      data-top-bottom="transform:translate3d(0px, 0%, 0px);opacity:0">
-
-      <div
-        class="parallax-image parallax-image-100"
-        style="background-image:url(images/park-city-skiing-utah.jpg)"
-        data-anchor-target=".gap"
-        data-bottom-top="transform: translate3d(0px, -80%, 0px);"
-        data-top-bottom="transform: translate3d(0px, 80%, 0px);"
-      ></div>
-    </div>
-
-    <div
-      class="parallax-image-wrapper piw-125"
-      data-anchor-target="#bacons + .gap"
-      id="geopattern"
-      data-bottom-top="transform:translate3d(0px, 180%, 0px)"
-      data-top-bottom="transform:translate3d(0px, 0%, 0px)">
-
-      <div
-        class="parallax-image parallax-image-100"
-        data-anchor-target="#bacons + .gap"
-        data-bottom-top="transform: translate3d(0px, 0%, 0px);"
-        data-top-bottom="transform: translate3d(0px, 0%, 0px);"
-      ></div>
-    </div>
-
-    <div
-      class="parallax-image-wrapper parallax-image-wrapper-50"
-      data-anchor-target="#kittens + .gap"
-      data-bottom-top="transform:translate3d(0px, 300%, 0px)"
-      data-top-bottom="transform:translate3d(0px, 0%, 0px)">
-
-      <div
-        class="parallax-image parallax-image-50"
-        style="background-image:url(images/images.jpg)"
-        data-anchor-target="#kittens + .gap"
-        data-bottom-top="transform: translate3d(0px, -10%, 0px);"
-        data-top-bottom="transform: translate3d(0px, 40%, 0px);"
-      ></div>
-    </div>
-
     <div id="skrollr-body">
-      <div class="gap gap-100" 
-           style="background-image:url(images/park-city-skiing-utah.jpg);display:table;">
-      <div class="hsContainer">
+      <div id="home-bg" 
+           class="hsContainer"
+           data-stellar-background-ratio="0.1"
+           data-top="opacity:1;"
+           data-top-bottom="opacity:.1;">
 
-        <div class="hsContent" style="padding-bottom:0px">
+        <div class="hsContent">
           <img src="images/logo.svg" width="150px" />
           <br/>
           <h1 id="home-title">
@@ -136,7 +91,7 @@
         </div>
       </div>
 
-      </div>
+      
         <div class="content box-shadow-inset" id="bacons">
           <p style="font-size:30px; width:80%; margin:1em auto;"
              class="text-center">
@@ -150,7 +105,6 @@
 
               <!--Info blob-->
               <div class="text-center info-blob"
-                   style="position:relative"
                    data-bottom-top="opacity:.65"
                    data-center-center="opacity:1"
                    data-top="opacity:0.8">
@@ -167,7 +121,6 @@
 
               <!--Info blob-->
               <div class="text-center info-blob"
-                   style="position:relative"
                    data-bottom-top="opacity:.65"
                    data-center-center="opacity:1"
                    data-top="opacity:0.8">
@@ -182,7 +135,6 @@
 
               <!--Info blob-->
               <div class="text-center info-blob"
-                   style="position:relative"
                    data-bottom-top="opacity:.65"
                    data-center-center="opacity:1"
                    data-top="opacity:0.8">
@@ -195,7 +147,6 @@
               </div>
 
               <div class="text-center info-blob"
-                   style="position:relative;"
                    data-bottom-top="opacity:.65;"
                    data-center-center="opacity:1;"
                    data-top="opacity:0.8">
@@ -211,15 +162,10 @@
             </div>
 
             <!-- row -->
-            <div class="info_row"
-                 style="position:relative;"
-                 data-bottom-top="opacity:.65"
-                 data-center-center="opacity:1"
-                 data-top="opacity:0.8">
+            <div class="info_row">
 
               <!--Info blob-->
               <div class="text-center info-blob"
-                   style="position:relative"
                    data-bottom-top="opacity:.65"
                    data-center-center="opacity:1"
                    data-top="opacity:0.8">
@@ -235,7 +181,6 @@
 
               <!--Info blob-->
               <div class="text-center info-blob"
-                   style="position:relative"
                    data-bottom-top="opacity:.65"
                    data-center-center="opacity:1"
                    data-top="opacity:0.8">
@@ -250,7 +195,6 @@
 
               <!--Info blob-->
               <div class="text-center info-blob"
-                   style="position:relative;"
                    data-bottom-top="opacity:.65;"
                    data-center-center="opacity:1;"
                    data-top="opacity:0.8">
@@ -266,7 +210,6 @@
 
               <!--Info blob-->
               <div class="text-center info-blob"
-                   style="position:relative;"
                    data-bottom-top="opacity:.65;"
                    data-center-center="opacity:1;"
                    data-top="opacity:0.8">
@@ -279,140 +222,132 @@
               </div>
             </div>
           </div>
-          <div style="width:100%;height:500px" id="chart"></div>
+          <div style="height:500px; width:100%;" id="chart"></div>
         </div>
+        <div id="registration"
+             class="hsContainer"
+             style="margin: 0 auto;"
+             data-stellar-background-ratio="0.1">
+          <div class="hsContent">
 
-        <div class="gap gap-100" style="background-color:#00DD22; display:table;">
-
-          <div class="hsContainer" style="margin: 0 auto;">
-            <div class="hsContent">
-
-              <h1 class="font-raleway">Registration</h1>
-              <form id="form" class="center-block">
-                <p class="text-left">
-                  <input name="first_name"
-                         placeholder="Your first name"
-                         class="pull-right form-control"
-                         required>
-                </p>
-                <p class="text-left">
-                  <input name="last_name"
-                         placeholder="Your last name"
-                         class="pull-right form-control"
-                         required>
-                </p>
-                <p class="text-left">
-                  <input name="email"
-                         placeholder="Your email (.edu if applicable)"
-                         class="pull-right form-control"
-                         required>
-                </p>
-                <p class="text-left">
-                  <input name="school"
-                         placeholder="Your school"
-                         class="pull-right form-control"
-                         required>
-                </p>
-                <p class="text-left">
-                  <input name="major"
-                         placeholder="Your major"
-                         class="pull-right form-control"
-                         required>
-                </p>
-                <p class="text-left">
-                  Grade:
-                  <select id="grade"
-                          name="grade"
-                          class="pull-right form-control"
-                          style="width:230px">
-                    <option value="High School">High School</option>
-                    <option value="Freshman">Freshman</option>
-                    <option value="Sophomore">Sophomore</option>
-                    <option value="Junior">Junior</option>
-                    <option value="Senior">Senior</option>
-                    <option value="Grad Student">Grad Student</option>
-                  </select>
-                </p>
-                <p class="text-left pull-left" style="width:100px">Gender:</p>
-                <div id="gender"
-                     class="btn-group pull-right"
-                     data-toggle="buttons"
-                     style="margin-top:10px;margin-bottom:0px">
-                  <button type="button" class="btn btn-default">Male</button>
-                  <button type="button" class="btn btn-default">Female</button>
-                </div>
-                <p class="text-left pull-left" style="width:100px">Shirt Size:</p>
-                <div id="shirt"
-                     class="btn-group pull-right"
-                     data-toggle="buttons"
-                     style="margin-top:10px;margin-bottom:30px">
-                  <button type="button" class="btn btn-default">XS</button>
-                  <button type="button" class="btn btn-default">S</button>
-                  <button type="button" class="btn btn-default">M</button>
-                  <button type="button" class="btn btn-default">L</button>
-                  <button type="button" class="btn btn-default">XL</button>
-                </div>
-                <p class="text-left pull-left" style="width:100px">
-                  Out of state Hacker?:
-                </p>
-                <div id="outOfState"
-                     class="btn-group pull-right"
-                     data-toggle="buttons"
-                     style="margin-top:-15px;margin-bottom:5px">
-                  <button type="button" class="btn btn-default">Yes</button>
-                  <button type="button" class="btn btn-default">No</button>
-                </div>
-                <div class="bar"></div>
-                <p class="text-left" style="margin-top:-5px">
-                  <input name="github"
-                         placeholder="Github username"
-                         class="pull-right form-control"
-                         required>
-                </p>
-                <p class="text-left">
-                  <input name="linkedin"
-                         placeholder="LinkedIn Profile"
-                         class="pull-right form-control"
-                         required>
-                </p>
-                <div class="bar"></div>
-                <p class="text-left pull-left" style="width:100px">
-                  First Hackathon?
-                </p>
-                <div id="first"
-                     class="btn-group pull-right"
-                     data-toggle="buttons"
-                     style="margin-top:10px;margin-bottom:10px">
-                  <button type="button" class="btn btn-default">Yes</button>
-                  <button type="button" class="btn btn-default">No</button>
-                </div>
-                <div class="bar"></div>
-                <div id="formSubmit"
-                     class="center-block"
-                     style="width:100%;max-width:126px">
-                  <a class="btn btn-primary">click me babeh!</a>
-                </div>
-              </form>
-            </div>
+            <h1 class="font-raleway">Registration</h1>
+            <form id="form" class="center-block">
+              <p class="text-left">
+                <input name="first_name"
+                       placeholder="Your first name"
+                       class="pull-right form-control"
+                       required>
+              </p>
+              <p class="text-left">
+                <input name="last_name"
+                       placeholder="Your last name"
+                       class="pull-right form-control"
+                       required>
+              </p>
+              <p class="text-left">
+                <input name="email"
+                       placeholder="Your email (.edu if applicable)"
+                       class="pull-right form-control"
+                       required>
+              </p>
+              <p class="text-left">
+                <input name="school"
+                       placeholder="Your school"
+                       class="pull-right form-control"
+                       required>
+              </p>
+              <p class="text-left">
+                <input name="major"
+                       placeholder="Your major"
+                       class="pull-right form-control"
+                       required>
+              </p>
+              <p class="text-left">
+                Grade:
+                <select id="grade"
+                        name="grade"
+                        class="pull-right form-control"
+                        style="width:230px">
+                  <option value="High School">High School</option>
+                  <option value="Freshman">Freshman</option>
+                  <option value="Sophomore">Sophomore</option>
+                  <option value="Junior">Junior</option>
+                  <option value="Senior">Senior</option>
+                  <option value="Grad Student">Grad Student</option>
+                </select>
+              </p>
+              <p class="text-left pull-left" style="width:100px">Gender:</p>
+              <div id="gender"
+                   class="btn-group pull-right"
+                   data-toggle="buttons"
+                   style="margin-top:10px;margin-bottom:0px">
+                <button type="button" class="btn btn-default">Male</button>
+                <button type="button" class="btn btn-default">Female</button>
+              </div>
+              <p class="text-left pull-left" style="width:100px">Shirt Size:</p>
+              <div id="shirt"
+                   class="btn-group pull-right"
+                   data-toggle="buttons"
+                   style="margin-top:10px;margin-bottom:30px">
+                <button type="button" class="btn btn-default">XS</button>
+                <button type="button" class="btn btn-default">S</button>
+                <button type="button" class="btn btn-default">M</button>
+                <button type="button" class="btn btn-default">L</button>
+                <button type="button" class="btn btn-default">XL</button>
+              </div>
+              <p class="text-left pull-left" style="width:100px">
+                Out of state Hacker?:
+              </p>
+              <div id="outOfState"
+                   class="btn-group pull-right"
+                   data-toggle="buttons"
+                   style="margin-top:-15px;margin-bottom:5px">
+                <button type="button" class="btn btn-default">Yes</button>
+                <button type="button" class="btn btn-default">No</button>
+              </div>
+              <div class="bar"></div>
+              <p class="text-left" style="margin-top:-5px">
+                <input name="github"
+                       placeholder="Github username"
+                       class="pull-right form-control"
+                       required>
+              </p>
+              <p class="text-left">
+                <input name="linkedin"
+                       placeholder="LinkedIn Profile"
+                       class="pull-right form-control"
+                       required>
+              </p>
+              <div class="bar"></div>
+              <p class="text-left pull-left" style="width:100px">
+                First Hackathon?
+              </p>
+              <div id="first"
+                   class="btn-group pull-right"
+                   data-toggle="buttons"
+                   style="margin-top:10px;margin-bottom:10px">
+                <button type="button" class="btn btn-default">Yes</button>
+                <button type="button" class="btn btn-default">No</button>
+              </div>
+              <div class="bar"></div>
+              <div id="formSubmit"
+                   class="center-block"
+                   style="width:100%;max-width:126px">
+                <a class="btn btn-primary">click me babeh!</a>
+              </div>
+            </form>
           </div>
-
         </div>
-
-        <div class="content" id="kittens" style="height:200px;display:none">
-          Use this space for something new
-        </div>
-
-        <div class="gap gap-50" style="background-color:#DD2200"></div>
         <div class="content box-shawdow-inset" id="done">
           <h4 style="font-size:40px; margin: 1em auto; width: 80%;">
             Meet the team.
           </h4>
-          <div style="height:4em;"></div>
+
           <!-- Derek's Bio -->
-          <div class="center-block"
+          <div class="center-block bio-strip"
                style="position:relative;"
                data-bottom-top="transform: translate3d(-100%, 0%, 0px)"
-               data--230-bottom="transform: translate3d(0%, 0%, 0px)">
+               data-bottom="transform: translate3d(0%, 0%, 0px)">
             <a href="http://goo.gl/WH26n" target="_blank">
               <div id="derek_bio" class="bio-strip-pic"></div>
             </a>
@@ -438,13 +373,13 @@
             </div>
           </div>
 
-          <div style="width:100%;height:1px;clear:both"></div>
+          
 
           <!-- Greg's Bio -->
-          <div class="center-block"
+          <div class="center-block bio-strip"
                style="position:relative;"
                data-bottom-top="transform: translate3d(-100%, 0%, 0px)"
-               data--230-bottom="transform: translate3d(0%, 0%, 0px)">
+               data-bottom="transform: translate3d(0%, 0%, 0px)">
             <a href="http://goo.gl/pSZRRv" target="_blank">
               <div id="greg_bio" class="bio-strip-pic"></div>
             </a>
@@ -471,13 +406,11 @@
             </div>
           </div>
 
-          <div style="width:100%;height:1px;clear:both"></div>
-
           <!-- Jeff's Bio -->
-          <div class="center-block"
+          <div class="center-block bio-strip"
                style="position:relative;"
                data-bottom-top="transform: translate3d(-100%, 0%, 0px)"
-               data--230-bottom="transform: translate3d(0%, 0%, 0px)">
+               data-bottom="transform: translate3d(0%, 0%, 0px)">
             <a href="http://goo.gl/qwCSK" target="_blank">
               <div id="jeff_bio" class="bio-strip-pic"></div>
             </a>
@@ -493,7 +426,10 @@
               <strong>Jeff Barton</strong>
             </div>
           </div>
-          <div style="width:100%;clear:both;height:1px"></div>
+        </div>
+        <div id="footer"
+             data-bottom-top="transform: translate3d(0%, -100%, 0px)"
+             data-bottom="transform: translate3d(0%, 0%, 0px)">
           <p>Coded with <a href="http://goo.gl/Yx6toJ" target="_blank">♥</a> by <a href="http://goo.gl/LMkTJ8" target="_blank">Derek</a> and <a href="http://goo.gl/Yx6toJ" target="_blank">Greg</a></p>
         </div>
       </div>
@@ -506,6 +442,7 @@
       <script src="bower_components/bootstrap/js/tooltip.js"></script>
       <script src="bower_components/highcharts/highcharts.js"></script>
       <script src="bower_components/highcharts/modules/exporting.js"></script>
+      <script src="bower_components/stellar/src/jquery.stellar.js"></script>
 
       <!-- Custom JavaScript -->
       <script type="text/javascript">
@@ -549,17 +486,17 @@
               type: 'pie',
               name: 'Attendants',
               data: [
-                ['Brigham Young University', 31.0],
-                ['The University of Illinois, Urbana-Champaign', 16.7],
-                ['Boise State University', 9.5],
-                ['The University of Texas, Austin', 4.8],
-                ['Others',   38.1]
+                ['Brigham Young University', 14],
+                ['The University of Illinois, Urbana-Champaign', 7],
+                ['Boise State University', 4],
+                ['The University of Texas, Austin', 2],
+                ['Others',   7]
               ]
             }]
           });
         });
 
-
+        $(window).stellar();
       </script>
       <script src="scripts/geopattern.js"></script>
       <script src="scripts/form-validation.js"></script>
