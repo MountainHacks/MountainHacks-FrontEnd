@@ -81,15 +81,14 @@ hr { border-color:rgba(0, 0, 0, 0.4); }
 .large-fa { font-size: 30px; }
 
 .info-blob {
-  height: 425px;
   float: left;
   margin: 5px;
 }
 
 .info_row {
-  height: 490px;
   margin-left: auto;
   margin-right: auto;
+  height: 500px;
 }
 
 .info-blob > h4 {
@@ -107,7 +106,7 @@ hr { border-color:rgba(0, 0, 0, 0.4); }
 .info-blob > i { font-size: 72px; }
 
 .center-block {
-  display: block;
+  display: inline-block !important;
   width: 80%;
 }
 
@@ -273,24 +272,22 @@ p { margin:1em 0; }
 
 .content-full { height: 100%; }
 
-#done { }
-
-#done > p > a {
+#footer > p > a {
   color: black;
   cursor: text;
 }
 
-#done > div > a {
+#footer > div > a {
   color: black;
   cursor: default;
 }
 
-#done > p > a:hover {
+#footer > p > a:hover {
   cursor: text;
   text-decoration: none;
 }
 
-#done > div > a:hover {
+#footer > div > a:hover {
   cursor: default;
   text-decoration: none;
 }
