@@ -13,6 +13,7 @@ if (!String.prototype.contains) {
 }
 
 $("#formSubmit").click( function( e ) {
+
   e.preventDefault();
   var datablob = {};
   datablob.first_name = $("#form input[name='first_name']").val();
@@ -85,11 +86,19 @@ $("#formSubmit").click( function( e ) {
     return;
   }
 
+  var request = new XMLHttpRequest();
+  request.open('GET', 'http://api.mountainhacks.com/token', false);
+  request.send(null);
+  var token = request.responseText;
+  console.log(token)
+
   $.ajax({
-    //url: "http://localhost:8000/submit",
     url: "http://api.mountainhacks.com/submit",
     type: "POST",
     data: datablob,
+    beforeSend: function (request) {
+     request.setRequestHeader("X-MOUNTAINHACKS", token);
+    },
     success: function( data ) {
       $.ambiance({
         message: "Thanks for registering!",
@@ -98,8 +107,8 @@ $("#formSubmit").click( function( e ) {
       });
       $("#form").trigger("reset");
       $('.btn-group button').click(function() {
-            $(this).parent().children().removeClass('active');
-        });
+        $(this).parent().children().removeClass('active');
+      });
     },
     error: function ( jXHR, textStatus, errorThrown ) {
       $.ambiance({
