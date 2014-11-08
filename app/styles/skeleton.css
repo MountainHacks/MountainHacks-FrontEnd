@@ -39,7 +39,7 @@
     .container .five.columns                    { width: 280px; }
     .container .six.columns                     { width: 340px; }
     .container .seven.columns                   { width: 400px; }
-    .container .eight.columns                   { width: 460px; }
+    .container .eight.columns, .chart           { width: 460px; }
     .container .nine.columns                    { width: 520px; }
     .container .ten.columns                     { width: 580px; }
     .container .eleven.columns                  { width: 640px; }
@@ -92,7 +92,7 @@
         .container .five.columns                    { width: 220px; }
         .container .six.columns                     { width: 268px; }
         .container .seven.columns                   { width: 316px; }
-        .container .eight.columns                   { width: 364px; }
+        .container .eight.columns, .chart           { width: 364px; }
         .container .nine.columns                    { width: 412px; }
         .container .ten.columns                     { width: 460px; }
         .container .eleven.columns                  { width: 508px; }
@@ -141,8 +141,8 @@
         .container .four.columns, .info-blob,
         .container .five.columns,
         .container .six.columns,
-        .container .seven.columns,
-        .container .eight.columns,
+        .container .seven.columns, 
+        .container .eight.columns, .chart,
         .container .nine.columns,
         .container .ten.columns,
         .container .eleven.columns,
@@ -191,8 +191,8 @@
         .container .four.columns, .info-blob,
         .container .five.columns,
         .container .six.columns,
-        .container .seven.columns,
-        .container .eight.columns,
+        .container .seven.columns, 
+        .container .eight.columns, .chart,
         .container .nine.columns,
         .container .ten.columns,
         .container .eleven.columns,

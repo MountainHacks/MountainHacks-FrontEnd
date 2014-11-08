@@ -48,7 +48,7 @@
            data-top-bottom="opacity:.1;">
 
         <div class="hsContent">
-          <img src="images/logo.svg" width="150px" />
+          <img src="images/logo.svg" width="150px" heigth="150px" />
           <br/>
           <h1 id="home-title">
             MountainHacks
@@ -222,7 +222,15 @@
               </div>
             </div>
           </div>
-          <div style="height:500px; width:100%;" id="chart"></div>
+         <div class="container">
+          <div id="schoolData" class="row">
+            <div class="chart">
+              <h2>Registered Students</h2>
+              <canvas id="schools" width="440px" height="440px"></canvas>
+            </div>
+          </div>
+         </div> 
+
         </div>
         <div id="registration"
              class="hsContainer"
@@ -443,61 +451,11 @@
       <script src="bower_components/highcharts/highcharts.js"></script>
       <script src="bower_components/highcharts/modules/exporting.js"></script>
       <script src="bower_components/stellar/src/jquery.stellar.js"></script>
+      <script src="bower_components/chartjs/Chart.min.js"></script>
+      <script src="scripts/main.js"></script>
+      
 
       <!-- Custom JavaScript -->
-      <script type="text/javascript">
-        skrollr.init({
-          smoothScrolling: false,
-          mobileDeceleration: 0.004
-        });
-
-        $('.btn-group button').click(function() {
-            $(this).parent().children().removeClass('active');
-            $(this).addClass('active');
-        });
-
-        $(function () {
-          $('#chart').highcharts({
-            chart: {
-              plotBackgroundColor: null,
-              plotBorderWidth: 1,//null,
-              plotShadow: false
-            },
-            title: {
-              text: 'Registered Students'
-            },
-            tooltip: {
-              pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
-            },
-            plotOptions: {
-              pie: {
-                allowPointSelect: true,
-                cursor: 'pointer',
-                dataLabels: {
-                  enabled: true,
-                  format: '<b>{point.name}</b>: {point.percentage:.1f} %',
-                  style: {
-                    color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
-                  }
-                }
-              }
-            },
-            series: [{
-              type: 'pie',
-              name: 'Attendants',
-              data: [
-                ['Brigham Young University', 14],
-                ['The University of Illinois, Urbana-Champaign', 7],
-                ['Boise State University', 4],
-                ['The University of Texas, Austin', 2],
-                ['Others',   7]
-              ]
-            }]
-          });
-        });
-
-        $(window).stellar();
-      </script>
       <script src="scripts/geopattern.js"></script>
       <script src="scripts/form-validation.js"></script>
       <script>
@@ -508,7 +466,6 @@
 
         ga('create', 'UA-56237545-1', 'auto');
         ga('send', 'pageview');
-
       </script>
   </body>
 </html>

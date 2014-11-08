@@ -5,6 +5,10 @@
 
 hr { border-color:rgba(0, 0, 0, 0.4); }
 
+.chart {
+  display: inline-block;
+}
+
 .hsContent > a { color: white; }
 
 .form-control { margin-bottom: 8px;}
