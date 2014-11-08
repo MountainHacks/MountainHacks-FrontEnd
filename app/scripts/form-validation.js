@@ -90,7 +90,6 @@ $("#formSubmit").click( function( e ) {
   request.open('GET', 'http://api.mountainhacks.com/token', false);
   request.send(null);
   var token = request.responseText;
-  console.log(token)
 
   $.ajax({
     url: "http://api.mountainhacks.com/submit",
