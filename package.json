@@ -1,6 +1,6 @@
 {
   "name": "MountainHacks-FrontEnd",
-  "version": "1.5.1",
+  "version": "1.5.2",
   "dependencies": {},
   "devDependencies": {
     "grunt": "^0.4.1",
