@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="styles/main.css"/>
     <link rel="stylesheet" href="styles/skeleton.css"/>
     <link rel="stylesheet" href="styles/breakpoints.css"/>
+    <link rel="stylesheet" type="text/css" href="bower_components/typeahead.js-bootstrap-css/typeaheadjs.css">
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="logo.ico"/>
@@ -43,20 +44,10 @@
     <div id="skrollr-body">
       <div id="home-bg" 
            class="hsContainer"
-<<<<<<< Updated upstream
-           data-stellar-background-ratio="0"
-=======
-           data-stellar-background-ratio="0.1"
->>>>>>> Stashed changes
-           data-top="opacity:1;"
-           data-top-bottom="opacity:.1;">
+           data-stellar-background-ratio="0">
 
         <div class="hsContent">
-<<<<<<< Updated upstream
           <img src="images/logo.svg" width="150px" heigth="150px" />
-=======
-          <img src="images/logo.svg" width="150px" />
->>>>>>> Stashed changes
           <br/>
           <h1 id="home-title">
             MountainHacks
@@ -267,10 +258,11 @@
                        required>
               </p>
               <p class="text-left">
-                <input name="school"
-                       placeholder="Your school"
-                       class="pull-right form-control"
-                       required>
+                <input id="typehead-schools"
+                       class="typeahead form-control pull-right"
+                       style="margin-bottom:-10px;"
+                       type="text"
+                       placeholder="Your school">
               </p>
               <p class="text-left">
                 <input name="major"
@@ -456,36 +448,16 @@
       <script src="bower_components/skrollr/src/skrollr.js"></script>
       <script src="bower_components/geopattern/js/geopattern.min.js"></script>
       <script src="bower_components/jquery.ambiance/assets/js/jquery.ambiance.js"></script>
-      <script src="bower_components/bootstrap/js/tooltip.js"></script>
-<<<<<<< Updated upstream
       <script src="bower_components/highcharts/highcharts.js"></script>
       <script src="bower_components/highcharts/modules/exporting.js"></script>
       <script src="bower_components/stellar/src/jquery.stellar.js"></script>
       <script src="bower_components/chartjs/Chart.min.js"></script>
+      <script src="bower_components/typeahead.js/dist/typeahead.jquery.min.js"></script>
+      <script src="bower_components/typeahead.js/dist/bloodhound.min.js"></script>
       <script src="scripts/main.js"></script>
-      
-
-      <!-- Custom JavaScript -->
-=======
-      <script src="bower_components/stellar/src/jquery.stellar.js"></script>
-
-      <!-- Custom JavaScript -->
-      <script type="text/javascript">
-        skrollr.init({
-          smoothScrolling: false,
-          mobileDeceleration: 0.004
-        });
-
-        $('.btn-group button').click(function() {
-            $(this).parent().children().removeClass('active');
-            $(this).addClass('active');
-        });
-
-        $(window).stellar();
-      </script>
->>>>>>> Stashed changes
       <script src="scripts/geopattern.js"></script>
       <script src="scripts/form-validation.js"></script>
+      <script src="scripts/typeahead.js"></script>
       <script>
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
