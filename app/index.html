@@ -43,12 +43,20 @@
     <div id="skrollr-body">
       <div id="home-bg" 
            class="hsContainer"
+<<<<<<< Updated upstream
            data-stellar-background-ratio="0"
+=======
+           data-stellar-background-ratio="0.1"
+>>>>>>> Stashed changes
            data-top="opacity:1;"
            data-top-bottom="opacity:.1;">
 
         <div class="hsContent">
+<<<<<<< Updated upstream
           <img src="images/logo.svg" width="150px" heigth="150px" />
+=======
+          <img src="images/logo.svg" width="150px" />
+>>>>>>> Stashed changes
           <br/>
           <h1 id="home-title">
             MountainHacks
@@ -449,6 +457,7 @@
       <script src="bower_components/geopattern/js/geopattern.min.js"></script>
       <script src="bower_components/jquery.ambiance/assets/js/jquery.ambiance.js"></script>
       <script src="bower_components/bootstrap/js/tooltip.js"></script>
+<<<<<<< Updated upstream
       <script src="bower_components/highcharts/highcharts.js"></script>
       <script src="bower_components/highcharts/modules/exporting.js"></script>
       <script src="bower_components/stellar/src/jquery.stellar.js"></script>
@@ -457,6 +466,24 @@
       
 
       <!-- Custom JavaScript -->
+=======
+      <script src="bower_components/stellar/src/jquery.stellar.js"></script>
+
+      <!-- Custom JavaScript -->
+      <script type="text/javascript">
+        skrollr.init({
+          smoothScrolling: false,
+          mobileDeceleration: 0.004
+        });
+
+        $('.btn-group button').click(function() {
+            $(this).parent().children().removeClass('active');
+            $(this).addClass('active');
+        });
+
+        $(window).stellar();
+      </script>
+>>>>>>> Stashed changes
       <script src="scripts/geopattern.js"></script>
       <script src="scripts/form-validation.js"></script>
       <script>
