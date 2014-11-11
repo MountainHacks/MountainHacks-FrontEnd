@@ -1,6 +1,6 @@
 {
   "name": "MountainHacks-FrontEnd",
-  "version": "1.5.1",
+  "version": "1.5.2",
   "dependencies": {
     "json3": "~3.3.1",
     "es5-shim": "~3.1.0",

@@ -34,12 +34,12 @@ var firsttimerData = [
 
   var schoolData = [
       {
-          value: 15,
+          value: 16,
           color:"#428BCA",
           label: "Brigham Young University"
       },
       {
-          value: 7,
+          value: 8,
           color: "#555",
           label: "The University of Illinois, Urbana-Champaign"
       },
@@ -55,14 +55,14 @@ var firsttimerData = [
           label: "The University of Texas, Austin"
       },
       {
-          value: 7,
+          value: 8,
           color:"#eee",
           label: "Others"
       }
   ];
 
 var pieOptions = {
-  tooltipTemplate: "<%=label%>: <%= Math.round((value/35)*100) + '%' %>",
+  tooltipTemplate: "<%=label%>: <%= Math.round((value/38)*100) + '%' %>",
   onAnimationComplete: function()
   {
       this.showTooltip(this.segments, true);
