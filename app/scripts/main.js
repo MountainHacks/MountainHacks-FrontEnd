@@ -43,7 +43,7 @@ $(window).stellar();
   ];
 
 var pieOptions = {
-  tooltipTemplate: "<%=label%>: <%= Math.round((value/38)*100) + '%' %>",
+  tooltipTemplate: "<%=label%>: <%= Math.round((value/41)*100) + '%' %>",
   onAnimationComplete: function()
   {
       this.showTooltip(this.segments, true);
