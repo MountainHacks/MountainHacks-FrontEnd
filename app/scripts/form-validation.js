@@ -22,7 +22,7 @@ $("#formSubmit").click( function( e ) {
   datablob.school = $("#form input[name='school']").val();
   datablob.major = $("#form input[name='major']").val();
   datablob.grade = $("#grade option:selected").val();
-  datablob.gender = $("#gender").children(".active").text();
+  datablob.gender = $("#gender").children(".active").text().charAt(0).toString();
   datablob.shirt = $("#shirt").children(".active").text();
   datablob.out_of_state = $("#outOfState").children(".active").text();
   datablob.github = $("#form input[name='github']").val();
