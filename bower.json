@@ -1,6 +1,6 @@
 {
   "name": "MountainHacks-FrontEnd",
-  "version": "1.6.2",
+  "version": "1.6.5",
   "dependencies": {
     "bootstrap": "~3.2.0",
     "skrollr": "~0.6.27",
