@@ -15,7 +15,7 @@ $(window).stellar();
 
   var schoolData = [
       {
-          value: 16,
+          value: 17,
           color:"#428BCA",
           label: "Brigham Young University"
       },
@@ -25,7 +25,7 @@ $(window).stellar();
           label: "The University of Illinois, Urbana-Champaign"
       },
       {
-          value: 4,
+          value: 5,
           color:"#53AFFF",
           label: "Boise State University"
       },
@@ -36,7 +36,7 @@ $(window).stellar();
           label: "The University of Texas, Austin"
       },
       {
-          value: 8,
+          value: 9,
           color:"#eee",
           label: "Others"
       }
