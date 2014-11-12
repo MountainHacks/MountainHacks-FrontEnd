@@ -22,7 +22,7 @@ $("#formSubmit").click( function( e ) {
   datablob.school = $("#form input[name='school']").val();
   datablob.major = $("#form input[name='major']").val();
   datablob.grade = $("#grade option:selected").val();
-  datablob.gender = $("#gender").children(".active").text();
+  datablob.gender = $("#gender").children(".active").text().charAt(0).toString();
   datablob.shirt = $("#shirt").children(".active").text();
   datablob.out_of_state = $("#outOfState").children(".active").text();
   datablob.github = $("#form input[name='github']").val();
@@ -46,7 +46,7 @@ $("#formSubmit").click( function( e ) {
   }
 
   if(!String(datablob.email).contains(".edu") && 
-  	 datablob.grade != "High School") {
+     datablob.grade != "High School") {
     ambiantMessage( "Please enter your .edu email." );
     return;
   }
@@ -85,6 +85,10 @@ $("#formSubmit").click( function( e ) {
     ambiantMessage( "Please indicate if you are a first-time hacker." );
     return;
   }
+  
+  $('#cog-load').css({'display':'inline-block'});
+  $('#formSubmit a').off();
+  $('#formSubmit a').val("working...");
 
   var request = new XMLHttpRequest();
   request.open('GET', 'http://api.mountainhacks.com/token', false);
@@ -105,9 +109,10 @@ $("#formSubmit").click( function( e ) {
         type: "success"
       });
       $("#form").trigger("reset");
-      $('.btn-group button').click(function() {
-        $(this).parent().children().removeClass('active');
-      });
+      $('.btn-group button').removeClass('active');
+      $('#formSubmit a').on();
+      $('#formSubmit a').val("click me babeh!");
+      $('#cog-load').css({'display':'none'});
     },
     error: function ( jXHR, textStatus, errorThrown ) {
       $.ambiance({
@@ -115,6 +120,7 @@ $("#formSubmit").click( function( e ) {
         type: "error",
         fade: true
       });
+      $('#cog-load').css({'display':'none'});
     }
   })
 });

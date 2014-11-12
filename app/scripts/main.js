@@ -13,25 +13,6 @@ $('.btn-group button').click(function() {
 //Init Stellar
 $(window).stellar();
 
-//Chartjs School Donut
-var firsttimerData = [
-      {
-          value: 300,
-          color:"#F7464A",
-          label: "Red"
-      },
-      {
-          value: 50,
-          color: "#46BFBD",
-          label: "Green"
-      },
-      {
-          value: 100,
-          color: "#FDB45C",
-          label: "Yellow"
-      }
-  ];
-
   var schoolData = [
       {
           value: 16,
