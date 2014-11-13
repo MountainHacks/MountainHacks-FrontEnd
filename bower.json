@@ -1,6 +1,6 @@
 {
   "name": "MountainHacks-FrontEnd",
-  "version": "1.6.6",
+  "version": "1.7.0",
   "dependencies": {
     "bootstrap": "~3.2.0",
     "skrollr": "~0.6.27",
@@ -14,7 +14,8 @@
     "chartjs": ">0.2.0",
     "retinajs": "~1.3.0",
     "typeahead.js": "~0.10.5",
-    "typeahead.js-bootstrap-css": "*"
+    "typeahead.js-bootstrap-css": "*",
+    "animate.css": "~3.2.0"
   },
   "appPath": "app"
 }

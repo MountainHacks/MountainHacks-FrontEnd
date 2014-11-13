@@ -14,6 +14,9 @@
     <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Raleway'/>
     <link rel="stylesheet"
           href="bower_components/jquery.ambiance/assets/css/jquery.ambiance.css"/>
+    <link rel="stylesheet" href="bower_components/typeahead.js-bootstrap-css/typeaheadjs.css">
+    <link rel="stylesheet" href="bower_components/animate.css/animate.min.css">
+    
     <!--[if lt IE 9]>
       <script src="bower_components/html5shiv/dist/html5shiv.js"></script>
     <![endif]-->
@@ -22,7 +25,7 @@
     <link rel="stylesheet" href="styles/main.css"/>
     <link rel="stylesheet" href="styles/skeleton.css"/>
     <link rel="stylesheet" href="styles/breakpoints.css"/>
-    <link rel="stylesheet" type="text/css" href="bower_components/typeahead.js-bootstrap-css/typeaheadjs.css">
+    
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="logo.ico"/>
@@ -237,7 +240,20 @@
              data-stellar-background-ratio="0">
           <div class="hsContent">
 
-            <h1 class="font-raleway">Registration</h1>
+            <!-- MHacks Video -->
+            <div id="mhack-video" style="position:absolute;z-index:-99;display:none;">
+              <h1 class="font-raleway">You are now registered!
+                <br><small style="color:white;">Get hyped by watching these two videos from MHacks.</small>
+              </h1>
+              <div class="row">
+                <div class="video-half" style="margin: 0 auto;">
+                  <iframe width="95%" height="315" src="//www.youtube.com/embed/videoseries?list=PLXAdDMKTjNmDHVwbPDtY6DWCLx06sCv3C" frameborder="0" allowfullscreen></iframe>
+                </div>
+              </div>
+            </div>
+
+            <!-- Registration Form -->
+            <h1 id="reg-title" class="font-raleway">Registration</h1>
             <form id="form" class="center-block">
               <p class="text-left">
                 <input name="first_name"

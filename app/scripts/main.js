@@ -68,3 +68,26 @@ if (document.images) {
     img3 = new Image();
     img3.src = "http://goo.gl/Hw4YyL";
 }   
+
+//Submission Transition
+var subAnimation = function () {
+  $('#reg-title').css({'display':'none'});
+  $('#form').addClass('animated zoomOutUp');
+  $('#form').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend',
+    function(){
+      $('#form').css(
+        {
+          'display':'none',
+          'position':'absolute',
+          'z-index':'-100'
+        });
+      $('#mhack-video').css(
+        {
+          'display':'block',
+          'position':'relative',
+          'z-index':'100'
+        });
+      $('#mhack-video').addClass('animated zoomInDown');
+      skrollr.init().refresh();
+    });
+};

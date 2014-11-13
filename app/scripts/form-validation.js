@@ -96,12 +96,12 @@ $("#formSubmit").click( function( e ) {
   $('#formSubmit a').val("working...");
 
   var request = new XMLHttpRequest();
-  request.open('GET', 'http://api.mountainhacks.com/token', false);
+  request.open('GET', 'http://localhost:8000/token', false);
   request.send(null);
   var token = request.responseText;
 
   $.ajax({
-    url: "http://api.mountainhacks.com/submit",
+    url: "http://localhost:8000/submit",
     type: "POST",
     data: datablob,
     beforeSend: function (request) {
@@ -118,6 +118,7 @@ $("#formSubmit").click( function( e ) {
       $('#formSubmit a').on();
       $('#formSubmit a').val("click me babeh!");
       $('#cog-load').css({'display':'none'});
+      subAnimation();
     },
     error: function ( jXHR, textStatus, errorThrown ) {
       $.ambiance({
