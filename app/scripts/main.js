@@ -91,3 +91,14 @@ var subAnimation = function () {
       skrollr.init().refresh();
     });
 };
+
+//Choose file button pretty
+document.getElementById("resumebecausegregissofrigginlameswaggy").onchange = function () {
+    document.getElementById("uploadFile").value = this.value;
+};
+
+$('#resumebecausegregissofrigginlameswaggy').change(function() {
+  var fileurl = $('#uploadFile').val();
+  fileurl = fileurl.replace(/^C:\\fakepath\\/, "");
+  $('#uploadFile').val(fileurl);
+});

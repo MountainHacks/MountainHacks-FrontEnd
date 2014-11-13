@@ -343,7 +343,13 @@
                        required>
               </p>
               <div class="bar"></div>
-              <input type="file" id="resumebecausegregissofrigginlameswaggy">
+              <div class="input-group">
+                <input id="uploadFile" placeholder="Upload Resume (*.pdf)" class="form-control" disabled="disabled" />
+                <div class="input-group-btn fileUpload btn btn-primary">
+                    <span style="font-size:14px;">Browse...</span>
+                    <input id="resumebecausegregissofrigginlameswaggy" type="file" class="upload" />
+                </div>
+              </div>
               <div class="bar"></div>
               <p class="text-left pull-left" style="width:100px">
                 First Hackathon?

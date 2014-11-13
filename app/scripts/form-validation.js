@@ -28,9 +28,9 @@ $("#formSubmit").click( function( e ) {
   
   var firstName =  $( "#form input[name='first_name']" ).val();
   var lastName =   $( "#form input[name='last_name']" ).val();
-  var email =      $( "#typehead-schools" ).val();
-  var school =     $( "#form input[name='major']" ).val();
-  var major =      $( "#grade option:selected" ).val();
+  var email =      $( "#form input[name='email']" ).val();
+  var school =     $( "#typehead-schools" ).val();
+  var major =      $( "#form input[name='major']" ).val();
   var grade =      $( "#grade option:selected" ).val();
   var gender =     $( "#gender").children( ".active" ).text().charAt( 0 ).toString();
   var shirt =      $( "#shirt").children( ".active" ).text();
@@ -91,7 +91,7 @@ $("#formSubmit").click( function( e ) {
     return;
   }
 
-  if(linkedin !== "" && !datablob.linkedin.toString().contains("https://www.")) {
+  if(linkedIn !== "" && !linkedIn.toString().contains("https://www.")) {
     ambiantMessage( "Please enter proper URL for LinkedIn. (Start with https://www.)");
     return;
   }
@@ -113,20 +113,20 @@ $("#formSubmit").click( function( e ) {
   form.append( 'github', github);
   form.append( 'linkedin', linkedIn);
   form.append( 'first', first);
-  form.append('resume', $( '#resumebecausegregissofrigginlameswaggy' )[0].files[0] );
+  form.append( 'resume', $( '#resumebecausegregissofrigginlameswaggy' )[0].files[0] );
   
   $('#cog-load').css({'display':'inline-block'});
   $('#formSubmit a').off();
   $('#formSubmit a').val("working...");
 
   var request = new XMLHttpRequest();
-  request.open('GET', 'http://api.mountainhacks.com/token', false );
+  request.open('GET', 'http://localhost:8000/token', false );
   request.send( null );
 
   var token = request.responseText;
 
   $.ajax({
-    url: "http://api.mountainhacks.com/submit",
+    url: "http://localhost:8000/submit",
     type: "POST",
     data: form,
     processData: false,
