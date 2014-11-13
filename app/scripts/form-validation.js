@@ -80,6 +80,11 @@ $("#formSubmit").click( function( e ) {
     ambiantMessage( "Please indicate if you are out-of-state." );
     return;
   }
+
+  if(datablob.linkedin !== "" && !datablob.linkedin.toString().contains("https://www.")) {
+    ambiantMessage( "Please enter proper URL for LinkedIn. (Start with https://www.)");
+    return;
+  }
   
   if(datablob.first == "") {
     ambiantMessage( "Please indicate if you are a first-time hacker." );

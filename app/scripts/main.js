@@ -13,34 +13,35 @@ $('.btn-group button').click(function() {
 //Init Stellar
 $(window).stellar();
 
-  var schoolData = [
-      {
-          value: 17,
-          color:"#428BCA",
-          label: "Brigham Young University"
-      },
-      {
-          value: 8,
-          color: "#555",
-          label: "The University of Illinois, Urbana-Champaign"
-      },
-      {
-          value: 5,
-          color:"#53AFFF",
-          label: "Boise State University"
-      },
-      {
-          value: 2,
-          color:"#909090",
-          highlight: "#FF5A5E",
-          label: "The University of Texas, Austin"
-      },
-      {
-          value: 9,
-          color:"#eee",
-          label: "Others"
-      }
-  ];
+//ChartJS
+var schoolData = [
+    {
+        value: 17,
+        color:"#428BCA",
+        label: "Brigham Young University"
+    },
+    {
+        value: 8,
+        color: "#555",
+        label: "The University of Illinois, Urbana-Champaign"
+    },
+    {
+        value: 5,
+        color:"#53AFFF",
+        label: "Boise State University"
+    },
+    {
+        value: 2,
+        color:"#909090",
+        highlight: "#FF5A5E",
+        label: "The University of Texas, Austin"
+    },
+    {
+        value: 9,
+        color:"#eee",
+        label: "Others"
+    }
+];
 
 var pieOptions = {
   tooltipTemplate: "<%=label%>: <%= Math.round((value/41)*100) + '%' %>",
@@ -56,4 +57,14 @@ var pieOptions = {
 };
 
 var schools = document.getElementById("schools").getContext("2d");
-new Chart(schools).Doughnut(schoolData, pieOptions);      
+new Chart(schools).Doughnut(schoolData, pieOptions);   
+
+//Pre-load Images
+if (document.images) {
+    img1 = new Image();
+    img1.src = "http://goo.gl/a29VKh";
+    img2 = new Image();
+    img2.src = "http://goo.gl/PmoxhV";
+    img3 = new Image();
+    img3.src = "http://goo.gl/Hw4YyL";
+}   
