@@ -19,7 +19,7 @@ $("#formSubmit").click( function( e ) {
   datablob.first_name = $("#form input[name='first_name']").val();
   datablob.last_name = $("#form input[name='last_name']").val();
   datablob.email = $("#form input[name='email']").val();
-  datablob.school = $("#form input[name='school']").val();
+  datablob.school = $("#typehead-schools").val();
   datablob.major = $("#form input[name='major']").val();
   datablob.grade = $("#grade option:selected").val();
   datablob.gender = $("#gender").children(".active").text().charAt(0).toString();
