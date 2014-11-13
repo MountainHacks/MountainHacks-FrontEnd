@@ -19,7 +19,7 @@ $("#formSubmit").click( function( e ) {
   datablob.first_name = $("#form input[name='first_name']").val();
   datablob.last_name = $("#form input[name='last_name']").val();
   datablob.email = $("#form input[name='email']").val();
-  datablob.school = $("#form input[name='school']").val();
+  datablob.school = $("#typehead-schools").val();
   datablob.major = $("#form input[name='major']").val();
   datablob.grade = $("#grade option:selected").val();
   datablob.gender = $("#gender").children(".active").text().charAt(0).toString();
@@ -80,6 +80,11 @@ $("#formSubmit").click( function( e ) {
     ambiantMessage( "Please indicate if you are out-of-state." );
     return;
   }
+
+  if(datablob.linkedin !== "" && !datablob.linkedin.toString().contains("https://www.")) {
+    ambiantMessage( "Please enter proper URL for LinkedIn. (Start with https://www.)");
+    return;
+  }
   
   if(datablob.first == "") {
     ambiantMessage( "Please indicate if you are a first-time hacker." );
@@ -91,12 +96,12 @@ $("#formSubmit").click( function( e ) {
   $('#formSubmit a').val("working...");
 
   var request = new XMLHttpRequest();
-  request.open('GET', 'http://api.mountainhacks.com/token', false);
+  request.open('GET', 'http://localhost:8000/token', false);
   request.send(null);
   var token = request.responseText;
 
   $.ajax({
-    url: "http://api.mountainhacks.com/submit",
+    url: "http://localhost:8000/submit",
     type: "POST",
     data: datablob,
     beforeSend: function (request) {
