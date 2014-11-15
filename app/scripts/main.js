@@ -16,12 +16,12 @@ $(window).stellar();
 //ChartJS
 var schoolData = [
     {
-        value: 17,
+        value: 24,
         color:"#428BCA",
         label: "Brigham Young University"
     },
     {
-        value: 8,
+        value: 9,
         color: "#555",
         label: "The University of Illinois, Urbana-Champaign"
     },
@@ -31,20 +31,20 @@ var schoolData = [
         label: "Boise State University"
     },
     {
-        value: 2,
+        value: 3,
         color:"#909090",
         highlight: "#FF5A5E",
         label: "The University of Texas, Austin"
     },
     {
-        value: 9,
+        value: 15,
         color:"#eee",
         label: "Others"
     }
 ];
 
 var pieOptions = {
-  tooltipTemplate: "<%=label%>: <%= Math.round((value/41)*100) + '%' %>",
+  tooltipTemplate: "<%=label%>: <%= Math.round((value/55)*100) + '%' %>",
   onAnimationComplete: function()
   {
       this.showTooltip(this.segments, true);
