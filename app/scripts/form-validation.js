@@ -13,12 +13,12 @@ if (!String.prototype.contains) {
 }
 
 // dummy test data
-$("#form input[name='first_name']").val("test");
-$("#form input[name='last_name']").val("test");
-$("#form input[name='email']").val("test@test.edu");
-$("#typehead-schools").val("test");
-$("#form input[name='major']").val("test");
-$("#form input[name='github']").val("test");
+// $("#form input[name='first_name']").val("test");
+// $("#form input[name='last_name']").val("test");
+// $("#form input[name='email']").val("test@test.edu");
+// $("#typehead-schools").val("test");
+// $("#form input[name='major']").val("test");
+// $("#form input[name='github']").val("test");
 
 $("#formSubmit").click( function( e ) {
 
