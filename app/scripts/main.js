@@ -15,42 +15,56 @@ $(window).stellar();
 
 //ChartJS
 var schoolData = [
-    {
-        value: 24,
-        color:"#428BCA",
-        label: "Brigham Young University--Provo"
-    },
-    {
-        value: 9,
-        color: "#555",
-        label: "University of Illinois--Urbana-Champaign"
-    },
-    {
-        value: 5,
-        color:"#53AFFF",
-        label: "Boise State University"
-    },
-    {
-        value: 3,
-        color:"#909090",
-        highlight: "#FF5A5E",
-        label: "University of Texas--Austin"
-    },
-    {
-        value: 15,
-        color:"#eee",
-        label: "Others"
-    }
+  {
+    value: 32,
+    color:"#002255",
+    label: "Brigham Young University--Provo",
+      
+  },
+  {
+    value: 9,
+    color: "#F47F24",
+    label: "University of Illinois--Urbana-Champaign"
+  },
+  {
+    value: 2,
+    color: "#3484BF",
+    label: "University of California--Los Angeles"
+  },
+  {
+    value: 2,
+    color: "#002855",
+    label: "University of California--Davis"
+  },
+  {
+    value: 4,
+    color: "#C15308",
+    label: "University of Texas--Austin"
+  },
+  {
+    value: 5,
+    color: "#005BAA",
+    label: "Boise State University"
+  },
+  {
+    value: 13,
+    color:"#efefef",
+    label: "Others"
+  },
+  {
+    value: 2,
+    color: "#990000",
+    label: "Carnegie Mellon University"
+  }
 ];
 
 var pieOptions = {
-  tooltipTemplate: "<%=label%>: <%= Math.round((value/55)*100) + '%' %>",
+  tooltipTemplate: "<%=label%>: <%= Math.round((value/69)*100) + '%' %>",
   onAnimationComplete: function()
   {
       this.showTooltip(this.segments, true);
   },
   tooltipEvents: [],
-  segmentStrokeColor : "#FFF",
   percentageInnerCutout : 50,
   showTooltips: true
 
