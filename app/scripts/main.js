@@ -19,12 +19,26 @@ var schoolData = [
     value: 32,
     color:"#002255",
     label: "Brigham Young University--Provo",
-      
   },
   {
     value: 9,
     color: "#F47F24",
     label: "University of Illinois--Urbana-Champaign"
+  },
+  {
+    value: 5,
+    color: "#005BAA",
+    label: "Boise State University"
+  },
+  {
+    value: 4,
+    color: "#C15308",
+    label: "University of Texas--Austin"
+  },
+  {
+    value: 2,
+    color: "#990000",
+    label: "Carnegie Mellon University"
   },
   {
     value: 2,
@@ -37,41 +51,80 @@ var schoolData = [
     label: "University of California--Davis"
   },
   {
-    value: 4,
-    color: "#C15308",
-    label: "University of Texas--Austin"
-  },
-  {
-    value: 5,
-    color: "#005BAA",
-    label: "Boise State University"
-  },
-  {
     value: 13,
-    color:"#efefef",
+    color:"#9E9E9E",
     label: "Others"
-  },
-  {
-    value: 2,
-    color: "#990000",
-    label: "Carnegie Mellon University"
   }
 ];
 
 var pieOptions = {
-  tooltipTemplate: "<%=label%>: <%= Math.round((value/69)*100) + '%' %>",
-  onAnimationComplete: function()
-  {
-      this.showTooltip(this.segments, true);
-  },
-  tooltipEvents: [],
-  percentageInnerCutout : 50,
-  showTooltips: true
+    responsive : true,
+    animationEasing: "easeOutQuart",
+    tooltipTemplate: "<%if (label){%><%=label%>: <%}%><%= Math.round((value/69)*100) %>%",
+    segmentStrokeColor : "#f9f9f9",
+    legendTemplate : "<ul class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<segments.length; i++){%><li><div class=\"comm-how\"><%=Math.round((segments[i].value/69)*100)%>%</div><span style=\"background-color:<%=segments[i].fillColor%>\"></span><%if(segments[i].label){%><%=segments[i].label%><%}%></li><%}%></ul>"
+  };
 
-};
+// window.onload = function(){
+//   var schools = document.getElementById("schools").getContext("2d");
+//   window.myDoughnut = new Chart(schools).Doughnut(schoolData, pieOptions); 
 
-var schools = document.getElementById("schools").getContext("2d");
-new Chart(schools).Doughnut(schoolData, pieOptions);   
+//   var legendHolder = document.getElementById('schoolsLegend')
+//         legendHolder.innerHTML = myDoughnut.generateLegend();
+//         // Include a html legend template after the module doughnut itself
+//         helpers.each(legendHolder.firstChild.childNodes, function(legendNode, index){
+//             helpers.addEvent(legendNode, 'mouseover', function(){
+//                 var activeSegment = myDoughnut.segments[index];
+//                 activeSegment.save();
+//                 activeSegment.fillColor = activeSegment.highlightColor;
+//                 myDoughnut.showTooltip([activeSegment]);
+//                 activeSegment.restore();
+//             });
+//         });
+//         helpers.addEvent(legendHolder.firstChild, 'mouseout', function(){
+//             myDoughnut.draw();
+//         });
+//         canvas.parentNode.parentNode.appendChild(legendHolder.firstChild);
+            
+
+//         myDoughnut.generateLegend();
+//         document.getElementById('schoolsLegend').innerHTML = myDoughnut.generateLegend();
+// };
+
+window.onload = function(){
+          var ctx = document.getElementById("schools").getContext("2d");
+          window.myDoughnut = new Chart(ctx).Doughnut(schoolData, {
+            responsive : true,
+            animationEasing: "easeOutQuart",
+            tooltipTemplate: "<%if (label){%><%=label%>: <%}%><%= Math.round((value/69)*100) %>%",
+            segmentStrokeColor : "#f9f9f9",
+            legendTemplate : "<ul class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<segments.length; i++){%><li><div class=\"comm-how\"><%=Math.round((segments[i].value/69)*100)%>%</div><span style=\"background-color:<%=segments[i].fillColor%>\"></span><%if(segments[i].label){%><%=segments[i].label%><%}%></li><%}%></ul>"
+          });
+
+           var helpers = Chart.helpers;
+           var legendHolder = document.getElementById('schoolsLegend')
+      legendHolder.innerHTML = myDoughnut.generateLegend();
+      // Include a html legend template after the module doughnut itself
+      helpers.each(legendHolder.firstChild.childNodes, function(legendNode, index){
+          helpers.addEvent(legendNode, 'mouseover', function(){
+              var activeSegment = myDoughnut.segments[index];
+              activeSegment.save();
+              activeSegment.fillColor = activeSegment.highlightColor;
+              myDoughnut.showTooltip([activeSegment]);
+              activeSegment.restore();
+          });
+      });
+      helpers.addEvent(legendHolder.firstChild, 'mouseout', function(){
+          myDoughnut.draw();
+      });
+      canvas.parentNode.parentNode.appendChild(legendHolder.firstChild);
+          
+
+          myDoughnut.generateLegend();
+          document.getElementById('schoolsLegend').innerHTML = myDoughnut.generateLegend();
+        };
+
+
 
 //Pre-load Images
 if (document.images) {
