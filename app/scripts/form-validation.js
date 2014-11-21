@@ -22,10 +22,13 @@ if (!String.prototype.contains) {
 
 $("#formSubmit").click( function( e ) {
 
+  //subAnimation();
+  //return;
+
   e.preventDefault();
 
   var form = new FormData();
-  
+
   var firstName =  $( "#form input[name='first_name']" ).val();
   var lastName =   $( "#form input[name='last_name']" ).val();
   var email =      $( "#form input[name='email']" ).val();
@@ -55,8 +58,7 @@ $("#formSubmit").click( function( e ) {
     return;
   }
 
-  if(!String(email).contains(".edu") && 
-     grade != "High School") {
+  if(!String(email).contains(".edu") && !String(email).contains(".ca") && grade != "High School") {
     ambiantMessage( "Please enter your .edu email." );
     return;
   }
@@ -95,7 +97,7 @@ $("#formSubmit").click( function( e ) {
     ambiantMessage( "Please enter proper URL for LinkedIn. (Start with https://www.)");
     return;
   }
-  
+
   if(first == "") {
     ambiantMessage( "Please indicate if you are a first-time hacker." );
     return;
@@ -114,7 +116,7 @@ $("#formSubmit").click( function( e ) {
   form.append( 'linkedin', linkedIn);
   form.append( 'first', first);
   form.append( 'resume', $( '#resumebecausegregissofrigginlameswaggy' )[0].files[0] );
-  
+
   $('#cog-load').css({'display':'inline-block'});
   $('#formSubmit a').off();
   $('#formSubmit a').val("working...");

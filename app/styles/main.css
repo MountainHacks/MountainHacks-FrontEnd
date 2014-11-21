@@ -62,7 +62,7 @@ hr { border-color:rgba(0, 0, 0, 0.4); }
 }
 
 .box-shadow-inset {
-  background:#ecf0f1 !important;
+  background: #ecf0f1 !important;
   -webkit-box-shadow: inset 0px 8px 169px -34px rgba(0,0,0,0.13);
   -moz-box-shadow: inset 0px 8px 169px -34px rgba(0,0,0,0.13);
   box-shadow: inset 0px 8px 169px -34px rgba(0,0,0,0.13);
@@ -353,6 +353,9 @@ p { margin:1em 0; }
 
 .content-full { height: 100%; }
 
+#footer, html {
+  background: #ecf0f1;
+}
 
 #footer > p > a {
   color: black;
