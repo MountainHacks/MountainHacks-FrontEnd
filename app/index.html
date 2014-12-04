@@ -11,11 +11,14 @@
           href="bower_components/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet"
           href="bower_components/fontawesome/css/font-awesome.min.css"/>
-    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Raleway'/>
+    <link rel='stylesheet'
+          href='http://fonts.googleapis.com/css?family=Raleway'/>
     <link rel="stylesheet"
           href="bower_components/jquery.ambiance/assets/css/jquery.ambiance.css"/>
-    <link rel="stylesheet" href="bower_components/typeahead.js-bootstrap-css/typeaheadjs.css">
-    <link rel="stylesheet" href="bower_components/animate.css/animate.min.css">
+    <link rel="stylesheet"
+          href="bower_components/typeahead.js-bootstrap-css/typeaheadjs.css">
+    <link rel="stylesheet"
+          href="bower_components/animate.css/animate.min.css">
 
     <!--[if lt IE 9]>
       <script src="bower_components/html5shiv/dist/html5shiv.js"></script>
@@ -41,6 +44,15 @@
     <meta property="og:description" content="MountainHacks is the mountain-west's premier 24-hour hackathon for university students. Come build with us." />
     <meta property="og:image" content="http://goo.gl/otlo6L" />
 
+    <style type="text/css">
+      #sponsorButton {
+        background-color:white;color:rgb(53,152,219);
+      }
+      #sponsorButton:hover {
+        color:rgb(53, 108, 155);
+      }
+    </style>
+
   </head>
 
   <body ng-app="mountainhacks">
@@ -53,7 +65,9 @@
            data-top-bottom="opacity:.1">
 
         <div class="hsContent">
-          <img src="images/logo.svg" width="150px" heigth="150px" />
+          <img src="images/logo.svg"
+               width="150px"
+               heigth="150px" />
           <br/>
           <h1 id="home-title">
             MountainHacks
@@ -88,11 +102,15 @@
             </a></div>
           </div>
 
+          
           <a id="home-sponsor"
              href="mailto:derek@mountainhacks.com"
              target="_blank">
-            <p style="font-size:35px">Interested in sponsoring?</p>
+             <div id="sponsorButton" class="center-block">
+            <p style="font-size:35px;margin:10px">Interested in sponsoring?</p>
+            </div>
           </a>
+          
         </div>
       </div>
 
@@ -116,12 +134,7 @@
                 <i class="fa fa-question"></i>
                 <h4>So how does this work?</h4>
                 <hr>
-                <p>You have <strong>24 hours</strong> to build a new unique product, whether it
-                be an iOS app, an Android app, a web app, a platform, a hardware
-                hack... etc. The only rule is that it has to be original. All
-                  your programming must take place at the hackathon,
-                however you may come up with ideas and form teams prior to the
-                event.</p>
+                <p>You have <strong>24 hours</strong> to build a working prototype of a new unique product, whether it be an iOS app, an Android app, a web app, a platform, a hardware hack... etc. Be creative!</p>
               </div>
 
               <!--Info blob-->
@@ -179,7 +192,7 @@
                 <hr>
                 <p>We will bring in a number of professionals in the field,
                 including <strong>engineers</strong> and <strong>professors</strong>, to evaluate your hack on a
-                number of considerations. We will be giving awards for Best iOS
+                number of considerations. Awards will be given for Best iOS
                 App, Best Hardware Hack, Most Technically Impressive, etc. so
                 that every hack has a chance to win.</p>
               </div>
@@ -247,13 +260,18 @@
           <div class="hsContent">
 
             <!-- MHacks Video -->
-            <div id="mhack-video" style="position:absolute;z-index:-99;display:none;">
-              <h1 class="font-raleway">You are now registered!
-                <br><small style="color:white;">Not sure what to expect?<br/>Check out these videos from <a href="http://mhacks.org/" target="_blank">our friends over in Michigan</a></small>
+            <div id="mhack-video"
+                 style="position:absolute;z-index:-99;display:none;">
+              <h1 class="font-raleway">You are now registered!<br/>
+                <br>You should have recieved a confirmation email<br/><small style="color:white;">Not sure what to expect from this hackathon? Check out these videos from <a href="http://mhacks.org/" target="_blank">our friends over in Michigan</a></small>
               </h1>
               <div class="row">
                 <div class="video-half" style="margin: 0 auto;">
-                  <iframe width="95%" height="315" src="//www.youtube.com/embed/videoseries?list=PLXAdDMKTjNmDHVwbPDtY6DWCLx06sCv3C" frameborder="0" allowfullscreen></iframe>
+                  <iframe width="95%"
+                          height="315"
+                          src="//www.youtube.com/embed/videoseries?list=PLXAdDMKTjNmDHVwbPDtY6DWCLx06sCv3C" 
+                          frameborder="0"
+                          allowfullscreen></iframe>
                 </div>
               </div>
               <h1>
@@ -261,8 +279,10 @@
               </h1>
             </div>
 
+
+
             <!-- Registration Form -->
-            <h1 id="reg-title" class="font-raleway">Registration</h1>
+            <h1 id="reg-title" class="font-raleway">Register Now</h1>
             <form id="form" class="center-block">
               <p class="text-left">
                 <input name="first_name"
@@ -353,10 +373,15 @@
               </p>
               <div class="bar"></div>
               <div class="input-group">
-                <input id="uploadFile" placeholder="Upload Resume (*.pdf)" class="form-control" disabled="disabled" />
+                <input id="uploadFile" 
+                       placeholder="Upload Resume (*.pdf)"
+                       class="form-control"
+                       disabled="disabled" />
                 <div class="input-group-btn fileUpload btn btn-primary">
                     <span style="font-size:14px;">Browse...</span>
-                    <input id="resumebecausegregissofrigginlameswaggy" type="file" class="upload" />
+                    <input id="resumebecausegregissofrigginlameswaggy"
+                           type="file"
+                           class="upload" />
                 </div>
               </div>
               <div class="bar"></div>
@@ -375,7 +400,9 @@
                    class="center-block"
                    style="width:100%;max-width:126px">
                 <a class="btn btn-primary">click me babeh!</a>
-                <i id="cog-load" class="fa fa-cog fa-spin fa-3x" style="margin-top:10px; display:none;"></i>
+                <i id="cog-load"
+                   class="fa fa-cog fa-spin fa-3x"
+                   style="margin-top:10px; display:none;"></i>
               </div>
             </form>
           </div>
@@ -390,12 +417,18 @@
               <a href="http://www.idrone.com/" target="_blank">
                 <img src="images/sponsors/idrone.png" width="217" height="103">
               </a>
+              <a href="http://craftlakecity.com/" target="_blank">
+                <img src="images/sponsors/CLCLogo.png" height="103">
+              </a>
             </div>
             <div class="five columns"></div>
+            <h4>Is your company interested in helping to make this happen? <a href="mailto:mountainhacks@gmail.com" target="_blank">Let's chat.</a></h4>
           </div>
           <h3 style="font-size:50px; margin: 1em auto; width: 80%;">
             Meet the team.
           </h3>
+
+
 
           <!-- Derek's Bio -->
           <div class="center-block bio-strip"
@@ -408,9 +441,18 @@
             <div class="bio-strip-nametag only-sm bs-only-sm">
               <strong>Derek Argueta</strong>
               <div class="bio-strip-social-icon">
-                <a href="http://twitter.com/derek_arg" target="_blank"><i class="fa fa-twitter"></i></a>
-                <a href="https://github.com/derekargueta" target="_blank"><i class="fa fa-github"></i></a>
-                <a href="https://www.linkedin.com/pub/derek-argueta/64/810/517" target="_blank"><i class="fa fa-linkedin-square"></i></a>
+                <a href="http://twitter.com/derek_arg"
+                   target="_blank">
+                  <i class="fa fa-twitter"></i>
+                </a>
+                <a href="https://github.com/derekargueta"
+                   target="_blank">
+                  <i class="fa fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/pub/derek-argueta/64/810/517"
+                   target="_blank">
+                  <i class="fa fa-linkedin-square"></i>
+                </a>
               </div>
             </div>
             <div class="bio-strip-content">
@@ -420,9 +462,18 @@
             <div class="bio-strip-nametag no-sm bs-no-sm">
               <strong>Derek Argueta</strong>
               <div class="bio-strip-social-icon">
-                <a href="http://twitter.com/derek_arg" target="_blank"><i class="fa fa-twitter"></i></a>
-                <a href="https://github.com/derekargueta" target="_blank"><i class="fa fa-github"></i></a>
-                <a href="https://www.linkedin.com/pub/derek-argueta/64/810/517" target="_blank"><i class="fa fa-linkedin-square"></i></a>
+                <a href="http://twitter.com/derek_arg"
+                   target="_blank">
+                  <i class="fa fa-twitter"></i>
+                </a>
+                <a href="https://github.com/derekargueta"
+                   target="_blank">
+                  <i class="fa fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/pub/derek-argueta/64/810/517"
+                   target="_blank">
+                  <i class="fa fa-linkedin-square"></i>
+                </a>
               </div>
             </div>
           </div>
@@ -440,9 +491,18 @@
             <div class="bio-strip-nametag only-sm bs-only-sm">
               <strong>Greg Holguin</strong>
               <div class="bio-strip-social-icon">
-                <a href="http://twitter.com/simulatedgreg" target="_blank"><i class="fa fa-twitter"></i></a>
-                <a href="https://github.com/simulatedgreg" target="_blank"><i class="fa fa-github"></i></a>
-                <a href="https://www.linkedin.com/pub/greg-holguin/a7/b3b/527" target="_blank"><i class="fa fa-linkedin-square"></i></a>
+                <a href="http://twitter.com/simulatedgreg"
+                   target="_blank">
+                  <i class="fa fa-twitter"></i>
+                </a>
+                <a href="https://github.com/simulatedgreg"
+                   target="_blank">
+                  <i class="fa fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/pub/greg-holguin/a7/b3b/527"
+                   target="_blank">
+                  <i class="fa fa-linkedin-square"></i>
+                </a>
               </div>
             </div>
             <div class="bio-strip-content">
@@ -453,12 +513,23 @@
             <div class="bio-strip-nametag no-sm bs-no-sm">
               <strong>Greg Holguin</strong>
               <div class="bio-strip-social-icon">
-                <a href="http://twitter.com/simulatedgreg" target="_blank"><i class="fa fa-twitter"></i></a>
-                <a href="https://github.com/simulatedgreg" target="_blank"><i class="fa fa-github"></i></a>
-                <a href="https://www.linkedin.com/pub/greg-holguin/a7/b3b/527" target="_blank"><i class="fa fa-linkedin-square"></i></a>
+                <a href="http://twitter.com/simulatedgreg"
+                   target="_blank">
+                  <i class="fa fa-twitter"></i>
+                </a>
+                <a href="https://github.com/simulatedgreg"
+                   target="_blank">
+                  <i class="fa fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/pub/greg-holguin/a7/b3b/527"
+                   target="_blank">
+                  <i class="fa fa-linkedin-square"></i>
+                </a>
               </div>
             </div>
           </div>
+
+
 
           <!-- Jeff's Bio -->
           <div class="center-block bio-strip"
@@ -491,10 +562,10 @@
 
       <!-- Libraries -->
       <script src="bower_components/jquery/dist/jquery.min.js"></script>
-      <script src="bower_components/skrollr/src/skrollr.js"></script>
+      <script src="bower_components/skrollr/dist/skrollr.min.js"></script>
       <script src="bower_components/geopattern/js/geopattern.min.js"></script>
       <script src="bower_components/jquery.ambiance/assets/js/jquery.ambiance.js"></script>
-      <script src="bower_components/stellar/src/jquery.stellar.js"></script>
+      <script src="bower_components/stellar/jquery.stellar.min.js"></script>
       <script src="bower_components/chartjs/Chart.min.js"></script>
       <script src="bower_components/typeahead.js/dist/typeahead.jquery.min.js"></script>
       <script src="bower_components/typeahead.js/dist/bloodhound.min.js"></script>

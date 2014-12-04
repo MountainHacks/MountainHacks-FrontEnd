@@ -39,7 +39,7 @@
     .container .five.columns                    { width: 280px; }
     .container .six.columns                     { width: 340px; }
     .container .seven.columns                   { width: 400px; }
-    .container .eight.columns, .chart           { width: 460px; }
+    .container .eight.columns, .chart, #sponsorButton           { width: 460px; }
     .container .nine.columns                    { width: 520px; }
     .container .ten.columns                     { width: 580px; }
     .container .eleven.columns                  { width: 640px; }
@@ -154,6 +154,8 @@
         .container .one-third.column,
         .container .two-thirds.column  { width: 300px; }
 
+        #sponsorButton { width: 170px;height:90px;margin-top:15px; }
+
         /* Offsets */
         .container .offset-by-one,
         .container .offset-by-two,
@@ -192,7 +194,7 @@
         .container .five.columns,
         .container .six.columns,
         .container .seven.columns, 
-        .container .eight.columns, .chart,
+        .container .eight.columns, .chart, #sponsorButton,
         .container .nine.columns,
         .container .ten.columns,
         .container .eleven.columns,

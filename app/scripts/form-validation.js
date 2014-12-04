@@ -22,9 +22,6 @@ if (!String.prototype.contains) {
 
 $("#formSubmit").click( function( e ) {
 
-  //subAnimation();
-  //return;
-
   e.preventDefault();
 
   var form = new FormData();
@@ -122,13 +119,13 @@ $("#formSubmit").click( function( e ) {
   $('#formSubmit a').val("working...");
 
   var request = new XMLHttpRequest();
-  request.open('GET', 'http://localhost:8000/token', false );
+  request.open('GET', 'http://api.mountainhacks.com/token', false );
   request.send( null );
 
   var token = request.responseText;
 
   $.ajax({
-    url: "http://localhost:8000/submit",
+    url: "http://api.mountainhacks.com/submit",
     type: "POST",
     data: form,
     processData: false,
