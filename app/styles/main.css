@@ -3,29 +3,23 @@
   margin:0;
 }
 
-hr { border-color: white; }
-
-.chart {
-  display: inline-block;
+hr {
+  border-color: white;
 }
 
-.hsContent > a { color: white; }
+#hsContent > a {
+  color: white;
+}
 
-.form-control { margin-bottom: 8px;}
+.form-control {
+  margin-bottom: 8px;
+}
 
 #home-title {
   font-size: 85px;
   margin-bottom: 0;
   margin-top: 0;
 }
-
-#home-subtitle {
-  font-size: 35px;
-  margin-bottom: 1.25em;
-  margin-top: 0;
-}
-
-#home-date { font-size:30px }
 
 #home-bg {
   background: url('../images/park-city-skiing-utah.jpg');
@@ -38,14 +32,7 @@ hr { border-color: white; }
   width: 100%;
 }
 
-#form { width: 300px; }
-
-#form > p {
-  margin-bottom: 10px;
-  width: 100%;
-}
-
-.hsContent {
+#hsContent {
   background: rgba(0, 0, 0, 0.5);
   border-radius: 10px;
   margin: 0 auto;
@@ -61,14 +48,6 @@ hr { border-color: white; }
   vertical-align: middle;
 }
 
-.box-shadow-inset {
-  background:#ecf0f1 !important;
-  -webkit-box-shadow: inset 0px 8px 169px -34px rgba(0,0,0,0.13);
-  -moz-box-shadow: inset 0px 8px 169px -34px rgba(0,0,0,0.13);
-  box-shadow: inset 0px 8px 169px -34px rgba(0,0,0,0.13);
-  color:#2c3e50;
-}
-
 .social-icon-large {
   background: white;
   border-radius: 30px;
@@ -79,10 +58,17 @@ hr { border-color: white; }
   width: 2em;
 }
 
-#home-sponsor { text-decoration: none; }
-#home-sponsor:hover { color: #ccc; }
+#home-sponsor {
+  text-decoration: none;
+}
 
-.large-fa { font-size: 30px; }
+#home-sponsor:hover {
+  color: #ccc;
+}
+
+.large-fa {
+  font-size: 30px;
+}
 
 .fa {
   color: white;
@@ -111,9 +97,13 @@ hr { border-color: white; }
   color: white;
 }
 
-#form > p > input { color: black; }
+#form > p > input {
+  color: black;
+}
 
-.info-blob > i { font-size: 72px; }
+.info-blob > i {
+  font-size: 72px;
+}
 
 .center-block {
   display: inline-block !important;
@@ -166,26 +156,27 @@ hr { border-color: white; }
   color: #34495e;
 }
 
-.font-raleway { font-family: 'Raleway', sans-serif; }
+.font-raleway {
+  font-family: 'Raleway', sans-serif;
+}
 
-html, body {
+html,
+body {
   height: 100%;
   text-align: center;
 }
-
-.skrollr-desktop body { height:100% !important; }
 
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 }
 
-p { margin:1em 0; }
+p {
+  margin: 1em 0;
+}
 
 /* Profile Pictures/GIFs */
 #derek_bio { background-image: url(../images/profiles/derek.jpg); }
 #derek_bio:hover { background-image: url(http://goo.gl/a29VKh); }
-#greg_bio { background-image: url(../images/profiles/greg.jpg); }
-#greg_bio:hover { background-image: url(http://goo.gl/PmoxhV); }
 #jeff_bio { background-image: url(../images/profiles/jeff.jpg); }
 #jeff_bio:hover { background-image: url(http://goo.gl/Hw4YyL); }
 
@@ -248,28 +239,10 @@ p { margin:1em 0; }
   top: 0;
 }
 
-.parallax-image.skrollable-between { display: block; }
-
-.no-skrollr .parallax-image-wrapper { display: none !important; }
-
 #skrollr-body {
   height: 100%;
   overflow: visible;
   position: relative;
-}
-
-.gap {
-  background: transparent center no-repeat;
-  background-size: cover;
-}
-
-.skrollr .gap { background: transparent !important; }
-
-.gap-50 { height: 50%; }
-
-.gap-100 {
-  height: 100%;
-  width: 100%;
 }
 
 .header,

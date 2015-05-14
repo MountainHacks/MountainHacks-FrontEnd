@@ -1,170 +1,132 @@
 @media only screen and (max-width: 767px) {
 
-	.info-blob {
-		margin: 1em auto;
-		width: 300px;
-	}
+  .info-blob {
+    margin: 1em auto;
+    width: 300px;
+  }
 
-	.info_row {
-		margin-bottom:-6em;
-		height: 1600px;
-	}
+  .info_row {
+    margin-bottom:-6em;
+    height: 1600px;
+  }
 
-	.hsContent {
-		width: 400px;
-		padding: 20px;
-	}
+  .hsContent {
+    width: 400px;
+    padding: 20px;
+  }
 
-	#home-title {
-		font-size: 50px !important;
-	}
+  #home-title {
+    font-size: 50px !important;
+  }
 
-	#home-subtitle {
-		font-size: 24px !important;
-	}
+  .bs-only-sm {
+    display: inline-block !important;
+  }
 
-	.only-sm {
-		display: inline-block !important;
-	}
+  .no-sm {
+    display: none !important;
+  }
 
-	.no-sm {
-		display: none !important;
-	}
+  .social-icon-large {
+    margin-top:.25em;
+    margin-bottom: 0;
+  }
 
-	#home-info-only-sm {
-		font-size: 30px !important;
-	}
+  #home-sponsor p {
+    font-size: 24px !important;
+  }
 
-	.social-icon-large {
-		margin-top:.25em;
-		margin-bottom: 0;
-	}
+  .bio-strip-pic {
+    float: none !important;
+    margin: 0 auto;
+    display:block;
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+  }
 
-	#home-sponsor p {
-		font-size: 24px !important;
-	}
+  .bio-strip-nametag {
+    display:block;
+    text-align: center;
+    width: 100%;
+    font-size: 32px;
+    margin-bottom: 0;
+  }
 
-	.bio-strip-pic {
-		float: none !important;
-		margin: 0 auto;
-		display:block;
-		width: 200px;
-		height: 200px;
-		border-radius: 100px;
-	}
+  .bio-strip-content {
+    margin-top: 1.2em;
+    width: 100%;
+    margin-bottom: 3em;
+  }
 
-	.bio-strip-nametag {
-		display:block;
-		text-align: center;
-		width: 100%;
-		font-size: 32px;
-		margin-bottom: 0;
-	}
+  .bio-strip-content > p {
+    text-align: center;
+    font-size: 18px;
+  }
 
-	.bio-strip-content {
-		margin-top: 1.2em;
-		width: 100%;
-		margin-bottom: 3em;
-	}
+  #grade {
+    width: 170px !important;
+  }
 
-	.bio-strip-content > p {
-		text-align: center;
-		font-size: 18px;
-	}
+  .bio-strip {
+    height: 525px;
+    padding-top: 4em;
+  }
 
-	#form {
-		width:250px;
-	}
-
-	#grade {
-		width: 170px !important;
-	}
-
-	.bio-strip {
-		height: 525px;
-		padding-top: 4em;
-	}
-
-	.btn {
-		padding: 6px 8px;
-	}
-
+  .btn {
+    padding: 6px 8px;
+  }
 }
 
 @media only screen and (min-width: 767px) and (max-width: 959px) {
 
-	.info_row {
-		margin-bottom:5.25em;
-	}
+  .info_row {
+    margin-bottom:5.25em;
+  }
 
-	.hsContent {
-		width: 700px;
-		padding: 20px;
-	}
+  .hsContent {
+    width: 700px;
+    padding: 20px;
+  }
 
-	#home-sponsor p {
-		font-size:24px !important;
-	}
+  #home-sponsor p {
+    font-size:24px !important;
+  }
 
-	.bs-only-sm {
-		display: inline-block !important;
-		float: left;
-		clear: none;
-		font-size: 32px;
-		width: 300px;
-		margin-top: 90px;
-		margin-bottom: 2.3em;
-	}
+  .bs-only-sm {
+    display: inline-block !important;
+    float: left;
+    clear: none;
+    font-size: 32px;
+    width: 300px;
+    margin-top: 90px;
+    margin-bottom: 2.3em;
+  }
 
-	.bs-no-sm {
-		display: none;
-	}
+  .bs-no-sm {
+    display: none;
+  }
 
-	.bio-strip-content {
-		width: 100%;
+  .bio-strip-content {
+    width: 100%;
 
-	}
+  }
 
-	.bio-strip-pic {
-		margin-top: 3em;
-	}
-
-	canvas {
-		width:400px !important;
-		height: 400px !important;
-		margin-left: -1em;
-	}
-
+  .bio-strip-pic {
+    margin-top: 3em;
+  }
 }
 
 @media only screen and (max-width: 479px) {
-	.hsContent {
-		width: 300px !important;
-	}
+  .hsContent {
+    width: 300px !important;
+  }
 
-	.hsContainer {
-		padding: 0 !important;
-	}
+  .hsContainer {
+    padding: 0 !important;
+  }
 
-	#home-title {
-		font-size: 32px !important;
-	}
-
-	canvas {
-		width: 280px !important;
-		height: 280px !important;
-	}
+  #home-title {
+    font-size: 32px !important;
+  }
 }
-
- 
-/*-----------------------------
-|                             |
-| Some Fixin's                |
-|                             |
-------------------------------*/
-
-.only-sm {
-	display: none;
-}
-
-

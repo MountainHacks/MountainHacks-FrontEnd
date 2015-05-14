@@ -5,7 +5,7 @@ $('.btn-group button').click(function() {
 });
 
 //Init Stellar
-$(window).stellar();
+// $(window).stellar();
 
 // geopattern
 $('#blue-geo').geopattern('bluebgplsblueBLUEGIVE ME PLEASE GOSH');  
