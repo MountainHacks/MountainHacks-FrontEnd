@@ -3,7 +3,7 @@
   margin:0;
 }
 
-hr { border-color:rgba(0, 0, 0, 0.4); }
+hr { border-color: white; }
 
 .chart {
   display: inline-block;
@@ -84,6 +84,10 @@ hr { border-color:rgba(0, 0, 0, 0.4); }
 
 .large-fa { font-size: 30px; }
 
+.fa {
+  color: white;
+}
+
 .info-blob {
   float: left;
   margin: 5px;
@@ -98,11 +102,13 @@ hr { border-color:rgba(0, 0, 0, 0.4); }
 .info-blob > h4 {
   font-family: 'Raleway', sans-serif;
   font-size: 30px;
+  color: white;
 }
 
 .info-blob > p {
   font-size: 16px;
   margin-top: 1em;
+  color: white;
 }
 
 #form > p > input { color: black; }
@@ -266,7 +272,8 @@ p { margin:1em 0; }
   width: 100%;
 }
 
-.header, .content {
+.header,
+.content {
   background: #fff;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -274,7 +281,9 @@ p { margin:1em 0; }
   padding: 1em;
 }
 
-.content-full { height: 100%; }
+.content-full {
+  height: 100%;
+}
 
 
 #footer > p > a {
