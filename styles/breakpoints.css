@@ -1,15 +1,5 @@
 @media only screen and (max-width: 767px) {
 
-  .info-blob {
-    margin: 1em auto;
-    width: 300px;
-  }
-
-  .info_row {
-    margin-bottom:-6em;
-    height: 1600px;
-  }
-
   .hsContent {
     width: 400px;
     padding: 20px;
@@ -79,10 +69,6 @@
 }
 
 @media only screen and (min-width: 767px) and (max-width: 959px) {
-
-  .info_row {
-    margin-bottom:5.25em;
-  }
 
   .hsContent {
     width: 700px;

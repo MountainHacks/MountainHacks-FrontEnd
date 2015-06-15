@@ -1,11 +1,4 @@
-// Generated on 2014-10-07 using generator-angular 0.9.8
 'use strict';
-
-// # Globbing
-// for performance reasons we're only matching one level down:
-// 'test/spec/{,*/}*.js'
-// use this if you want to recursively match all subfolders:
-// 'test/spec/**/*.js'
 
 module.exports = function (grunt) {
 
@@ -72,8 +65,8 @@ module.exports = function (grunt) {
         // Change this to '0.0.0.0' to access the server from outside.
         hostname: 'localhost',
         livereload: 35729
-      },
-      livereload: {
+       },
+       livereload: {
         options: {
           open: true,
           middleware: function (connect) {
@@ -85,8 +78,8 @@ module.exports = function (grunt) {
               ),
               connect.static(appConfig.app)
             ];
-          }
-        }
+           }
+         }
       },
       test: {
         options: {
@@ -110,7 +103,7 @@ module.exports = function (grunt) {
           base: '<%= yeoman.dist %>'
         }
       }
-    },
+     },
 
     // Make sure code styles are up to par and there are no obvious mistakes
     jshint: {
@@ -123,12 +116,12 @@ module.exports = function (grunt) {
           'Gruntfile.js',
           '<%= yeoman.app %>/scripts/{,*/}*.js'
         ]
-      },
+       },
       test: {
         options: {
           jshintrc: 'test/.jshintrc'
         },
-        src: ['test/spec/{,*/}*.js']
+         src: ['test/spec/{,*/}*.js']
       }
     },
 
@@ -346,14 +339,6 @@ module.exports = function (grunt) {
         'svgmin'
       ]
     },
-
-    // Test settings
-    karma: {
-      unit: {
-        configFile: 'test/karma.conf.js',
-        singleRun: true
-      }
-    }
   });
 
 
@@ -371,19 +356,6 @@ module.exports = function (grunt) {
       'watch'
     ]);
   });
-
-  grunt.registerTask('server', 'DEPRECATED TASK. Use the "serve" task instead', function (target) {
-    grunt.log.warn('The `server` task has been deprecated. Use `grunt serve` to start a server.');
-    grunt.task.run(['serve:' + target]);
-  });
-
-  grunt.registerTask('test', [
-    'clean:server',
-    'concurrent:test',
-    'autoprefixer',
-    'connect:test',
-    'karma'
-  ]);
 
   grunt.registerTask('build', [
     'clean:dist',
@@ -404,7 +376,6 @@ module.exports = function (grunt) {
 
   grunt.registerTask('default', [
     'newer:jshint',
-    'test',
     'build'
   ]);
 };
