@@ -22,7 +22,6 @@
     <link rel="stylesheet" href="styles/main.css"/>
     <link rel="stylesheet" href="styles/skeleton.css"/>
     <link rel="stylesheet" href="styles/breakpoints.css"/>
-    <link rel="stylesheet" type="text/css" href="bower_components/typeahead.js-bootstrap-css/typeaheadjs.css">
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="logo.ico"/>
@@ -41,9 +40,7 @@
   <body ng-app="mountainhacks">
 
     <div id="skrollr-body">
-      <div id="home-bg" 
-           class="hsContainer"
-           data-stellar-background-ratio="0">
+      <div id="home-bg">
 
         <div id="hsContent">
           <img src="images/logo.svg" width="150px" heigth="150px" />
@@ -51,6 +48,11 @@
           <h1 id="home-title">
             MountainHacks
           </h1>
+          <div style="width:700px;height:80px;margin-left:auto;margin-right:auto;background-color:white;color:rgb(52,152,219);padding-top:5px">
+            <h2>
+              the premier hackathon organization of Utah
+            </h2>
+          </div>
 
           <a id="home-sponsor"
              href="mailto:derek@mountainhacks.com"
@@ -60,25 +62,18 @@
         </div>
       </div>
       
-      <div class="content" id="blue-geo">
+      <div class="content" id="blue-geo" style="padding:0;position:relative;height:500px">
+        <div style="width:508px;height:438px;left:0;position:absolute;bottom:0;background:url(images/mtns.gif);background-size:100% 100%;z-index:0"></div>
 
-        <div class="content-container">
-          <p style="font-size:30px; width:80%; margin:1em auto; color: white"
+        <div class="content-container" style="padding:0;padding-top:100px;z-index:15">
+          <p style="font-size:30px; width:80%;margin-top:0;margin-left:auto;margin-right:auto;display:block;padding-top:60px;color: white"
              class="text-center">
             MountainHacks is the Mountain-West's premier hackathon organization for 
             university students. <strong>Come build with us.</strong>
           </p>
-
-          <p>MountainHacks is a BYU-based student organization geared towards
-          turning computer science students into <i>hackers</i>.<br/><br/>No, we're
-          not about breaking into systems or finding security exploits. We use the
-          term hacker in it's original meaning - the correct meaning. The term
-          <i>hacker</i> dates back to MIT in the 70's, used to describe anyone who
-          just loves to program and create new things. Hackers know how to get stuff
-          done. Need that new web platform done by Monday? A hacker will get it done
-          by Friday. We 'hack' together APIs and platforms to build the next big products
-          off tomorrow.</p>
         </div>
+
+        <div style="width:508px;height:438px;right:0;position:absolute;bottom:0;background:url(images/mtns.gif);background-size:100% 100%;z-index:0"></div>
       </div>
 
       <div class="content" id="done">
@@ -89,36 +84,22 @@
         <!-- Derek's Bio -->
         <div class="center-block bio-strip"
              style="position:relative;">
-          <a href="http://goo.gl/WH26n" target="_blank">
-            <div id="derek_bio" class="bio-strip-pic"></div>
-          </a>
-          <div class="bio-strip-nametag only-sm bs-only-sm">
-            <strong>Derek Argueta</strong>
-            <div class="bio-strip-social-icon">
-              <a href="http://twitter.com/derek_arg" target="_blank"><i class="fa fa-twitter"></i></a>
-              <a href="https://github.com/derekargueta" target="_blank"><i class="fa fa-github"></i></a>
-              <a href="https://www.linkedin.com/pub/derek-argueta/64/810/517" target="_blank"><i class="fa fa-linkedin-square"></i></a>
+          <div style="float:left;width:20%">
+            <a href="http://goo.gl/WH26n" target="_blank">
+              <div id="derek_bio" class="bio-strip-pic"></div>
+            </a>
+            <div class="bio-strip-nametag only-sm bs-only-sm">
+              <strong>Derek Argueta</strong>
+              <div class="bio-strip-social-icon">
+                <a href="http://twitter.com/derek_arg" target="_blank"><i class="fa fa-twitter"></i></a>
+                <a href="https://github.com/derekargueta" target="_blank"><i class="fa fa-github"></i></a>
+                <a href="https://www.linkedin.com/pub/derek-argueta/64/810/517" target="_blank"><i class="fa fa-linkedin-square"></i></a>
+              </div>
             </div>
           </div>
-          <div class="bio-strip-content">
+          <div class="bio-strip-content" style="float:right;width:80%;padding-top:30px">
             <p>Derek is a student at BYU studying Computer Science. His main 
-            interests are in iOS, Go and Django development.</p>
-          </div>
-        </div>
-
-        <!-- Jeff's Bio -->
-        <div class="center-block bio-strip"
-             style="position:relative;">
-          <a href="http://goo.gl/qwCSK" target="_blank">
-            <div id="jeff_bio" class="bio-strip-pic"></div>
-          </a>
-          <div class="bio-strip-nametag only-sm bs-only-sm">
-            <strong>Jeff Barton</strong>
-          </div>
-          <div class="bio-strip-content">
-            <p>Jeff is also a student a BYU. He is studying Electrical 
-            Engineering and enjoys hacking around with microcontrollers and 
-            circuits.</p>
+            interests are in iOS, Go, Python, systems engineering, and data engineering.</p>
           </div>
         </div>
       </div>
@@ -131,8 +112,7 @@
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="bower_components/geopattern/js/geopattern.min.js"></script>
     <script src="bower_components/jquery.ambiance/assets/js/jquery.ambiance.js"></script>
-    <script src="bower_components/stellar/src/jquery.stellar.js"></script>
-    <script src="bower_components/typeahead.js/dist/bloodhound.min.js"></script>
+    <script src="scripts/parallax.js-1.3.2/parallax.min.js"></script>
     <script src="scripts/main.js"></script>
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

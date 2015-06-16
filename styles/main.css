@@ -23,7 +23,12 @@ hr {
 
 #home-bg {
   background: url('../images/park-city-skiing-utah.jpg');
-  background-size: cover;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  color: white;
+  height: 710px;
+  text-align: center;
+  vertical-align: middle;
 }
 
 .bar {
@@ -33,19 +38,11 @@ hr {
 }
 
 #hsContent {
-  background: rgba(0, 0, 0, 0.5);
-  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.3);
   margin: 0 auto;
   padding: 50px;
-  width: 900px;
-}
-
-.hsContainer {
-  color: white;
-  margin: 0 auto;
-  padding: 30px;
-  text-align: center;
-  vertical-align: middle;
+  width: 100%;
+  height: 720px;
 }
 
 .social-icon-large {
@@ -138,86 +135,15 @@ p {
 /* Profile Pictures/GIFs */
 #derek_bio { background-image: url(../images/profiles/derek.jpg); }
 #derek_bio:hover { background-image: url(http://goo.gl/a29VKh); }
-#jeff_bio { background-image: url(../images/profiles/jeff.jpg); }
-#jeff_bio:hover { background-image: url(http://goo.gl/Hw4YyL); }
-
-/*-----------------------------
-|                             |
-| Skrollr CSS                 |
-|                             |
-------------------------------*/
-
-.parallax-image-wrapper {
-  left: 0;
-  overflow: hidden;
-  position: fixed;
-  width: 100%;
-}
-
-.parallax-image-wrapper-50 {
-  height: 50%;
-  top: -50%;
-}
-
-.parallax-image-wrapper-75 {
-  height: 75%;
-  top: -75%;
-}
-
-.parallax-image-wrapper-100 {
-  height: 100%;
-  top: -100%;
-}
-
-.piw-125 {
-  height: 125%;
-  top: -125%;
-}
-
-.parallax-image {
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  bottom: 0;
-  display: none;
-  left: 0;
-  position: absolute;
-  width: 100%;
-}
-
-.parallax-image-50 {
-  height: 200%;
-  top: -50%;
-}
-
-.parallax-image-75 {
-  height: 150%;
-  top: -33%;
-}
-
-.parallax-image-100 {
-  height: 100%;
-  top: 0;
-}
-
-#skrollr-body {
-  height: 100%;
-  overflow: visible;
-  position: relative;
-}
 
 .header,
 .content {
   background: #fff;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
   padding: 1em;
 }
 
 #blue-geo {
-  background-color: #020202;
-  opacity: .9;
+  background-color: rgb(52, 152, 219);
 }
 
 .content-full {

@@ -5,7 +5,7 @@ $('.btn-group button').click(function() {
 });
 
 // geopattern
-$('#blue-geo').geopattern('bluebgplsblueBLUEGIVE ME PLEASE GOSH');  
+//$('#blue-geo').geopattern('bluebgplsblueBLUEGIVE ME PLEASE GOSH');  
 
 //Pre-load Images
 if (document.images) {
