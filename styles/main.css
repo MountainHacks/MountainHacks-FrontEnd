@@ -15,6 +15,13 @@ hr {
   margin-bottom: 8px;
 }
 
+.mtn {
+  position: absolute;
+  bottom: 0;
+  background: url(../images/mtns.gif);
+  background-size: 100% 100%;
+}
+
 #home-title {
   font-size: 85px;
   margin-bottom: 0;
@@ -144,6 +151,9 @@ p {
 
 #blue-geo {
   background-color: rgb(52, 152, 219);
+  padding: 0;
+  position: relative;
+  height: 500px;
 }
 
 .content-full {
